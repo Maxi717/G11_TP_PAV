@@ -14,7 +14,7 @@ using G11_TP_PAV;
 
 namespace G11_TP_PAV.Formularios
 {
-    //Test Prueba
+    //Test Pruebaa
     public partial class AltaDepartamentos : Form
     {
         public AltaDepartamentos()
