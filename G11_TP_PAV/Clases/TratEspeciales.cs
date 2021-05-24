@@ -13,6 +13,8 @@ namespace G11_TP_PAV.Clases
     {
         public enum Resultado { correcto, error }
 
+        //TratEspeciales
+
         public Resultado Validar(Control.ControlCollection controles)
         {
             foreach (var item in controles)
