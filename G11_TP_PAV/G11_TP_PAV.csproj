@@ -315,6 +315,18 @@
     <Compile Include="Formularios\Tipos de Moneda\Frm_Modificar_TipoMoneda.designer.cs">
       <DependentUpon>Frm_Modificar_TipoMoneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Consultar_Expensa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Consultar_Expensa.Designer.cs">
+      <DependentUpon>Frm_Consultar_Expensa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Transaccion_Recibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Transaccion_Recibos.Designer.cs">
+      <DependentUpon>Frm_Transaccion_Recibos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Escritorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +343,7 @@
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
+    <Compile Include="Negocio\NE_Transaccion_Recibos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Barrios\Frm_ABMC_Barrio.resx">
@@ -449,6 +462,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tipos de Moneda\Frm_Modificar_TipoMoneda.resx">
       <DependentUpon>Frm_Modificar_TipoMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TransRecibos\Frm_Consultar_Expensa.resx">
+      <DependentUpon>Frm_Consultar_Expensa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TransRecibos\Frm_Transaccion_Recibos.resx">
+      <DependentUpon>Frm_Transaccion_Recibos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Escritorio.resx">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
