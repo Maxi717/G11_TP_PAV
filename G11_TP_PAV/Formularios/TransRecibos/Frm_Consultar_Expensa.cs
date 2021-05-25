@@ -14,6 +14,7 @@ namespace G11_TP_PAV.Formularios.TransRecibos
     public partial class Frm_Consultar_Expensa : Form
     {
         public string id_depto { get; set; }
+        public string num_rec { get; set; }
 
         public Frm_Consultar_Expensa()
         {
@@ -23,7 +24,10 @@ namespace G11_TP_PAV.Formularios.TransRecibos
         private void Frm_Consultar_Expensa_Load(object sender, EventArgs e)
         {
             NE_Transaccion_Recibos trans = new NE_Transaccion_Recibos();
-            MostrarDatos(trans.GetAll(id_depto));
+            DataTable tabla = trans.GetFecha(num_rec);
+            string mes = tabla.Rows[0]["mes"].ToString();
+            string anio = tabla.Rows[0]["anio"].ToString();
+            MostrarDatos(trans.GetAll(id_depto, mes, anio));
         }
 
         private void MostrarDatos(DataTable tabla)
@@ -44,6 +48,11 @@ namespace G11_TP_PAV.Formularios.TransRecibos
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void grid_expensas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -39,6 +39,7 @@ namespace G11_TP_PAV.Formularios.TransRecibos
         {
             Frm_Consultar_Expensa consultar = new Frm_Consultar_Expensa();
             consultar.id_depto = cmb_departamentos.SelectedValue.ToString();
+            consultar.num_rec = cmb_fecha.SelectedValue.ToString();
             consultar.ShowDialog();
         }
 

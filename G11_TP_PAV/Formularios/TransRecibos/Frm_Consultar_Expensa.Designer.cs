@@ -56,6 +56,7 @@
             this.grid_expensas.ReadOnly = true;
             this.grid_expensas.Size = new System.Drawing.Size(649, 74);
             this.grid_expensas.TabIndex = 4;
+            this.grid_expensas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_expensas_CellContentClick);
             // 
             // btn_aceptar
             // 
