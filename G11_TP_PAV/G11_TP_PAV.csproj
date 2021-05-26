@@ -315,6 +315,12 @@
     <Compile Include="Formularios\Tipos de Moneda\Frm_Modificar_TipoMoneda.designer.cs">
       <DependentUpon>Frm_Modificar_TipoMoneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.Designer.cs">
+      <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Escritorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +329,7 @@
     </Compile>
     <Compile Include="Negocio\NE_Barrios.cs" />
     <Compile Include="Negocio\NE_Clientes.cs" />
+    <Compile Include="Negocio\NE_ContratoAlquiler.cs" />
     <Compile Include="Negocio\NE_departamentos.cs" />
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
@@ -347,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Modificar_Clientes.resx">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.resx">
+      <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Duenios\Frm_ABM_Duenios.resx">
       <DependentUpon>Frm_ABM_Duenios.cs</DependentUpon>
