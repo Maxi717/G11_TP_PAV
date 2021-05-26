@@ -17,8 +17,7 @@ namespace G11_TP_PAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Frm_Escritorio());
-            Application.Run(new Formularios.TransRecibos.Frm_Transaccion_Recibos());
+            Application.Run(new Frm_Escritorio());
         }
     }
 }

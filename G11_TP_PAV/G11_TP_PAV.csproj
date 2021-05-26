@@ -344,6 +344,7 @@
     <Compile Include="Negocio\NE_Publicidades.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
     <Compile Include="Negocio\NE_Transaccion_Recibos.cs" />
+    <Compile Include="Negocio\NE_TransRecibos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Barrios\Frm_ABMC_Barrio.resx">

@@ -11,6 +11,7 @@ using G11_TP_PAV.Formularios;
 using G11_TP_PAV.Formularios.Dueños;
 using G11_TP_PAV.Formularios.Escribanos;
 using G11_TP_PAV.Formularios.Tipo_Moneda;
+using G11_TP_PAV.Formularios.TransRecibos;
 
 namespace G11_TP_PAV
 {
@@ -110,6 +111,14 @@ namespace G11_TP_PAV
             this.Hide();
             Frm_Gastos gasto = new Frm_Gastos();
             gasto.ShowDialog();
+            this.Show();
+        }
+
+        private void expensasRecibosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Transaccion_Recibos transRec = new Frm_Transaccion_Recibos();
+            transRec.ShowDialog();
             this.Show();
         }
     }

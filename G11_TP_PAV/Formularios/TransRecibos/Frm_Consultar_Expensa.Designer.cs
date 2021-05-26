@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.grid_expensas = new System.Windows.Forms.DataGridView();
-            this.btn_aceptar = new System.Windows.Forms.Button();
             this.piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.denominacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid_expensas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,16 +57,6 @@
             this.grid_expensas.Size = new System.Drawing.Size(649, 74);
             this.grid_expensas.TabIndex = 4;
             this.grid_expensas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_expensas_CellContentClick);
-            // 
-            // btn_aceptar
-            // 
-            this.btn_aceptar.Location = new System.Drawing.Point(505, 141);
-            this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(103, 23);
-            this.btn_aceptar.TabIndex = 5;
-            this.btn_aceptar.Text = "Aceptar";
-            this.btn_aceptar.UseVisualStyleBackColor = true;
-            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // piso
             // 
@@ -108,6 +98,16 @@
             this.id_departamento.ReadOnly = true;
             this.id_departamento.Width = 150;
             // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(505, 141);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(103, 23);
+            this.btn_aceptar.TabIndex = 5;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
             // Frm_Consultar_Expensa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +116,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.grid_expensas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_Consultar_Expensa";
