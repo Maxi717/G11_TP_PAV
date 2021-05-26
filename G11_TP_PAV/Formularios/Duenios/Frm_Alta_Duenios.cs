@@ -75,5 +75,10 @@ namespace G11_TP_PAV.Formularios.Dueños
         {
             this.Close();
         }
+
+        private void btn_cancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

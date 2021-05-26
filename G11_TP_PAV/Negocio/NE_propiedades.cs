@@ -11,24 +11,24 @@ namespace G11_TP_PAV.Negocio
 {
     class NE_Propiedades
     {
-
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        BE_Transaccional _BD_T = new BE_Transaccional();
 
         public DataTable RecuperarTodos()
         {
-            string sql = @"SELECT designacion_catastral, calle, numero, piso, departamento, barrios.nombre as 'barrio', tipos_propiedad.nombre as 'tipo' "
+            string sql = @"SELECT designacion_catastral, calle, numero, piso, departamento, barrios.nombre as 'barrio', tipo_propiedad.nombre as 'tipo' "
                         + "FROM propiedades INNER JOIN barrios ON propiedades.id_barrio = barrios.id_barrio "
-                        + "INNER JOIN tipos_propiedad ON propiedades.id_tipo_propiedad = tipos_propiedad.id_tipo_propiedad";
+                        + "INNER JOIN tipo_propiedad ON propiedades.id_tipo_propiedad = tipo_propiedad.id_tipo_propiedad";
             return _BD.Consulta(sql);
         }
 
         public DataTable RecuperarDesignacion(string designacion)
         {
             string sql = @"SELECT designacion_catastral, calle, numero, piso, departamento,"
-                        + "propiedades.id_barrio, propiedades.id_tipo_propiedad, barrios.nombre as 'barrio', tipos_propiedad.nombre as 'tipo' "
+                        + "propiedades.id_barrio, propiedades.id_tipo_propiedad, barrios.nombre as 'barrio', tipo_propiedad.nombre as 'tipo' "
                         + "FROM propiedades "
                         + "INNER JOIN barrios ON propiedades.id_barrio = barrios.id_barrio "
-                        + "INNER JOIN tipos_propiedad ON propiedades.id_tipo_propiedad = tipos_propiedad.id_tipo_propiedad "
+                        + "INNER JOIN tipo_propiedad ON propiedades.id_tipo_propiedad = tipo_propiedad.id_tipo_propiedad "
                         + "WHERE designacion_catastral =" + designacion.ToString();
             return _BD.Consulta(sql);
         }
@@ -87,5 +87,31 @@ namespace G11_TP_PAV.Negocio
                         + " WHERE designacion_catastral = " + designacion;
             _BD.Consulta(sql);
         }
+
+        public void agregarAsociacion(string designacion, string documento, string tipo_documento)
+        {
+            string sql = @"INSERT INTO asociaciones"
+                         + " VALUES (" + designacion
+                         + ", " + documento
+                         + ", " + tipo_documento + ")";
+            _BD_T.Consulta(sql);
+        }
+
+        public DataTable recuperarAsociaciones(string designacion)
+        {
+            string sql = "SELECT documento, tipo_documento FROM asociaciones where designacion_catastral = " + designacion;
+            return _BD_T.Consulta(sql);
+        }
+
+        public void borrar_asociaciones(string designacion)
+        {
+            _BD_T.Consulta("DELETE FROM asociaciones WHERE designacion_catastral = " + designacion);
+        }
+
+        public void borrar_asociacion(string designacion, string documento, string tipo_documento)
+        {
+            _BD_T.Consulta("DELETE FROM asociaciones WHERE designacion_catastral = " + designacion + " AND documento = " + documento + " AND tipo_documento = " + tipo_documento);
+        }
+
     }
 }

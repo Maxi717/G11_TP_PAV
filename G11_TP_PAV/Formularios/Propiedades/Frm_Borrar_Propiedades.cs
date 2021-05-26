@@ -33,9 +33,29 @@ namespace G11_TP_PAV.Formularios
             txt_tipo.Text = tabla.Rows[0]["tipo"].ToString();
         }
 
+        private void CargarGrillaAsociaciones(DataTable tabla)
+        {
+            DataTable tablaDuenio = new DataTable();
+            NE_duenios duenio = new NE_duenios();
+
+            grid_duenios.Rows.Clear();
+            for (int i = 0; i < tabla.Rows.Count; i++)
+            {
+                tablaDuenio = duenio.RecuperarDocumento(tabla.Rows[i]["documento"].ToString(), tabla.Rows[i]["tipo_documento"].ToString());
+                grid_duenios.Rows.Add();
+                grid_duenios.Rows[i].Cells[0].Value = tablaDuenio.Rows[0]["numero_documento"].ToString();
+                grid_duenios.Rows[i].Cells[1].Value = tablaDuenio.Rows[0]["id_tipo_documento"].ToString();
+                grid_duenios.Rows[i].Cells[2].Value = tablaDuenio.Rows[0]["tipo_documento_nombre"].ToString();
+                grid_duenios.Rows[i].Cells[3].Value = tablaDuenio.Rows[0]["nombre"].ToString();
+                grid_duenios.Rows[i].Cells[4].Value = tablaDuenio.Rows[0]["telefono"].ToString();
+                grid_duenios.Rows[i].Cells[5].Value = tablaDuenio.Rows[0]["domicilio"].ToString();
+            }
+        }
+
         private void Frm_Borrar_Propiedades_Load(object sender, EventArgs e)
         {
             MostrarDatos(propiedad.RecuperarDesignacion(designacionCatastral));
+            CargarGrillaAsociaciones(propiedad.recuperarAsociaciones(designacionCatastral));
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)
@@ -43,6 +63,7 @@ namespace G11_TP_PAV.Formularios
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 propiedad.borrar(designacionCatastral);
+                propiedad.borrar_asociaciones(designacionCatastral);
                 MessageBox.Show("Se borró correctamente la propiedad.");
                 this.Close();
             }
