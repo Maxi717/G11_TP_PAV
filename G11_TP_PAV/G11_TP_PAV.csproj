@@ -111,6 +111,12 @@
     <Compile Include="Formularios\Clientes\Frm_Modificar_Clientes.designer.cs">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.Designer.cs">
+      <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Duenios\Frm_ABM_Duenios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Modificar_Clientes.resx">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_CompraVenta.resx">
+      <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Duenios\Frm_ABM_Duenios.resx">
       <DependentUpon>Frm_ABM_Duenios.cs</DependentUpon>
