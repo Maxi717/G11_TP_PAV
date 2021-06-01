@@ -39,12 +39,14 @@ namespace G11_TP_PAV
             contrato.Pp_monto = txt_monto.Text;
             contrato.Pp_porcentaje = cmb_tipoMoneda.SelectedValue.ToString();
             contrato.Pp_propiedad = cmb_Propiedad.SelectedValue.ToString();
-            contrato.Pp_cliente = cmb_escribano.SelectedValue.ToString();
+            contrato.Pp_cliente = cmb_cliente.SelectedValue.ToString();
             contrato.Pp_escribano = cmb_escribano.SelectedValue.ToString();
 
-            contrato.InsertarContratoAlquiler();
-            contrato.InsertarFactura();
-            MessageBox.Show("Se realizo el alta correctamente.");
+                contrato.InsertarContratoAlquiler();
+                contrato.InsertarFactura();
+
+
+
         }
 
         public void DT_inicio1_ValueChanged(object sender, EventArgs e)
@@ -82,6 +84,15 @@ namespace G11_TP_PAV
 
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txt_monto.Clear();
+            cmb_tipoMoneda.SelectedIndex = -1;
+            cmb_Propiedad.SelectedIndex = -1;
+            cmb_cliente.SelectedIndex = -1;
+            cmb_escribano.SelectedIndex = -1;
         }
     }
 }

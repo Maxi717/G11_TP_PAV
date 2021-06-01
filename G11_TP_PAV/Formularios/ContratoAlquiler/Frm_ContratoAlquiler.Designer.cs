@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.DataGrid = new System.Windows.Forms.DataGridView();
+            this.NroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaDePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@
             this.cmb_Propiedad = new G11_TP_PAV.Clases.ComboBox1();
             this.cmb_tipoMoneda = new G11_TP_PAV.Clases.ComboBox1();
             this.txt_monto = new G11_TP_PAV.Clases.TextBox01();
-            this.NroFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Propiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDePago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,36 @@
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.Size = new System.Drawing.Size(549, 259);
             this.DataGrid.TabIndex = 0;
+            // 
+            // NroFactura
+            // 
+            this.NroFactura.HeaderText = "NroFactura";
+            this.NroFactura.Name = "NroFactura";
+            // 
+            // Propiedad
+            // 
+            this.Propiedad.HeaderText = "Propiedad";
+            this.Propiedad.Name = "Propiedad";
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            // 
+            // Comision
+            // 
+            this.Comision.HeaderText = "Comision";
+            this.Comision.Name = "Comision";
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "MontoComision";
+            this.Monto.Name = "Monto";
+            // 
+            // FechaDePago
+            // 
+            this.FechaDePago.HeaderText = "FechaDePago";
+            this.FechaDePago.Name = "FechaDePago";
             // 
             // label1
             // 
@@ -169,6 +199,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Resetear Campos";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // DT_inicio
             // 
@@ -285,36 +316,6 @@
             this.txt_monto.Pp_validable = false;
             this.txt_monto.Size = new System.Drawing.Size(205, 23);
             this.txt_monto.TabIndex = 3;
-            // 
-            // NroFactura
-            // 
-            this.NroFactura.HeaderText = "NroFactura";
-            this.NroFactura.Name = "NroFactura";
-            // 
-            // Propiedad
-            // 
-            this.Propiedad.HeaderText = "Propiedad";
-            this.Propiedad.Name = "Propiedad";
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // Comision
-            // 
-            this.Comision.HeaderText = "Comision";
-            this.Comision.Name = "Comision";
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "MontoComision";
-            this.Monto.Name = "Monto";
-            // 
-            // FechaDePago
-            // 
-            this.FechaDePago.HeaderText = "FechaDePago";
-            this.FechaDePago.Name = "FechaDePago";
             // 
             // Frm_ContratoAlquiler
             // 

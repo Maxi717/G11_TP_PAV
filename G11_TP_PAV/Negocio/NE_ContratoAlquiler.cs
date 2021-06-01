@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace G11_TP_PAV.Negocio
 {
-    class NE_ContratoAlquiler
+    class  NE_ContratoAlquiler
     {
         public string Pp_id_contrato { get; set; }
         public string Pp_fechaInicio { get; set; }
@@ -33,18 +33,23 @@ namespace G11_TP_PAV.Negocio
         }
         public void InsertarContratoAlquiler()
         {
-            string sqlInsertar = "INSERT INTO contratoAlquiler (fecha_inicio,duracion_contrato,monto,id_tipo_moneda,designacion_catatral,documento) VALUES('" + Pp_fechaInicio + "' , '" + Pp_duracionContrato + "' , '" + Pp_monto + "' , '" + Pp_porcentaje + "', '" + Pp_propiedad + "', '" + Pp_cliente +  "' )";
 
-            _BD.Insertar(sqlInsertar);
 
         }
 
         public void InsertarFactura() {
-            string sqlSelect = "select * from contratoAlquiler where id_contratoALQ in(select MAX(id_contratoALQ) as ID from contratoAlquiler )";
-            tabla =_BD.Ejecutar_Select(sqlSelect);
-            Pp_id_contrato = tabla.Rows[0]["id_contratoALQ"].ToString();
-            string sqlInsertar = "INSERT INTO facturas_comisiones (comision,monto,fecha_pago,matricula_escribano,contrato_alquiler) VALUES('" + Pp_porcentaje + "' , '" + Pp_monto + "' , '" + Pp_fechaInicio + "' , '" + Pp_escribano + "', '" + Pp_id_contrato + "' )";
-            _BD.Insertar(sqlInsertar);
+            
+                string sqlInsertarCont = "INSERT INTO contratoAlquiler (fecha_inicio,duracion_contrato,monto,id_tipo_moneda,designacion_catatral,documento) VALUES('" + Pp_fechaInicio + "' , '" + Pp_duracionContrato + "' , '" + Pp_monto + "' , '" + Pp_porcentaje + "', '" + Pp_propiedad + "', '" + Pp_cliente + "' )";
+
+                _BD.Insertar(sqlInsertarCont);
+
+                string sqlSelect = "select * from contratoAlquiler where id_contratoALQ in(select MAX(id_contratoALQ) as ID from contratoAlquiler )";
+                tabla = _BD.Ejecutar_Select(sqlSelect);
+                Pp_id_contrato = tabla.Rows[0]["id_contratoALQ"].ToString();
+                string sqlInsertar = "INSERT INTO facturas_comisiones (comision,monto,fecha_pago,matricula_escribano,contrato_alquiler) VALUES('" + Pp_porcentaje + "' , '" + Pp_monto + "' , '" + Pp_fechaInicio + "' , '" + Pp_escribano + "', '" + Pp_id_contrato + "' )";
+                _BD.Insertar(sqlInsertar);
+
+            _BD.Validar();
         }
     }
 }
