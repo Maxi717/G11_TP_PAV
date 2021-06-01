@@ -62,12 +62,14 @@ namespace G11_TP_PAV.Formularios
                 grid_duenios.Rows[i].Cells[3].Value = tablaDuenio.Rows[0]["nombre"].ToString();
                 grid_duenios.Rows[i].Cells[4].Value = tablaDuenio.Rows[0]["telefono"].ToString();
                 grid_duenios.Rows[i].Cells[5].Value = tablaDuenio.Rows[0]["domicilio"].ToString();
+                grid_duenios.Rows[i].Cells[6].Value = "Viejo";
+
             }
         }
 
         private void AddGrilla(DataTable tabla)
         {
-            grid_duenios.Rows.Add(tabla.Rows[0]["numero_documento"].ToString(), tabla.Rows[0]["id_tipo_documento"].ToString(), tabla.Rows[0]["tipo_documento_nombre"].ToString(), tabla.Rows[0]["nombre"].ToString(), tabla.Rows[0]["telefono"].ToString(), tabla.Rows[0]["domicilio"].ToString());
+            grid_duenios.Rows.Add(tabla.Rows[0]["numero_documento"].ToString(), tabla.Rows[0]["id_tipo_documento"].ToString(), tabla.Rows[0]["tipo_documento_nombre"].ToString(), tabla.Rows[0]["nombre"].ToString(), tabla.Rows[0]["telefono"].ToString(), tabla.Rows[0]["domicilio"].ToString(), "Nuevo");
         }
 
 
@@ -120,6 +122,24 @@ namespace G11_TP_PAV.Formularios
                 propiedad.modificarCompleto(designacionCatastral, txt_calle.Text, txt_numero.Text, txt_piso.Text, txt_departamento.Text, cmb_barrio.SelectedValue.ToString(), cmb_tipo_propiedad.SelectedValue.ToString());
                 this.Close();
             }
+
+            for (int i = 0; i < grid_duenios.Rows.Count; i++)
+            {
+                if (grid_duenios.Rows[i].Visible == true)
+                {
+                    tabla = propiedad.recuperarAsociaciones(txt_designacion.Text, grid_duenios.Rows[i].Cells[0].Value.ToString(), grid_duenios.Rows[i].Cells[1].Value.ToString());
+                    if (tabla.Rows.Count == 0)
+                    {
+                        propiedad.agregarAsociacion(txt_designacion.Text, grid_duenios.Rows[i].Cells[0].Value.ToString(), grid_duenios.Rows[i].Cells[1].Value.ToString());
+                    }
+                }
+                else
+                {
+                    propiedad.borrar_asociacion(txt_designacion.Text, grid_duenios.Rows[i].Cells[0].Value.ToString(), grid_duenios.Rows[i].Cells[1].Value.ToString());
+                }
+            }
+            this.Close();
+
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -171,8 +191,7 @@ namespace G11_TP_PAV.Formularios
 
         private void btn_sacar_Click(object sender, EventArgs e)
         {
-            propiedad.borrar_asociacion(designacionCatastral, documento_seleccionado, tipo_documento_seleccionado);
-            CargarGrillaAsociaciones(propiedad.recuperarAsociaciones(designacionCatastral));
+            grid_duenios.CurrentRow.Visible = false;
         }
     }
 }

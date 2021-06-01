@@ -171,15 +171,7 @@ namespace G11_TP_PAV.Formularios
 
         private void btn_sacar_Click(object sender, EventArgs e)
         {
-            //grid_duenios.Rows[0].Delete;
-            MessageBox.Show(grid_duenios.Rows.Count.ToString());
-            for (int i = 0; i < grid_duenios.Rows.Count; i++)
-            {
-                MessageBox.Show(txt_designacion.Text);
-                MessageBox.Show(grid_duenios.Rows[i].Cells[0].Value.ToString());
-                MessageBox.Show(grid_duenios.Rows[i].Cells[1].Value.ToString());
-            }
-
+            grid_duenios.Rows.RemoveAt(grid_duenios.CurrentCell.RowIndex);
         }
     }
 }

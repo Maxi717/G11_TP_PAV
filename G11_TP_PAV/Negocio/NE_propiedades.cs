@@ -103,7 +103,14 @@ namespace G11_TP_PAV.Negocio
             return _BD_T.Consulta(sql);
         }
 
-        public void borrar_asociaciones(string designacion)
+        public DataTable recuperarAsociaciones(string designacion, string documento, string tipo_documento)
+        {
+            string sql = "SELECT * FROM asociaciones where designacion_catastral = " + designacion + " AND documento = " + documento + " AND tipo_documento = " + tipo_documento;
+            return _BD_T.Consulta(sql);
+        }
+
+
+        public void borrar_asociacion(string designacion)
         {
             _BD_T.Consulta("DELETE FROM asociaciones WHERE designacion_catastral = " + designacion);
         }

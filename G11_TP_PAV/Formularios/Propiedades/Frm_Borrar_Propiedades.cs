@@ -63,7 +63,7 @@ namespace G11_TP_PAV.Formularios
             if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 propiedad.borrar(designacionCatastral);
-                propiedad.borrar_asociaciones(designacionCatastral);
+                propiedad.borrar_asociacion(designacionCatastral);
                 MessageBox.Show("Se borró correctamente la propiedad.");
                 this.Close();
             }
