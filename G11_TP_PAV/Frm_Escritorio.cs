@@ -126,8 +126,8 @@ namespace G11_TP_PAV
         private void contratoAlquilerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Frm_contrat transRec = new Frm_Transaccion_Recibos();
-            transRec.ShowDialog();
+            Frm_ContratoAlquiler contrato = new Frm_ContratoAlquiler();
+            contrato.ShowDialog();
             this.Show();
         }
     }

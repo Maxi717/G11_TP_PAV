@@ -90,7 +90,7 @@ namespace G11_TP_PAV.Formularios.EmaContratoAlquiler
         {
             txt_monto.Clear();
             cmb_tipoMoneda.SelectedIndex = -1;
-            G11_TP_PAV.cmb_Propiedad.SelectedIndex = -1;
+            cmb_Propiedad.SelectedIndex = -1;
             cmb_cliente.SelectedIndex = -1;
             cmb_escribano.SelectedIndex = -1;
         }

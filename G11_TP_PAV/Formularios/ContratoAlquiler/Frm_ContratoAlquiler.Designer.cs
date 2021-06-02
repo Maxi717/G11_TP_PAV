@@ -1,4 +1,4 @@
-﻿namespace G11_TP_PAV
+﻿namespace G11_TP_PAV.Formularios.EmaContratoAlquiler
 {
     partial class Frm_ContratoAlquiler
     {

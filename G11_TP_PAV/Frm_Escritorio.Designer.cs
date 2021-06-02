@@ -43,13 +43,13 @@
             this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.expensasRecibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contratoAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contratoAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -182,6 +182,13 @@
             this.expensasRecibosToolStripMenuItem.Text = "Expensas/Recibos";
             this.expensasRecibosToolStripMenuItem.Click += new System.EventHandler(this.expensasRecibosToolStripMenuItem_Click);
             // 
+            // contratoAlquilerToolStripMenuItem
+            // 
+            this.contratoAlquilerToolStripMenuItem.Name = "contratoAlquilerToolStripMenuItem";
+            this.contratoAlquilerToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.contratoAlquilerToolStripMenuItem.Text = "Contrato Alquiler";
+            this.contratoAlquilerToolStripMenuItem.Click += new System.EventHandler(this.contratoAlquilerToolStripMenuItem_Click);
+            // 
             // listadosToolStripMenuItem
             // 
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
@@ -224,13 +231,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(437, 568);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // contratoAlquilerToolStripMenuItem
-            // 
-            this.contratoAlquilerToolStripMenuItem.Name = "contratoAlquilerToolStripMenuItem";
-            this.contratoAlquilerToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.contratoAlquilerToolStripMenuItem.Text = "Contrato Alquiler";
-            this.contratoAlquilerToolStripMenuItem.Click += new System.EventHandler(this.contratoAlquilerToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
