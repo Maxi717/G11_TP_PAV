@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.propiedadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -169,7 +170,8 @@
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.expensasRecibosToolStripMenuItem,
-            this.contratoAlquilerToolStripMenuItem});
+            this.contratoAlquilerToolStripMenuItem,
+            this.propiedadesToolStripMenuItem1});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
@@ -232,6 +234,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // propiedadesToolStripMenuItem1
+            // 
+            this.propiedadesToolStripMenuItem1.Name = "propiedadesToolStripMenuItem1";
+            this.propiedadesToolStripMenuItem1.Size = new System.Drawing.Size(203, 26);
+            this.propiedadesToolStripMenuItem1.Text = "Propiedades";
+            this.propiedadesToolStripMenuItem1.Click += new System.EventHandler(this.propiedadesToolStripMenuItem1_Click);
+            // 
             // Frm_Escritorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,6 +290,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem expensasRecibosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contratoAlquilerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem propiedadesToolStripMenuItem1;
     }
 }
 

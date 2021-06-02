@@ -33,11 +33,6 @@
             this.btn_Refrescar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.grid_propiedades = new System.Windows.Forms.DataGridView();
-            this.Btn_Buscar = new System.Windows.Forms.Button();
-            this.Lbl_designacion_catastral = new System.Windows.Forms.Label();
-            this.Txt_Designacion_Catastral = new System.Windows.Forms.TextBox();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.btn_eliminar = new System.Windows.Forms.Button();
             this.designacion_catastral = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,11 @@
             this.barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoPropiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duenios_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Lbl_designacion_catastral = new System.Windows.Forms.Label();
+            this.Txt_Designacion_Catastral = new System.Windows.Forms.TextBox();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_propiedades)).BeginInit();
             this.SuspendLayout();
@@ -117,55 +117,6 @@
             this.grid_propiedades.TabIndex = 3;
             this.grid_propiedades.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_propiedades_CellClick);
             // 
-            // Btn_Buscar
-            // 
-            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Buscar.Location = new System.Drawing.Point(272, 58);
-            this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(75, 28);
-            this.Btn_Buscar.TabIndex = 2;
-            this.Btn_Buscar.Text = "Buscar";
-            this.Btn_Buscar.UseVisualStyleBackColor = true;
-            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
-            // 
-            // Lbl_designacion_catastral
-            // 
-            this.Lbl_designacion_catastral.AutoSize = true;
-            this.Lbl_designacion_catastral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_designacion_catastral.Location = new System.Drawing.Point(20, 41);
-            this.Lbl_designacion_catastral.Name = "Lbl_designacion_catastral";
-            this.Lbl_designacion_catastral.Size = new System.Drawing.Size(146, 17);
-            this.Lbl_designacion_catastral.TabIndex = 0;
-            this.Lbl_designacion_catastral.Text = "Designacion Catastral";
-            // 
-            // Txt_Designacion_Catastral
-            // 
-            this.Txt_Designacion_Catastral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_Designacion_Catastral.Location = new System.Drawing.Point(23, 61);
-            this.Txt_Designacion_Catastral.Name = "Txt_Designacion_Catastral";
-            this.Txt_Designacion_Catastral.Size = new System.Drawing.Size(243, 23);
-            this.Txt_Designacion_Catastral.TabIndex = 1;
-            // 
-            // btn_agregar
-            // 
-            this.btn_agregar.Location = new System.Drawing.Point(35, 423);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(288, 57);
-            this.btn_agregar.TabIndex = 10;
-            this.btn_agregar.Text = "Agregar";
-            this.btn_agregar.UseVisualStyleBackColor = true;
-            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
-            // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Location = new System.Drawing.Point(700, 423);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(271, 57);
-            this.btn_eliminar.TabIndex = 11;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
             // designacion_catastral
             // 
             this.designacion_catastral.HeaderText = "Designacion Catastral";
@@ -220,6 +171,55 @@
             this.duenios_cantidad.ReadOnly = true;
             this.duenios_cantidad.Width = 65;
             // 
+            // Btn_Buscar
+            // 
+            this.Btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Buscar.Location = new System.Drawing.Point(272, 58);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(75, 28);
+            this.Btn_Buscar.TabIndex = 2;
+            this.Btn_Buscar.Text = "Buscar";
+            this.Btn_Buscar.UseVisualStyleBackColor = true;
+            this.Btn_Buscar.Click += new System.EventHandler(this.Btn_Buscar_Click);
+            // 
+            // Lbl_designacion_catastral
+            // 
+            this.Lbl_designacion_catastral.AutoSize = true;
+            this.Lbl_designacion_catastral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_designacion_catastral.Location = new System.Drawing.Point(20, 41);
+            this.Lbl_designacion_catastral.Name = "Lbl_designacion_catastral";
+            this.Lbl_designacion_catastral.Size = new System.Drawing.Size(146, 17);
+            this.Lbl_designacion_catastral.TabIndex = 0;
+            this.Lbl_designacion_catastral.Text = "Designacion Catastral";
+            // 
+            // Txt_Designacion_Catastral
+            // 
+            this.Txt_Designacion_Catastral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Designacion_Catastral.Location = new System.Drawing.Point(23, 61);
+            this.Txt_Designacion_Catastral.Name = "Txt_Designacion_Catastral";
+            this.Txt_Designacion_Catastral.Size = new System.Drawing.Size(243, 23);
+            this.Txt_Designacion_Catastral.TabIndex = 1;
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Location = new System.Drawing.Point(35, 423);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(288, 57);
+            this.btn_agregar.TabIndex = 10;
+            this.btn_agregar.Text = "Agregar";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Location = new System.Drawing.Point(700, 423);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(271, 57);
+            this.btn_eliminar.TabIndex = 11;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // Frm_AMB_Propiedades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +229,7 @@
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.BTN_Modificacion);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_AMB_Propiedades";

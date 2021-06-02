@@ -130,5 +130,13 @@ namespace G11_TP_PAV
             contrato.ShowDialog();
             this.Show();
         }
+
+        private void propiedadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_AMB_Propiedades prop = new Frm_AMB_Propiedades();
+            prop.ShowDialog();
+            this.Show();
+        }
     }
 }
