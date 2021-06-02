@@ -101,7 +101,7 @@ namespace G11_TP_PAV.Formularios.TransRecibos
                 }
                 string id_depto = cmb_departamentos_R.SelectedValue.ToString();
                 NE_TransRecibos recibo = new NE_TransRecibos();
-                double gastosEdificio = recibo.GastosEdificio(id_edificio);
+                double gastosEdificio = recibo.GastosEdificio(id_edificio, cmb_meses.SelectedValue.ToString(), anio.ToString());
                 double superficieEdificio = recibo.SuperficieEdificio(id_edificio);
                 double superficieDepto = recibo.SuperficieDepto(id_depto);
                 //Calculamos el monto
@@ -109,8 +109,10 @@ namespace G11_TP_PAV.Formularios.TransRecibos
                 try
                 {
                     int nro_expensa = recibo.CalcularNroExpensa();
-                    recibo.AltaExpensa(nro_expensa.ToString(), montoExpensa.ToString(), id_depto);
-                    recibo.AltaRecibo(recibo.CalcularNroRecibo().ToString(), mes, anio.ToString(), nro_expensa.ToString());
+                    string primerSQL = recibo.AltaExpensa(nro_expensa.ToString(), montoExpensa.ToString(), id_depto);
+                    string segundoSQL = recibo.AltaRecibo(recibo.CalcularNroRecibo().ToString(), mes, anio.ToString(), nro_expensa.ToString());
+                    List<string> sqls = new List<string>() { primerSQL, segundoSQL };
+                    recibo.ejecutarTransRecibo(sqls);
                     MessageBox.Show("Recibo creado con exito, consultelo");
                 }
                 catch (Exception ex) { MessageBox.Show("Error al crear recibo." + ex.ToString()); }

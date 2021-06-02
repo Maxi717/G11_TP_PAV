@@ -24,27 +24,38 @@ namespace G11_TP_PAV.Negocio
             return _BD.Consulta(sql);
         }
 
-        public void AltaRecibo(string numero_recibo, string mes_, string anio, string numero_expensa)
+        public string AltaRecibo(string numero_recibo, string mes_, string anio, string numero_expensa)
         {
             string sql = "INSERT INTO recibos (numero_recibo, mes, anio, numero_expensa)" +
                 "VALUES " +
                 "("+ numero_recibo+ ", '"+ mes_ +"', " + anio + ", "+ numero_expensa +")";
-            _BD.Insertar(sql);
+            return sql;
         }
 
-        public void AltaExpensa(string numero, string importe, string id_depto)
+        public string AltaExpensa(string numero, string importe, string id_depto)
         {
             string sql = "INSERT INTO expensas (numero_expensa, importe, id_departamento)" +
              "VALUES " +
             "(" + numero + ", " + importe + ", " + id_depto + ")";
-            _BD.Insertar(sql);
-        }
+            return sql;
+         }
 
-        public double GastosEdificio(string id_edificio)
+        public void ejecutarTransRecibo(List<string> comandos)
         {
-            DataTable gastosEd = _BD.Consulta("SELECT SUM(importe) FROM GASTOS WHERE id_edificio = " + id_edificio);
-            double gastoTotal = double.Parse(gastosEd.Rows[0][0].ToString());
-            return gastoTotal;
+            _BD.Transaccion(comandos);
+        }
+            
+
+        public double GastosEdificio(string id_edificio, string mes, string anio)
+        {
+            DataTable gastosEd = _BD.Consulta("SELECT SUM(importe) FROM GASTOS WHERE id_edificio = " + id_edificio +
+                "AND YEAR(fecha) = "+ anio + " AND MONTH(fecha) = "+ mes);
+            if (gastosEd.Rows[0][0].ToString() != "")
+            {
+                double gastoTotal = double.Parse(gastosEd.Rows[0][0].ToString());
+                return gastoTotal;
+            }
+            else { return double.Parse("0"); }
         }
 
         public double SuperficieEdificio(string id_edificio)
