@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_numero_documento = new System.Windows.Forms.TextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_telefono = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.cmb_tipo_documento = new G11_TP_PAV.Clases.ComboBoxHeredada();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
+            this.txt_numero_documento = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,14 +62,6 @@
             this.label2.Size = new System.Drawing.Size(174, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Numero de Documento";
-            // 
-            // txt_numero_documento
-            // 
-            this.txt_numero_documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_numero_documento.Location = new System.Drawing.Point(207, 77);
-            this.txt_numero_documento.Name = "txt_numero_documento";
-            this.txt_numero_documento.Size = new System.Drawing.Size(100, 26);
-            this.txt_numero_documento.TabIndex = 2;
             // 
             // txt_nombre
             // 
@@ -155,6 +147,7 @@
             this.btn_cancelar.TabIndex = 18;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click_1);
             // 
             // btn_aceptar
             // 
@@ -165,6 +158,15 @@
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // txt_numero_documento
+            // 
+            this.txt_numero_documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numero_documento.Location = new System.Drawing.Point(207, 77);
+            this.txt_numero_documento.MaxLength = 8;
+            this.txt_numero_documento.Name = "txt_numero_documento";
+            this.txt_numero_documento.Size = new System.Drawing.Size(100, 26);
+            this.txt_numero_documento.TabIndex = 2;
             // 
             // Frm_Alta_Duenios
             // 
@@ -196,7 +198,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_numero_documento;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_telefono;
@@ -207,5 +208,6 @@
         private Clases.ComboBoxHeredada cmb_tipo_documento;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.TextBox txt_numero_documento;
     }
 }

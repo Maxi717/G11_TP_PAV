@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
     <Compile Include="Clases\BE_Edificios.cs" />
+    <Compile Include="Clases\BE_Transaccional.cs" />
     <Compile Include="Clases\ComboBox1.cs">
       <SubType>Component</SubType>
     </Compile>
