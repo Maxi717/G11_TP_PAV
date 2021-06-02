@@ -16,9 +16,9 @@ namespace G11_TP_PAV.Negocio
 
         public DataTable RecuperarTodos()
         {
-            string sql = @"SELECT designacion_catastral, calle, numero, piso, departamento, barrios.nombre as 'barrio', tipos_propiedad.nombre as 'tipo' "
+            string sql = @"SELECT designacion_catastral, calle, numero, piso, departamento, barrios.nombre as 'barrio', tipo_propiedad.nombre as 'tipo' "
                         + "FROM propiedades INNER JOIN barrios ON propiedades.id_barrio = barrios.id_barrio "
-                        + "INNER JOIN tipos_propiedad ON propiedades.id_tipo_propiedad = tipos_propiedad.id_tipo_propiedad";
+                        + "INNER JOIN tipo_propiedad ON propiedades.id_tipo_propiedad = tipo_propiedad.id_tipo_propiedad";
             return _BD.Consulta(sql);
         }
 

@@ -32,24 +32,17 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBoxHeredado1 = new G11_TP_PAV.Clases.MaskedTextBoxHeredado();
-            this.maskedTextBoxHeredado2 = new G11_TP_PAV.Clases.MaskedTextBoxHeredado();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBoxHeredado3 = new G11_TP_PAV.Clases.MaskedTextBoxHeredado();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxHeredadaE1 = new G11_TP_PAV.Clases.ComboBoxHeredadaE();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxHeredado1 = new G11_TP_PAV.Clases.TextBoxHeredado();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_DesignCatastral = new System.Windows.Forms.Button();
+            this.btn_Cliente = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBoxHeredado2 = new G11_TP_PAV.Clases.TextBoxHeredado();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Escribano = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBoxHeredado3 = new G11_TP_PAV.Clases.TextBoxHeredado();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_FechaActual = new System.Windows.Forms.Button();
+            this.gdr_CompraVenta = new System.Windows.Forms.DataGridView();
             this.Id_CompraVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,10 +50,17 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Moneda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Factura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_RegistrarVenta = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txt_Escribano = new G11_TP_PAV.Clases.TextBoxHeredado();
+            this.txt_Cliente = new G11_TP_PAV.Clases.TextBoxHeredado();
+            this.txt_DesignCatastral = new G11_TP_PAV.Clases.TextBoxHeredado();
+            this.cmb_TipoMoneda = new G11_TP_PAV.Clases.ComboBoxHeredadaE();
+            this.txt_Monto = new G11_TP_PAV.Clases.MaskedTextBoxHeredado();
+            this.txt_FechaPago = new G11_TP_PAV.Clases.MaskedTextBoxHeredado();
+            this.txt_FechaActual = new G11_TP_PAV.Clases.MaskedTextBoxHeredado();
+            ((System.ComponentModel.ISupportInitialize)(this.gdr_CompraVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,34 +91,6 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label3.TabIndex = 2;
             this.label3.Text = "Fecha Actual:";
             // 
-            // maskedTextBoxHeredado1
-            // 
-            this.maskedTextBoxHeredado1.Location = new System.Drawing.Point(185, 67);
-            this.maskedTextBoxHeredado1.Mask = "99/99/9999";
-            this.maskedTextBoxHeredado1.Name = "maskedTextBoxHeredado1";
-            this.maskedTextBoxHeredado1.Pp_MaskxDefecto = null;
-            this.maskedTextBoxHeredado1.Pp_MensajeError = null;
-            this.maskedTextBoxHeredado1.Pp_NombreCampo = null;
-            this.maskedTextBoxHeredado1.Pp_NombreTabla = null;
-            this.maskedTextBoxHeredado1.Pp_Validable = false;
-            this.maskedTextBoxHeredado1.Size = new System.Drawing.Size(72, 23);
-            this.maskedTextBoxHeredado1.TabIndex = 3;
-            this.maskedTextBoxHeredado1.ValidatingType = typeof(System.DateTime);
-            // 
-            // maskedTextBoxHeredado2
-            // 
-            this.maskedTextBoxHeredado2.Location = new System.Drawing.Point(185, 207);
-            this.maskedTextBoxHeredado2.Mask = "99/99/9999";
-            this.maskedTextBoxHeredado2.Name = "maskedTextBoxHeredado2";
-            this.maskedTextBoxHeredado2.Pp_MaskxDefecto = null;
-            this.maskedTextBoxHeredado2.Pp_MensajeError = null;
-            this.maskedTextBoxHeredado2.Pp_NombreCampo = null;
-            this.maskedTextBoxHeredado2.Pp_NombreTabla = null;
-            this.maskedTextBoxHeredado2.Pp_Validable = false;
-            this.maskedTextBoxHeredado2.Size = new System.Drawing.Size(72, 23);
-            this.maskedTextBoxHeredado2.TabIndex = 5;
-            this.maskedTextBoxHeredado2.ValidatingType = typeof(System.DateTime);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -127,20 +99,6 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label4.Size = new System.Drawing.Size(108, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Fecha de Pago:";
-            // 
-            // maskedTextBoxHeredado3
-            // 
-            this.maskedTextBoxHeredado3.Location = new System.Drawing.Point(185, 166);
-            this.maskedTextBoxHeredado3.Mask = "99999999.99";
-            this.maskedTextBoxHeredado3.Name = "maskedTextBoxHeredado3";
-            this.maskedTextBoxHeredado3.Pp_MaskxDefecto = null;
-            this.maskedTextBoxHeredado3.Pp_MensajeError = null;
-            this.maskedTextBoxHeredado3.Pp_NombreCampo = null;
-            this.maskedTextBoxHeredado3.Pp_NombreTabla = null;
-            this.maskedTextBoxHeredado3.Pp_Validable = false;
-            this.maskedTextBoxHeredado3.Size = new System.Drawing.Size(72, 23);
-            this.maskedTextBoxHeredado3.TabIndex = 7;
-            this.maskedTextBoxHeredado3.ValidatingType = typeof(System.DateTime);
             // 
             // label5
             // 
@@ -151,22 +109,6 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label5.TabIndex = 6;
             this.label5.Text = "Monto:";
             // 
-            // comboBoxHeredadaE1
-            // 
-            this.comboBoxHeredadaE1.FormattingEnabled = true;
-            this.comboBoxHeredadaE1.Location = new System.Drawing.Point(185, 248);
-            this.comboBoxHeredadaE1.Name = "comboBoxHeredadaE1";
-            this.comboBoxHeredadaE1.Pp_Conseleccion = false;
-            this.comboBoxHeredadaE1.Pp_descripcion = null;
-            this.comboBoxHeredadaE1.Pp_MensajeError = null;
-            this.comboBoxHeredadaE1.Pp_NombreCampo = null;
-            this.comboBoxHeredadaE1.Pp_NombreTabla = null;
-            this.comboBoxHeredadaE1.Pp_Pk = null;
-            this.comboBoxHeredadaE1.Pp_tabla_origen = null;
-            this.comboBoxHeredadaE1.Pp_Validable = false;
-            this.comboBoxHeredadaE1.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxHeredadaE1.TabIndex = 8;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -175,18 +117,6 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label6.Size = new System.Drawing.Size(115, 17);
             this.label6.TabIndex = 9;
             this.label6.Text = "Tipo de Moneda:";
-            // 
-            // textBoxHeredado1
-            // 
-            this.textBoxHeredado1.Location = new System.Drawing.Point(185, 138);
-            this.textBoxHeredado1.Name = "textBoxHeredado1";
-            this.textBoxHeredado1.Pp_MensajeError = null;
-            this.textBoxHeredado1.Pp_NombreCampo = null;
-            this.textBoxHeredado1.Pp_NombreTabla = null;
-            this.textBoxHeredado1.Pp_Validable = false;
-            this.textBoxHeredado1.Size = new System.Drawing.Size(100, 23);
-            this.textBoxHeredado1.TabIndex = 10;
-            this.textBoxHeredado1.TextChanged += new System.EventHandler(this.textBoxHeredado1_TextChanged);
             // 
             // label7
             // 
@@ -197,23 +127,25 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label7.TabIndex = 11;
             this.label7.Text = "Designacion Catastral:";
             // 
-            // button1
+            // btn_DesignCatastral
             // 
-            this.button1.Location = new System.Drawing.Point(291, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_DesignCatastral.Location = new System.Drawing.Point(291, 138);
+            this.btn_DesignCatastral.Name = "btn_DesignCatastral";
+            this.btn_DesignCatastral.Size = new System.Drawing.Size(77, 23);
+            this.btn_DesignCatastral.TabIndex = 12;
+            this.btn_DesignCatastral.Text = "Buscar";
+            this.btn_DesignCatastral.UseVisualStyleBackColor = true;
+            this.btn_DesignCatastral.Click += new System.EventHandler(this.btn_DesignCatastral_Click);
             // 
-            // button2
+            // btn_Cliente
             // 
-            this.button2.Location = new System.Drawing.Point(291, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Cliente.Location = new System.Drawing.Point(291, 107);
+            this.btn_Cliente.Name = "btn_Cliente";
+            this.btn_Cliente.Size = new System.Drawing.Size(77, 23);
+            this.btn_Cliente.TabIndex = 15;
+            this.btn_Cliente.Text = "Buscar";
+            this.btn_Cliente.UseVisualStyleBackColor = true;
+            this.btn_Cliente.Click += new System.EventHandler(this.btn_Cliente_Click);
             // 
             // label8
             // 
@@ -224,25 +156,14 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label8.TabIndex = 14;
             this.label8.Text = "Cliente:";
             // 
-            // textBoxHeredado2
+            // btn_Escribano
             // 
-            this.textBoxHeredado2.Location = new System.Drawing.Point(185, 107);
-            this.textBoxHeredado2.Name = "textBoxHeredado2";
-            this.textBoxHeredado2.Pp_MensajeError = null;
-            this.textBoxHeredado2.Pp_NombreCampo = null;
-            this.textBoxHeredado2.Pp_NombreTabla = null;
-            this.textBoxHeredado2.Pp_Validable = false;
-            this.textBoxHeredado2.Size = new System.Drawing.Size(100, 23);
-            this.textBoxHeredado2.TabIndex = 13;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(291, 290);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Escribano.Location = new System.Drawing.Point(291, 290);
+            this.btn_Escribano.Name = "btn_Escribano";
+            this.btn_Escribano.Size = new System.Drawing.Size(77, 23);
+            this.btn_Escribano.TabIndex = 18;
+            this.btn_Escribano.Text = "Buscar";
+            this.btn_Escribano.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -253,32 +174,21 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.label9.TabIndex = 17;
             this.label9.Text = "Escribano:";
             // 
-            // textBoxHeredado3
+            // btn_FechaActual
             // 
-            this.textBoxHeredado3.Location = new System.Drawing.Point(185, 290);
-            this.textBoxHeredado3.Name = "textBoxHeredado3";
-            this.textBoxHeredado3.Pp_MensajeError = null;
-            this.textBoxHeredado3.Pp_NombreCampo = null;
-            this.textBoxHeredado3.Pp_NombreTabla = null;
-            this.textBoxHeredado3.Pp_Validable = false;
-            this.textBoxHeredado3.Size = new System.Drawing.Size(100, 23);
-            this.textBoxHeredado3.TabIndex = 16;
+            this.btn_FechaActual.Location = new System.Drawing.Point(291, 55);
+            this.btn_FechaActual.Name = "btn_FechaActual";
+            this.btn_FechaActual.Size = new System.Drawing.Size(71, 46);
+            this.btn_FechaActual.TabIndex = 19;
+            this.btn_FechaActual.Text = "Fecha Actual";
+            this.btn_FechaActual.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // gdr_CompraVenta
             // 
-            this.button4.Location = new System.Drawing.Point(291, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 46);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Fecha Actual";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gdr_CompraVenta.AllowUserToAddRows = false;
+            this.gdr_CompraVenta.AllowUserToDeleteRows = false;
+            this.gdr_CompraVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdr_CompraVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_CompraVenta,
             this.Fecha,
             this.Cliente,
@@ -286,11 +196,11 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.MontoTotal,
             this.Moneda,
             this.Factura});
-            this.dataGridView1.Location = new System.Drawing.Point(403, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(693, 255);
-            this.dataGridView1.TabIndex = 20;
+            this.gdr_CompraVenta.Location = new System.Drawing.Point(403, 55);
+            this.gdr_CompraVenta.Name = "gdr_CompraVenta";
+            this.gdr_CompraVenta.ReadOnly = true;
+            this.gdr_CompraVenta.Size = new System.Drawing.Size(693, 255);
+            this.gdr_CompraVenta.TabIndex = 20;
             // 
             // Id_CompraVenta
             // 
@@ -335,14 +245,14 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.Factura.Name = "Factura";
             this.Factura.ReadOnly = true;
             // 
-            // button5
+            // btn_RegistrarVenta
             // 
-            this.button5.Location = new System.Drawing.Point(185, 413);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(195, 23);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "Registrar CompraVenta";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_RegistrarVenta.Location = new System.Drawing.Point(185, 413);
+            this.btn_RegistrarVenta.Name = "btn_RegistrarVenta";
+            this.btn_RegistrarVenta.Size = new System.Drawing.Size(195, 23);
+            this.btn_RegistrarVenta.TabIndex = 21;
+            this.btn_RegistrarVenta.Text = "Registrar CompraVenta";
+            this.btn_RegistrarVenta.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -362,6 +272,98 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.button7.Text = "Eliminar CompraVenta";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // txt_Escribano
+            // 
+            this.txt_Escribano.Location = new System.Drawing.Point(185, 290);
+            this.txt_Escribano.Name = "txt_Escribano";
+            this.txt_Escribano.Pp_MensajeError = null;
+            this.txt_Escribano.Pp_NombreCampo = null;
+            this.txt_Escribano.Pp_NombreTabla = null;
+            this.txt_Escribano.Pp_Validable = false;
+            this.txt_Escribano.Size = new System.Drawing.Size(100, 23);
+            this.txt_Escribano.TabIndex = 16;
+            // 
+            // txt_Cliente
+            // 
+            this.txt_Cliente.Location = new System.Drawing.Point(185, 107);
+            this.txt_Cliente.Name = "txt_Cliente";
+            this.txt_Cliente.Pp_MensajeError = null;
+            this.txt_Cliente.Pp_NombreCampo = null;
+            this.txt_Cliente.Pp_NombreTabla = null;
+            this.txt_Cliente.Pp_Validable = false;
+            this.txt_Cliente.Size = new System.Drawing.Size(100, 23);
+            this.txt_Cliente.TabIndex = 13;
+            // 
+            // txt_DesignCatastral
+            // 
+            this.txt_DesignCatastral.Location = new System.Drawing.Point(185, 138);
+            this.txt_DesignCatastral.Name = "txt_DesignCatastral";
+            this.txt_DesignCatastral.Pp_MensajeError = null;
+            this.txt_DesignCatastral.Pp_NombreCampo = null;
+            this.txt_DesignCatastral.Pp_NombreTabla = null;
+            this.txt_DesignCatastral.Pp_Validable = false;
+            this.txt_DesignCatastral.Size = new System.Drawing.Size(100, 23);
+            this.txt_DesignCatastral.TabIndex = 10;
+            this.txt_DesignCatastral.TextChanged += new System.EventHandler(this.textBoxHeredado1_TextChanged);
+            // 
+            // cmb_TipoMoneda
+            // 
+            this.cmb_TipoMoneda.FormattingEnabled = true;
+            this.cmb_TipoMoneda.Location = new System.Drawing.Point(185, 248);
+            this.cmb_TipoMoneda.Name = "cmb_TipoMoneda";
+            this.cmb_TipoMoneda.Pp_Conseleccion = false;
+            this.cmb_TipoMoneda.Pp_descripcion = "nombre";
+            this.cmb_TipoMoneda.Pp_MensajeError = null;
+            this.cmb_TipoMoneda.Pp_NombreCampo = null;
+            this.cmb_TipoMoneda.Pp_NombreTabla = null;
+            this.cmb_TipoMoneda.Pp_Pk = "id_moneda";
+            this.cmb_TipoMoneda.Pp_tabla_origen = "tipo_moneda";
+            this.cmb_TipoMoneda.Pp_Validable = false;
+            this.cmb_TipoMoneda.Size = new System.Drawing.Size(121, 24);
+            this.cmb_TipoMoneda.TabIndex = 8;
+            // 
+            // txt_Monto
+            // 
+            this.txt_Monto.Location = new System.Drawing.Point(185, 166);
+            this.txt_Monto.Mask = "99999999.99";
+            this.txt_Monto.Name = "txt_Monto";
+            this.txt_Monto.Pp_MaskxDefecto = null;
+            this.txt_Monto.Pp_MensajeError = null;
+            this.txt_Monto.Pp_NombreCampo = null;
+            this.txt_Monto.Pp_NombreTabla = null;
+            this.txt_Monto.Pp_Validable = false;
+            this.txt_Monto.Size = new System.Drawing.Size(72, 23);
+            this.txt_Monto.TabIndex = 7;
+            this.txt_Monto.ValidatingType = typeof(System.DateTime);
+            // 
+            // txt_FechaPago
+            // 
+            this.txt_FechaPago.Location = new System.Drawing.Point(185, 207);
+            this.txt_FechaPago.Mask = "99/99/9999";
+            this.txt_FechaPago.Name = "txt_FechaPago";
+            this.txt_FechaPago.Pp_MaskxDefecto = null;
+            this.txt_FechaPago.Pp_MensajeError = null;
+            this.txt_FechaPago.Pp_NombreCampo = null;
+            this.txt_FechaPago.Pp_NombreTabla = null;
+            this.txt_FechaPago.Pp_Validable = false;
+            this.txt_FechaPago.Size = new System.Drawing.Size(72, 23);
+            this.txt_FechaPago.TabIndex = 5;
+            this.txt_FechaPago.ValidatingType = typeof(System.DateTime);
+            // 
+            // txt_FechaActual
+            // 
+            this.txt_FechaActual.Location = new System.Drawing.Point(185, 67);
+            this.txt_FechaActual.Mask = "99/99/9999";
+            this.txt_FechaActual.Name = "txt_FechaActual";
+            this.txt_FechaActual.Pp_MaskxDefecto = null;
+            this.txt_FechaActual.Pp_MensajeError = null;
+            this.txt_FechaActual.Pp_NombreCampo = null;
+            this.txt_FechaActual.Pp_NombreTabla = null;
+            this.txt_FechaActual.Pp_Validable = false;
+            this.txt_FechaActual.Size = new System.Drawing.Size(72, 23);
+            this.txt_FechaActual.TabIndex = 3;
+            this.txt_FechaActual.ValidatingType = typeof(System.DateTime);
+            // 
             // Frm_CompraVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -369,33 +371,34 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.ClientSize = new System.Drawing.Size(1143, 480);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_RegistrarVenta);
+            this.Controls.Add(this.gdr_CompraVenta);
+            this.Controls.Add(this.btn_FechaActual);
+            this.Controls.Add(this.btn_Escribano);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBoxHeredado3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txt_Escribano);
+            this.Controls.Add(this.btn_Cliente);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBoxHeredado2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txt_Cliente);
+            this.Controls.Add(this.btn_DesignCatastral);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBoxHeredado1);
+            this.Controls.Add(this.txt_DesignCatastral);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBoxHeredadaE1);
-            this.Controls.Add(this.maskedTextBoxHeredado3);
+            this.Controls.Add(this.cmb_TipoMoneda);
+            this.Controls.Add(this.txt_Monto);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.maskedTextBoxHeredado2);
+            this.Controls.Add(this.txt_FechaPago);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.maskedTextBoxHeredado1);
+            this.Controls.Add(this.txt_FechaActual);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_CompraVenta";
             this.Text = "Frm_CompraVenta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Frm_CompraVenta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gdr_CompraVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,24 +409,24 @@ namespace G11_TP_PAV.Formularios.CompraVenta
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Clases.MaskedTextBoxHeredado maskedTextBoxHeredado1;
-        private Clases.MaskedTextBoxHeredado maskedTextBoxHeredado2;
+        private Clases.MaskedTextBoxHeredado txt_FechaActual;
+        private Clases.MaskedTextBoxHeredado txt_FechaPago;
         private System.Windows.Forms.Label label4;
-        private Clases.MaskedTextBoxHeredado maskedTextBoxHeredado3;
+        private Clases.MaskedTextBoxHeredado txt_Monto;
         private System.Windows.Forms.Label label5;
-        private Clases.ComboBoxHeredadaE comboBoxHeredadaE1;
+        private Clases.ComboBoxHeredadaE cmb_TipoMoneda;
         private System.Windows.Forms.Label label6;
-        private Clases.TextBoxHeredado textBoxHeredado1;
+        private Clases.TextBoxHeredado txt_DesignCatastral;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_DesignCatastral;
+        private System.Windows.Forms.Button btn_Cliente;
         private System.Windows.Forms.Label label8;
-        private Clases.TextBoxHeredado textBoxHeredado2;
-        private System.Windows.Forms.Button button3;
+        private Clases.TextBoxHeredado txt_Cliente;
+        private System.Windows.Forms.Button btn_Escribano;
         private System.Windows.Forms.Label label9;
-        private Clases.TextBoxHeredado textBoxHeredado3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private Clases.TextBoxHeredado txt_Escribano;
+        private System.Windows.Forms.Button btn_FechaActual;
+        private System.Windows.Forms.DataGridView gdr_CompraVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_CompraVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
@@ -431,7 +434,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Moneda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Factura;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_RegistrarVenta;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
     }

@@ -167,5 +167,10 @@ namespace G11_TP_PAV.Formularios.Escribanos
             Matricula = "";
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

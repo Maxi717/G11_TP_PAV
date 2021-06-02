@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
+    <Compile Include="Clases\BE_Acceso_Datos_T.cs" />
     <Compile Include="Clases\BE_Edificios.cs" />
     <Compile Include="Clases\ComboBox1.cs">
       <SubType>Component</SubType>
@@ -110,6 +111,18 @@
     </Compile>
     <Compile Include="Formularios\Clientes\Frm_Modificar_Clientes.designer.cs">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarCliente.Designer.cs">
+      <DependentUpon>Frm_BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarPropiedad.Designer.cs">
+      <DependentUpon>Frm_BuscarPropiedad.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.cs">
       <SubType>Form</SubType>
@@ -329,6 +342,7 @@
     </Compile>
     <Compile Include="Negocio\NE_Barrios.cs" />
     <Compile Include="Negocio\NE_Clientes.cs" />
+    <Compile Include="Negocio\NE_CompraVenta.cs" />
     <Compile Include="Negocio\NE_departamentos.cs" />
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
@@ -353,6 +367,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Modificar_Clientes.resx">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarCliente.resx">
+      <DependentUpon>Frm_BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarPropiedad.resx">
+      <DependentUpon>Frm_BuscarPropiedad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CompraVenta\Frm_CompraVenta.resx">
       <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
