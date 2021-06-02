@@ -166,7 +166,7 @@ namespace G11_TP_PAV.Formularios
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if (txt_numero_documento.Text == "")
+            if (txt_numero_documento.Text == "" || txt_nombre.Text == "")
             {
                 MessageBox.Show("Ingrese un Numero de documento para la busqueda.");
                 return;
