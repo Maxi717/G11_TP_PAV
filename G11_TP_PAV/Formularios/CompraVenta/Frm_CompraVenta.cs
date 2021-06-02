@@ -111,8 +111,28 @@ namespace G11_TP_PAV.Formularios.CompraVenta
 
         private void btn_RegistrarVenta_Click(object sender, EventArgs e)
         {
+            NE_CompraVenta compraVenta = new NE_CompraVenta();
+
+            compraVenta.fechaActual = txt_FechaActual.Text;
+
+            compraVenta.id_documento = id_tipo_documento;
             
-           
+            compraVenta.nroDoc = numero_documento;
+            
+            compraVenta.monto = decimal.Parse(txt_Monto.Text);
+            
+            compraVenta.fechaPago = txt_FechaPago.Text;
+
+            compraVenta.escribano = matricula;
+
+            compraVenta.designCatastral = design_catastral;
+
+            compraVenta.tipoMoneda = cmb_TipoMoneda.SelectedValue.ToString();
+
+            compraVenta.insertar();
+
+            ActualizarGrilla();
+
         }
     }
 }
