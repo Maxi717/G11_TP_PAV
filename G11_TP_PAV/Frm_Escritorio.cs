@@ -12,6 +12,7 @@ using G11_TP_PAV.Formularios.Dueños;
 using G11_TP_PAV.Formularios.Escribanos;
 using G11_TP_PAV.Formularios.Tipo_Moneda;
 using G11_TP_PAV.Formularios.TransRecibos;
+using G11_TP_PAV.Formularios.EmaContratoAlquiler;
 
 namespace G11_TP_PAV
 {
@@ -118,6 +119,14 @@ namespace G11_TP_PAV
         {
             this.Hide();
             Frm_Transaccion_Recibos transRec = new Frm_Transaccion_Recibos();
+            transRec.ShowDialog();
+            this.Show();
+        }
+
+        private void contratoAlquilerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_contrat transRec = new Frm_Transaccion_Recibos();
             transRec.ShowDialog();
             this.Show();
         }
