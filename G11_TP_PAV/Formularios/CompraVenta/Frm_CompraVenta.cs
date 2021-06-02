@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using G11_TP_PAV.Negocio;
+using G11_TP_PAV.Clases;
 
 namespace G11_TP_PAV.Formularios.CompraVenta
 {
@@ -15,9 +16,12 @@ namespace G11_TP_PAV.Formularios.CompraVenta
     {
 
         private int id_tipo_documento { get; set; }
+
         private int numero_documento { get; set; }
 
         public string design_catastral { get; set; }
+
+        public int matricula { get; set; }
 
         public Frm_CompraVenta()
         {
@@ -82,6 +86,33 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.design_catastral = propiedad.design_catastral;
             txt_DesignCatastral.Text = design_catastral;
 
+        }
+
+        private void btn_Escribano_Click(object sender, EventArgs e)
+        {
+            Frm_BuscarEscribano escribano = new Frm_BuscarEscribano();
+
+            escribano.ShowDialog();
+
+            this.matricula = escribano.matricula;
+
+            string nombreEscribano = escribano.nombre + " " + escribano.apellido;
+
+            txt_Escribano.Text = nombreEscribano;
+
+        }
+
+        private void btn_FechaActual_Click(object sender, EventArgs e)
+        {
+            TratEspeciales tratamiento = new TratEspeciales();
+
+            txt_FechaActual.Text = tratamiento.RecuperarFecha();
+        }
+
+        private void btn_RegistrarVenta_Click(object sender, EventArgs e)
+        {
+            
+           
         }
     }
 }
