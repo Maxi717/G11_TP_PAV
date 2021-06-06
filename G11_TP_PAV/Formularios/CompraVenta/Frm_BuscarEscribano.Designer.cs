@@ -76,7 +76,10 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 262);
             this.Controls.Add(this.gdr_Escribanos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_BuscarEscribano";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccionar Escribano";
             this.Load += new System.EventHandler(this.Frm_BuscarEscribano_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gdr_Escribanos)).EndInit();

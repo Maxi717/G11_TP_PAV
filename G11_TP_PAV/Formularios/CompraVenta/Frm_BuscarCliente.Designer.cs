@@ -86,11 +86,15 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 253);
+            this.ClientSize = new System.Drawing.Size(620, 252);
             this.Controls.Add(this.gdr_Cliente);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_BuscarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda de Cliente";
             this.Load += new System.EventHandler(this.Frm_BuscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gdr_Cliente)).EndInit();

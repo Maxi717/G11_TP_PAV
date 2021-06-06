@@ -56,6 +56,7 @@ namespace G11_TP_PAV.Negocio
             try
             {
                 _BD.Transaccion(listado);
+                MessageBox.Show("La CompraVenta se registro con exito");
             }
             catch (Exception e)
             {
