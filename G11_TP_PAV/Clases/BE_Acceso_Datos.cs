@@ -82,5 +82,32 @@ namespace G11_TP_PAV.Clases
         }
 
         
+
+
+        public bool Transaccion(List<string> sqls, bool bandera = true)
+        {
+            Conectar();
+            SqlTransaction trans = Conexion.BeginTransaction("CompraVenta");
+            Cmd.Transaction = trans;
+            try
+            {
+                foreach (string comando in sqls)
+                {
+                    Cmd.CommandText = comando;
+                    Cmd.ExecuteNonQuery();
+                }
+                trans.Commit();
+                return true;
+            }
+            catch (Exception e)
+            {
+                
+                trans.Rollback();
+                throw e;
+            }
+        }
+
+
+
     }
 }

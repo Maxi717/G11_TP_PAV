@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
+    <Compile Include="Clases\BE_Acceso_Datos_T.cs" />
     <Compile Include="Clases\BE_Edificios.cs" />
     <Compile Include="Clases\BE_Transaccional.cs" />
     <Compile Include="Clases\ComboBox1.cs">
@@ -117,6 +118,30 @@
     </Compile>
     <Compile Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.Designer.cs">
       <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarCliente.Designer.cs">
+      <DependentUpon>Frm_BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarEscribano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarEscribano.Designer.cs">
+      <DependentUpon>Frm_BuscarEscribano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarPropiedad.Designer.cs">
+      <DependentUpon>Frm_BuscarPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.Designer.cs">
+      <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Duenios\Frm_ABM_Duenios.cs">
       <SubType>Form</SubType>
@@ -343,6 +368,7 @@
     <Compile Include="Negocio\NE_Barrios.cs" />
     <Compile Include="Negocio\NE_Clientes.cs" />
     <Compile Include="Negocio\NE_ContratoAlquiler.cs" />
+    <Compile Include="Negocio\NE_CompraVenta.cs" />
     <Compile Include="Negocio\NE_departamentos.cs" />
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
@@ -372,6 +398,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.resx">
       <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarCliente.resx">
+      <DependentUpon>Frm_BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarEscribano.resx">
+      <DependentUpon>Frm_BuscarEscribano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarPropiedad.resx">
+      <DependentUpon>Frm_BuscarPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_CompraVenta.resx">
+      <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Duenios\Frm_ABM_Duenios.resx">
       <DependentUpon>Frm_ABM_Duenios.cs</DependentUpon>
@@ -522,6 +560,7 @@
     <Content Include="Resources\blue-cross-icon-71.png" />
     <Content Include="Resources\Borrar Escribano.png" />
     <Content Include="Resources\cruz.png" />
+    <None Include="Resources\date_fechaActual.png" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\Erase.png" />
     <Content Include="Resources\Erase1.png" />
@@ -531,6 +570,7 @@
     <Content Include="Resources\nuevo1.png" />
     <Content Include="Resources\refresh_green.png" />
     <Content Include="Resources\salir.png" />
+    <None Include="Resources\search_buscar.png" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup />

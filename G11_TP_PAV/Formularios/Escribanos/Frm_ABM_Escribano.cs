@@ -14,6 +14,7 @@ namespace G11_TP_PAV.Formularios.Escribanos
 {
     public partial class Frm_ABM_Escribano : Form
     {
+        //Esta es mi prueba
 
         public string Matricula { get; set; }
 
@@ -164,6 +165,11 @@ namespace G11_TP_PAV.Formularios.Escribanos
             informar.ShowDialog();
             ActualizarGrilla();
             Matricula = "";
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }
