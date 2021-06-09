@@ -13,6 +13,17 @@ namespace G11_TP_PAV.Negocio
     {
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
 
+        public DataTable RecuperarPorFecha(DateTime desde, DateTime hasta)
+        {
+            //string fechaDesde = desde.Date.Year.ToString() + desde.Date.Month.ToString() + desde.Date.Day.ToString();
+            //string fechaHasta = hasta.Date.Year.ToString() + hasta.Date.Month.ToString() + hasta.Date.Day.ToString();
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
+            string sql = "SELECT * FROM gastos g join edificios e on g.id_edificio=e.id WHERE fecha > '"+ fechaDesde + "' AND fecha < '"+
+                fechaHasta+"'";
+            return _BD.Consulta(sql);
+        }
+
         public DataTable RecuperarTodos()
         {
             string sql = "SELECT * FROM gastos g join edificios e on g.id_edificio=e.id";
