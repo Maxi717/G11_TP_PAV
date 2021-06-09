@@ -5,8 +5,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using G11_TP_PAV.Formularios.CompraVenta;
 
-//Traido
-
 namespace G11_TP_PAV
 {
     static class Program
