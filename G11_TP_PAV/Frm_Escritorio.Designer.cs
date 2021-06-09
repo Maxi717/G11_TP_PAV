@@ -44,13 +44,14 @@
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.expensasRecibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contratoAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propiedadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.propiedadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -171,7 +172,8 @@
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.expensasRecibosToolStripMenuItem,
             this.contratoAlquilerToolStripMenuItem,
-            this.propiedadesToolStripMenuItem1});
+            this.propiedadesToolStripMenuItem1,
+            this.compraventaToolStripMenuItem});
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
@@ -190,6 +192,13 @@
             this.contratoAlquilerToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.contratoAlquilerToolStripMenuItem.Text = "Contrato Alquiler";
             this.contratoAlquilerToolStripMenuItem.Click += new System.EventHandler(this.contratoAlquilerToolStripMenuItem_Click);
+            // 
+            // propiedadesToolStripMenuItem1
+            // 
+            this.propiedadesToolStripMenuItem1.Name = "propiedadesToolStripMenuItem1";
+            this.propiedadesToolStripMenuItem1.Size = new System.Drawing.Size(203, 26);
+            this.propiedadesToolStripMenuItem1.Text = "Propiedades";
+            this.propiedadesToolStripMenuItem1.Click += new System.EventHandler(this.propiedadesToolStripMenuItem1_Click);
             // 
             // listadosToolStripMenuItem
             // 
@@ -234,12 +243,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // propiedadesToolStripMenuItem1
+            // compraventaToolStripMenuItem
             // 
-            this.propiedadesToolStripMenuItem1.Name = "propiedadesToolStripMenuItem1";
-            this.propiedadesToolStripMenuItem1.Size = new System.Drawing.Size(203, 26);
-            this.propiedadesToolStripMenuItem1.Text = "Propiedades";
-            this.propiedadesToolStripMenuItem1.Click += new System.EventHandler(this.propiedadesToolStripMenuItem1_Click);
+            this.compraventaToolStripMenuItem.Name = "compraventaToolStripMenuItem";
+            this.compraventaToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.compraventaToolStripMenuItem.Text = "Compraventa";
+            this.compraventaToolStripMenuItem.Click += new System.EventHandler(this.compraventaToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -291,6 +300,7 @@
         private System.Windows.Forms.ToolStripMenuItem expensasRecibosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contratoAlquilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propiedadesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem compraventaToolStripMenuItem;
     }
 }
 

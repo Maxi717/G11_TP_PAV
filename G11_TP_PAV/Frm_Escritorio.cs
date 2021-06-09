@@ -13,6 +13,7 @@ using G11_TP_PAV.Formularios.Escribanos;
 using G11_TP_PAV.Formularios.Tipo_Moneda;
 using G11_TP_PAV.Formularios.TransRecibos;
 using G11_TP_PAV.Formularios.EmaContratoAlquiler;
+using G11_TP_PAV.Formularios.CompraVenta;
 
 namespace G11_TP_PAV
 {
@@ -136,6 +137,14 @@ namespace G11_TP_PAV
             this.Hide();
             Frm_AMB_Propiedades prop = new Frm_AMB_Propiedades();
             prop.ShowDialog();
+            this.Show();
+        }
+
+        private void compraventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_CompraVenta cv = new Frm_CompraVenta();
+            cv.ShowDialog();
             this.Show();
         }
     }
