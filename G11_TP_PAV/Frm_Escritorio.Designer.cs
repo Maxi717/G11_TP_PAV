@@ -45,13 +45,15 @@
             this.expensasRecibosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contratoAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.propiedadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gastosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.compraventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contratosDeAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -200,12 +202,29 @@
             this.propiedadesToolStripMenuItem1.Text = "Propiedades";
             this.propiedadesToolStripMenuItem1.Click += new System.EventHandler(this.propiedadesToolStripMenuItem1_Click);
             // 
+            // compraventaToolStripMenuItem
+            // 
+            this.compraventaToolStripMenuItem.Name = "compraventaToolStripMenuItem";
+            this.compraventaToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+            this.compraventaToolStripMenuItem.Text = "Compraventa";
+            this.compraventaToolStripMenuItem.Click += new System.EventHandler(this.compraventaToolStripMenuItem_Click);
+            // 
             // listadosToolStripMenuItem
             // 
+            this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gastosToolStripMenuItem1,
+            this.contratosDeAlquilerToolStripMenuItem});
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
             this.listadosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.listadosToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
             this.listadosToolStripMenuItem.Text = "Listados";
+            // 
+            // gastosToolStripMenuItem1
+            // 
+            this.gastosToolStripMenuItem1.Name = "gastosToolStripMenuItem1";
+            this.gastosToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.gastosToolStripMenuItem1.Text = "Gastos";
+            this.gastosToolStripMenuItem1.Click += new System.EventHandler(this.gastosToolStripMenuItem1_Click);
             // 
             // estadísticasToolStripMenuItem
             // 
@@ -243,12 +262,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // compraventaToolStripMenuItem
+            // contratosDeAlquilerToolStripMenuItem
             // 
-            this.compraventaToolStripMenuItem.Name = "compraventaToolStripMenuItem";
-            this.compraventaToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
-            this.compraventaToolStripMenuItem.Text = "Compraventa";
-            this.compraventaToolStripMenuItem.Click += new System.EventHandler(this.compraventaToolStripMenuItem_Click);
+            this.contratosDeAlquilerToolStripMenuItem.Name = "contratosDeAlquilerToolStripMenuItem";
+            this.contratosDeAlquilerToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.contratosDeAlquilerToolStripMenuItem.Text = "Contratos de Alquiler";
+            this.contratosDeAlquilerToolStripMenuItem.Click += new System.EventHandler(this.contratosDeAlquilerToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -301,6 +320,8 @@
         private System.Windows.Forms.ToolStripMenuItem contratoAlquilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem propiedadesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem compraventaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gastosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem contratosDeAlquilerToolStripMenuItem;
     }
 }
 
