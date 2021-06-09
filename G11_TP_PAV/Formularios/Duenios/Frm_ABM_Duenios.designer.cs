@@ -39,13 +39,13 @@
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmb_tipo_documento = new G11_TP_PAV.Clases.ComboBoxHeredada();
             this.txt_numero_documento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_borrar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
-            this.cmb_tipo_documento = new G11_TP_PAV.Clases.ComboBoxHeredada();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_duenios)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +96,8 @@
             // 
             // grid_duenios
             // 
+            this.grid_duenios.AllowUserToAddRows = false;
+            this.grid_duenios.AllowUserToDeleteRows = false;
             this.grid_duenios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_duenios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numero_documento,
@@ -106,6 +108,7 @@
             this.domicilio});
             this.grid_duenios.Location = new System.Drawing.Point(15, 76);
             this.grid_duenios.Name = "grid_duenios";
+            this.grid_duenios.ReadOnly = true;
             this.grid_duenios.Size = new System.Drawing.Size(546, 292);
             this.grid_duenios.TabIndex = 3;
             this.grid_duenios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_duenios_CellClick);
@@ -114,36 +117,54 @@
             // 
             this.numero_documento.HeaderText = "Documento";
             this.numero_documento.Name = "numero_documento";
+            this.numero_documento.ReadOnly = true;
             // 
             // id_tipo_documento
             // 
             this.id_tipo_documento.HeaderText = "id_tipo_documento";
             this.id_tipo_documento.Name = "id_tipo_documento";
+            this.id_tipo_documento.ReadOnly = true;
             this.id_tipo_documento.Visible = false;
             // 
             // tipo_documento
             // 
             this.tipo_documento.HeaderText = "Tipo Documento";
             this.tipo_documento.Name = "tipo_documento";
+            this.tipo_documento.ReadOnly = true;
             // 
             // nombre
             // 
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
             // telefono
             // 
             this.telefono.HeaderText = "Telefono";
             this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
             // 
             // domicilio
             // 
             this.domicilio.HeaderText = "Domicilio";
             this.domicilio.Name = "domicilio";
+            this.domicilio.ReadOnly = true;
+            // 
+            // cmb_tipo_documento
+            // 
+            this.cmb_tipo_documento.FormattingEnabled = true;
+            this.cmb_tipo_documento.Location = new System.Drawing.Point(190, 49);
+            this.cmb_tipo_documento.Name = "cmb_tipo_documento";
+            this.cmb_tipo_documento.Pp_descripcion = "nombre_tipo_documento";
+            this.cmb_tipo_documento.Pp_Pk = "id_tipo_documento";
+            this.cmb_tipo_documento.Pp_tabla_origen = "tipo_documento";
+            this.cmb_tipo_documento.Size = new System.Drawing.Size(97, 21);
+            this.cmb_tipo_documento.TabIndex = 2;
             // 
             // txt_numero_documento
             // 
             this.txt_numero_documento.Location = new System.Drawing.Point(15, 49);
+            this.txt_numero_documento.MaxLength = 12;
             this.txt_numero_documento.Name = "txt_numero_documento";
             this.txt_numero_documento.Size = new System.Drawing.Size(169, 20);
             this.txt_numero_documento.TabIndex = 1;
@@ -196,17 +217,6 @@
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // cmb_tipo_documento
-            // 
-            this.cmb_tipo_documento.FormattingEnabled = true;
-            this.cmb_tipo_documento.Location = new System.Drawing.Point(190, 49);
-            this.cmb_tipo_documento.Name = "cmb_tipo_documento";
-            this.cmb_tipo_documento.Pp_descripcion = "nombre_tipo_documento";
-            this.cmb_tipo_documento.Pp_Pk = "id_tipo_documento";
-            this.cmb_tipo_documento.Pp_tabla_origen = "tipo_documento";
-            this.cmb_tipo_documento.Size = new System.Drawing.Size(97, 21);
-            this.cmb_tipo_documento.TabIndex = 2;
             // 
             // Frm_ABM_Duenios
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,10 @@ namespace G11_TP_PAV.Clases
         public bool Pp_Validable { get; set; }
         public string Pp_MensajeError { get; set; }
 
+        public string Pp_combinada01 { get; set; }
+        public string Pp_combinada02 { get; set; }
+        public string Pp_valorSelec { get; set; }
+
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
 
         public void CargarCombo()
@@ -42,6 +47,26 @@ namespace G11_TP_PAV.Clases
             {
                 this.SelectedIndex = -1;
             }
+        }
+
+        public void CargarDobleCombo(string id)
+        {
+            string sql = "SELECT " + Pp_Pk + ", " + Pp_combinada01 + ", " + Pp_combinada02 + " FROM " + Pp_Tabla + " WHERE " + id + "=" + Pp_valorSelec;
+            this.DisplayMember = "depto";
+            this.ValueMember = Pp_Pk;
+            DataTable tabla = _BD.Consulta(sql);
+            tabla.Columns.Add("depto", typeof(string), "piso + ' ' + denominacion");
+            this.DataSource = tabla;
+        }
+
+        public void CargarComboFecha(string id)
+        {
+            string sql = "SELECT " + Pp_Pk + ", " + Pp_combinada01 + ", " + Pp_combinada02 + " FROM " + Pp_Tabla + " r JOIN expensas e ON r.numero_expensa=e.numero_expensa WHERE e." + id + "=" + Pp_valorSelec;
+            this.DisplayMember = "fecha";
+            this.ValueMember = Pp_Pk;
+            DataTable tabla = _BD.Consulta(sql);
+            tabla.Columns.Add("fecha", typeof(string), "mes + ' ' + anio");
+            this.DataSource = tabla;
         }
     }
 }

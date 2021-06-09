@@ -36,6 +36,12 @@ namespace G11_TP_PAV.Negocio
 
         }
 
+        public DataTable Recuperar_x_Nombre(string nombre)
+        {
+            string sql = "SELECT * FROM tipo_moneda WHERE nombre =" + nombre;
+            return _BD.Consulta(sql);
+        }
+
         public DataTable Recuperar_x_IdMoneda(string id_moneda)
         {
             string sql = "SELECT * FROM tipo_moneda WHERE id_moneda =" + id_moneda;

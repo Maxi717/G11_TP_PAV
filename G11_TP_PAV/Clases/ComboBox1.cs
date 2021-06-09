@@ -14,6 +14,7 @@ namespace G11_TP_PAV.Clases
     {
         public string Pp_Pk { get; set; }
         public string Pp_descripcion { get; set; }
+        public string Pp_descripcion2 { get; set; }
         public string Pp_tabla { get; set; }
         public bool Pp_Conseleccion { get; set; }
         BE_Edificios _BD = new BE_Edificios();
@@ -23,6 +24,15 @@ namespace G11_TP_PAV.Clases
             string sql = "SELECT " + Pp_Pk + " , " + Pp_descripcion + " FROM " + Pp_tabla;
 	        this.DisplayMember = Pp_descripcion;
 	        this.ValueMember = Pp_Pk;
+            this.DataSource = _BD.Ejecutar_Select(sql);
+
+        }
+        public void CargarCombo2()
+        {
+            string sql = "SELECT " + Pp_Pk + " , concat (" + Pp_descripcion + ",' ', " + Pp_descripcion2 + ") as Completo FROM " + Pp_tabla;
+            string algo = Pp_descripcion2 + Pp_descripcion;
+            this.DisplayMember = "Completo";
+            this.ValueMember = Pp_Pk;
             this.DataSource = _BD.Ejecutar_Select(sql);
 
         }

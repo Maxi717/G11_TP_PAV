@@ -13,6 +13,8 @@ namespace G11_TP_PAV.Clases
     {
         public enum Resultado { correcto, error }
 
+        //TratEspeciales
+
         public Resultado Validar(Control.ControlCollection controles)
         {
             foreach (var item in controles)
@@ -138,5 +140,12 @@ namespace G11_TP_PAV.Clases
                     return valorColumna;
             }
         }
+
+        public string RecuperarFecha()
+        {
+            BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+            return _BD.Consulta("select convert (char(10), getdate(), 103)").Rows[0][0].ToString();
+        }
+
     }
 }

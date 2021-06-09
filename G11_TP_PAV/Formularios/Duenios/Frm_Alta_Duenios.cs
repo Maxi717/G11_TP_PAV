@@ -17,6 +17,7 @@ namespace G11_TP_PAV.Formularios.Dueños
         {
             InitializeComponent();
         }
+        //Comentario
 
         private void Frm_Alta_Duenios_Load(object sender, EventArgs e)
         {
@@ -71,6 +72,11 @@ namespace G11_TP_PAV.Formularios.Dueños
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_cancelar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

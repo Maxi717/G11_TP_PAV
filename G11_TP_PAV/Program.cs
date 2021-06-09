@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using G11_TP_PAV.Formularios;
+using G11_TP_PAV.Formularios.CompraVenta;
 
 namespace G11_TP_PAV
 {

@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
+    <Compile Include="Clases\BE_Acceso_Datos_T.cs" />
     <Compile Include="Clases\BE_Edificios.cs" />
+    <Compile Include="Clases\BE_Transaccional.cs" />
     <Compile Include="Clases\ComboBox1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -110,6 +112,36 @@
     </Compile>
     <Compile Include="Formularios\Clientes\Frm_Modificar_Clientes.designer.cs">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.Designer.cs">
+      <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarCliente.Designer.cs">
+      <DependentUpon>Frm_BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarEscribano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarEscribano.Designer.cs">
+      <DependentUpon>Frm_BuscarEscribano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_BuscarPropiedad.Designer.cs">
+      <DependentUpon>Frm_BuscarPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_CompraVenta.Designer.cs">
+      <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Duenios\Frm_ABM_Duenios.cs">
       <SubType>Form</SubType>
@@ -315,6 +347,18 @@
     <Compile Include="Formularios\Tipos de Moneda\Frm_Modificar_TipoMoneda.designer.cs">
       <DependentUpon>Frm_Modificar_TipoMoneda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Consultar_Expensa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Consultar_Expensa.Designer.cs">
+      <DependentUpon>Frm_Consultar_Expensa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Transaccion_Recibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TransRecibos\Frm_Transaccion_Recibos.Designer.cs">
+      <DependentUpon>Frm_Transaccion_Recibos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Escritorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +367,8 @@
     </Compile>
     <Compile Include="Negocio\NE_Barrios.cs" />
     <Compile Include="Negocio\NE_Clientes.cs" />
+    <Compile Include="Negocio\NE_ContratoAlquiler.cs" />
+    <Compile Include="Negocio\NE_CompraVenta.cs" />
     <Compile Include="Negocio\NE_departamentos.cs" />
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
@@ -331,6 +377,8 @@
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
+    <Compile Include="Negocio\NE_Transaccion_Recibos.cs" />
+    <Compile Include="Negocio\NE_TransRecibos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Barrios\Frm_ABMC_Barrio.resx">
@@ -347,6 +395,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Clientes\Frm_Modificar_Clientes.resx">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.resx">
+      <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarCliente.resx">
+      <DependentUpon>Frm_BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarEscribano.resx">
+      <DependentUpon>Frm_BuscarEscribano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_BuscarPropiedad.resx">
+      <DependentUpon>Frm_BuscarPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_CompraVenta.resx">
+      <DependentUpon>Frm_CompraVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Duenios\Frm_ABM_Duenios.resx">
       <DependentUpon>Frm_ABM_Duenios.cs</DependentUpon>
@@ -450,6 +513,12 @@
     <EmbeddedResource Include="Formularios\Tipos de Moneda\Frm_Modificar_TipoMoneda.resx">
       <DependentUpon>Frm_Modificar_TipoMoneda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TransRecibos\Frm_Consultar_Expensa.resx">
+      <DependentUpon>Frm_Consultar_Expensa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\TransRecibos\Frm_Transaccion_Recibos.resx">
+      <DependentUpon>Frm_Transaccion_Recibos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Escritorio.resx">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +560,7 @@
     <Content Include="Resources\blue-cross-icon-71.png" />
     <Content Include="Resources\Borrar Escribano.png" />
     <Content Include="Resources\cruz.png" />
+    <None Include="Resources\date_fechaActual.png" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\Erase.png" />
     <Content Include="Resources\Erase1.png" />
@@ -500,6 +570,7 @@
     <Content Include="Resources\nuevo1.png" />
     <Content Include="Resources\refresh_green.png" />
     <Content Include="Resources\salir.png" />
+    <None Include="Resources\search_buscar.png" />
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup />

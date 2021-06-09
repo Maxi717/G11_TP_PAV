@@ -92,6 +92,8 @@ namespace G11_TP_PAV.Formularios
                     dataGridView1.Rows[i].Cells[5].Value = tabla.Rows[i]["Duenio"].ToString();
                     dataGridView1.Rows[i].Cells[6].Value = tabla.Rows[i]["Domicilio"].ToString();
                     dataGridView1.Rows[i].Cells[7].Value = tabla.Rows[i]["Barrio"].ToString();
+                    
+
 
 
                 }

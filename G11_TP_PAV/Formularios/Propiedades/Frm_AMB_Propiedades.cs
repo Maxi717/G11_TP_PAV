@@ -36,6 +36,7 @@ namespace G11_TP_PAV.Formularios
                 grid_propiedades.Rows[i].Cells[4].Value = tabla.Rows[i]["departamento"].ToString();
                 grid_propiedades.Rows[i].Cells[5].Value = tabla.Rows[i]["barrio"].ToString();
                 grid_propiedades.Rows[i].Cells[6].Value = tabla.Rows[i]["tipo"].ToString();
+                grid_propiedades.Rows[i].Cells[7].Value = propiedad.recuperarAsociaciones(tabla.Rows[i]["designacion_catastral"].ToString()).Rows.Count.ToString();
             }
         }
 
@@ -44,6 +45,11 @@ namespace G11_TP_PAV.Formularios
             tabla = propiedad.RecuperarTodos();
             CargarGrilla(tabla);
 
+            designacionCatastral = grid_propiedades.CurrentRow.Cells["designacion_catastral"].Value.ToString();
+        }
+
+        private void grid_propiedades_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             designacionCatastral = grid_propiedades.CurrentRow.Cells["designacion_catastral"].Value.ToString();
         }
 
@@ -92,11 +98,6 @@ namespace G11_TP_PAV.Formularios
 
             tabla = propiedad.RecuperarTodos();
             CargarGrilla(tabla);
-        }
-
-        private void grid_propiedades_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            designacionCatastral = grid_propiedades.CurrentRow.Cells["designacion_catastral"].Value.ToString();
         }
 
         private void BTN_Modificacion_Click(object sender, EventArgs e)

@@ -66,6 +66,7 @@ namespace G11_TP_PAV.Formularios.Escribanos
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Escribanos en el sistema";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btn_Filtrar
             // 
