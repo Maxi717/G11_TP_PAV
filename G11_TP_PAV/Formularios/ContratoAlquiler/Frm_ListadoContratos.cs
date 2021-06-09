@@ -19,7 +19,7 @@ namespace G11_TP_PAV.Formularios.ContratoAlquiler
         {
             InitializeComponent();
         }
-
+        //ej
         private void Frm_ListadoContratos_Load(object sender, EventArgs e)
         {
             DataTable infoalquileres = new DataTable();
