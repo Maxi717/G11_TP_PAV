@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +64,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD3K6G11_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K6G11_2021DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K6G11_2021DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
     <Compile Include="Clases\BE_Acceso_Datos_T.cs" />
     <Compile Include="Clases\BE_Edificios.cs" />
@@ -365,6 +393,18 @@
     <Compile Include="Frm_Escritorio.Designer.cs">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Edificios\Frm_ListadoEdificios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Edificios\Frm_ListadoEdificios.Designer.cs">
+      <DependentUpon>Frm_ListadoEdificios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Publicidades\Frm_ListadoPublicidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Publicidades\Frm_ListadoPublicidades.Designer.cs">
+      <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\NE_Barrios.cs" />
     <Compile Include="Negocio\NE_Clientes.cs" />
     <Compile Include="Negocio\NE_ContratoAlquiler.cs" />
@@ -381,6 +421,7 @@
     <Compile Include="Negocio\NE_TransRecibos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Formularios\Barrios\Frm_ABMC_Barrio.resx">
       <DependentUpon>Frm_ABMC_Barrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,6 +542,7 @@
     <EmbeddedResource Include="Formularios\Publicidades\Frm_Alta_Publicidad.resx">
       <DependentUpon>Frm_Alta_Publicidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicidades\informeReportePublicidades.rdlc" />
     <EmbeddedResource Include="Formularios\Tipos de Moneda\Frm_ABM_TipoMoneda.resx">
       <DependentUpon>Frm_ABM_TipoMoneda.cs</DependentUpon>
     </EmbeddedResource>
@@ -522,6 +564,13 @@
     <EmbeddedResource Include="Frm_Escritorio.resx">
       <DependentUpon>Frm_Escritorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicidades\Frm_ListadoPublicidades.resx">
+      <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Edificios\InformeReporteEdificios.rdlc" />
+    <EmbeddedResource Include="Formularios\Edificios\Frm_ListadoEdificios.resx">
+      <DependentUpon>Frm_ListadoEdificios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -532,6 +581,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BD3K6G11_2021DataSet.xsc">
+      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G11_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G11_2021DataSet.xss">
+      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021DataSet1.xsc">
+      <DependentUpon>BD3K6G11_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G11_2021DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G11_2021DataSet1.xss">
+      <DependentUpon>BD3K6G11_2021DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -560,6 +632,19 @@
     <Content Include="Resources\blue-cross-icon-71.png" />
     <Content Include="Resources\Borrar Escribano.png" />
     <Content Include="Resources\cruz.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\date_fechaActual.png" />
     <Content Include="Resources\eliminar.png" />
     <Content Include="Resources\Erase.png" />

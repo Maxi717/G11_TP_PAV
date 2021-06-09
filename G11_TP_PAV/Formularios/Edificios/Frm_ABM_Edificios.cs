@@ -34,6 +34,10 @@ namespace G11_TP_PAV.Formularios
             cmb_barrio.DisplayMember = "nombre";
             cmb_barrio.ValueMember = "id_barrio";
             cmb_barrio.DataSource = tabla;
+
+            NE_edificios edificio = new NE_edificios();
+            tabla = edificio.RecuperarEdificios();
+            CargarGrilla(tabla);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -68,7 +72,7 @@ namespace G11_TP_PAV.Formularios
                         dataGridView1.Rows[i].Cells[0].Value = tabla.Rows[i]["ID"].ToString();
                         dataGridView1.Rows[i].Cells[1].Value = tabla.Rows[i]["DOMICILIO"].ToString();
                         dataGridView1.Rows[i].Cells[2].Value = tabla.Rows[i]["ASCENSOR"].ToString();
-                        dataGridView1.Rows[i].Cells[3].Value = tabla.Rows[i]["CANT_ASCENSORES"].ToString();
+                        dataGridView1.Rows[i].Cells[3].Value = tabla.Rows[i]["CANT_DEPARTAMENTOS"].ToString();
                         dataGridView1.Rows[i].Cells[4].Value = tabla.Rows[i]["BARRIO"].ToString();
 
 
