@@ -22,7 +22,7 @@ namespace G11_TP_PAV.Negocio
 
         BE_Edificios _BD = new BE_Edificios();
         DataTable tabla = new DataTable();
-
+        BE_Acceso_Datos _BD2 = new BE_Acceso_Datos();
 
 
         public DataTable RecuperarDatos()
@@ -31,6 +31,22 @@ namespace G11_TP_PAV.Negocio
             return _BD.Ejecutar_Select(sql);
 
         }
+
+        public DataTable RecuperarTodos()
+        {
+            string sql = "SELECT * FROM contratoAlquiler";
+            return _BD.Ejecutar_Select(sql);
+        }
+
+        public DataTable RecuperarPorFecha(DateTime desde, DateTime hasta)
+        {
+            string fechaDesde = desde.ToString();
+            string fechaHasta = hasta.ToString();
+            string sql = "SELECT * FROM contratoAlquiler WHERE fecha_inicio > '" + fechaDesde + "' AND fecha_inicio < '" +
+                fechaHasta + "'";
+            return _BD2.Consulta(sql);
+        }
+
         public void InsertarContratoAlquiler()
         {
 
