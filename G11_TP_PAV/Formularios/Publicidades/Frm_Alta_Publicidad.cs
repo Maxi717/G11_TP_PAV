@@ -29,14 +29,6 @@ namespace G11_TP_PAV.Formularios
             cmb_secciones.Text = "(sección...)";
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            NE_Publicidades publi = new NE_Publicidades();
-            string fecha = publi.ConvertirFecha(date_public.Value);
-            MessageBox.Show(fecha);
-
-        }
-
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
         }

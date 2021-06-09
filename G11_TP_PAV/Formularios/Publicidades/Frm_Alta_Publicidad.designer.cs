@@ -105,7 +105,6 @@
             this.date_public.Size = new System.Drawing.Size(180, 20);
             this.date_public.TabIndex = 20;
             this.date_public.Value = new System.DateTime(2021, 5, 12, 0, 0, 0, 0);
-            this.date_public.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // pictureBox2
             // 
@@ -162,6 +161,8 @@
             this.cmb_secciones.FormattingEnabled = true;
             this.cmb_secciones.Location = new System.Drawing.Point(203, 158);
             this.cmb_secciones.Name = "cmb_secciones";
+            this.cmb_secciones.Pp_combinada01 = null;
+            this.cmb_secciones.Pp_combinada02 = null;
             this.cmb_secciones.Pp_descripcion = "nombre";
             this.cmb_secciones.Pp_Pk = "id_seccion";
             this.cmb_secciones.Pp_tabla_origen = "secciones";
@@ -173,6 +174,8 @@
             this.cmb_propiedades.FormattingEnabled = true;
             this.cmb_propiedades.Location = new System.Drawing.Point(203, 195);
             this.cmb_propiedades.Name = "cmb_propiedades";
+            this.cmb_propiedades.Pp_combinada01 = null;
+            this.cmb_propiedades.Pp_combinada02 = null;
             this.cmb_propiedades.Pp_descripcion = "designacion_catastral";
             this.cmb_propiedades.Pp_Pk = "designacion_catastral";
             this.cmb_propiedades.Pp_tabla_origen = "propiedades";
