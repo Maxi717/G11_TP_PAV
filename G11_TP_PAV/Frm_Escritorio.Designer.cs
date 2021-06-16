@@ -48,12 +48,14 @@
             this.compraventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gastosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contratosDeAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.publicidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contratosDeAlquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edificiosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -213,7 +215,9 @@
             // 
             this.listadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gastosToolStripMenuItem1,
-            this.contratosDeAlquilerToolStripMenuItem});
+            this.contratosDeAlquilerToolStripMenuItem,
+            this.publicidadesToolStripMenuItem1,
+            this.edificiosToolStripMenuItem1});
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
             this.listadosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.listadosToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
@@ -225,6 +229,13 @@
             this.gastosToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
             this.gastosToolStripMenuItem1.Text = "Gastos";
             this.gastosToolStripMenuItem1.Click += new System.EventHandler(this.gastosToolStripMenuItem1_Click);
+            // 
+            // contratosDeAlquilerToolStripMenuItem
+            // 
+            this.contratosDeAlquilerToolStripMenuItem.Name = "contratosDeAlquilerToolStripMenuItem";
+            this.contratosDeAlquilerToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.contratosDeAlquilerToolStripMenuItem.Text = "Contratos de Alquiler";
+            this.contratosDeAlquilerToolStripMenuItem.Click += new System.EventHandler(this.contratosDeAlquilerToolStripMenuItem_Click);
             // 
             // estadísticasToolStripMenuItem
             // 
@@ -253,6 +264,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "En el menú podrá encontrar todas las funcionalidades";
             // 
+            // publicidadesToolStripMenuItem1
+            // 
+            this.publicidadesToolStripMenuItem1.Name = "publicidadesToolStripMenuItem1";
+            this.publicidadesToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.publicidadesToolStripMenuItem1.Text = "Publicidades";
+            this.publicidadesToolStripMenuItem1.Click += new System.EventHandler(this.publicidadesToolStripMenuItem1_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::G11_TP_PAV.Properties.Resources.ReminPNG;
@@ -262,12 +280,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // contratosDeAlquilerToolStripMenuItem
+            // edificiosToolStripMenuItem1
             // 
-            this.contratosDeAlquilerToolStripMenuItem.Name = "contratosDeAlquilerToolStripMenuItem";
-            this.contratosDeAlquilerToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.contratosDeAlquilerToolStripMenuItem.Text = "Contratos de Alquiler";
-            this.contratosDeAlquilerToolStripMenuItem.Click += new System.EventHandler(this.contratosDeAlquilerToolStripMenuItem_Click);
+            this.edificiosToolStripMenuItem1.Name = "edificiosToolStripMenuItem1";
+            this.edificiosToolStripMenuItem1.Size = new System.Drawing.Size(227, 26);
+            this.edificiosToolStripMenuItem1.Text = "Edificios";
+            this.edificiosToolStripMenuItem1.Click += new System.EventHandler(this.edificiosToolStripMenuItem1_Click);
             // 
             // Frm_Escritorio
             // 
@@ -322,6 +340,8 @@
         private System.Windows.Forms.ToolStripMenuItem compraventaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gastosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem contratosDeAlquilerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem publicidadesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem edificiosToolStripMenuItem1;
     }
 }
 

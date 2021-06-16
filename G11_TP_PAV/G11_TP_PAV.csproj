@@ -232,6 +232,12 @@
     <Compile Include="Formularios\Edificios\Frm_ABM_Edificios.designer.cs">
       <DependentUpon>Frm_ABM_Edificios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Edificios\Frm_ListadoEdificios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Edificios\Frm_ListadoEdificios.Designer.cs">
+      <DependentUpon>Frm_ListadoEdificios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Edificios\ModificarDepartamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +364,12 @@
     <Compile Include="Formularios\Publicidades\Frm_Alta_Publicidad.designer.cs">
       <DependentUpon>Frm_Alta_Publicidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Publicidades\Frm_ListadoPublicidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Publicidades\Frm_ListadoPublicidades.Designer.cs">
+      <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tipos de Moneda\Frm_ABM_TipoMoneda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -481,6 +493,10 @@
     <EmbeddedResource Include="Formularios\Edificios\Frm_ABM_Edificios.resx">
       <DependentUpon>Frm_ABM_Edificios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Edificios\Frm_ListadoEdificios.resx">
+      <DependentUpon>Frm_ListadoEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Edificios\InformeReporteEdificios.rdlc" />
     <EmbeddedResource Include="Formularios\Edificios\ModificarDepartamentos.resx">
       <DependentUpon>ModificarDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +561,10 @@
     <EmbeddedResource Include="Formularios\Publicidades\Frm_Alta_Publicidad.resx">
       <DependentUpon>Frm_Alta_Publicidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicidades\Frm_ListadoPublicidades.resx">
+      <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicidades\informeReportePublicidades.rdlc" />
     <EmbeddedResource Include="Formularios\Tipos de Moneda\Frm_ABM_TipoMoneda.resx">
       <DependentUpon>Frm_ABM_TipoMoneda.cs</DependentUpon>
     </EmbeddedResource>

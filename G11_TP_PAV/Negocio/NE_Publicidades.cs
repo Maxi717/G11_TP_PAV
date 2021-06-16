@@ -29,6 +29,12 @@ namespace G11_TP_PAV.Negocio
             return _BD.Consulta(sql);
         }
 
+        public DataTable RecuperarFecha(string fechaInicio, string fechaFinal)
+        {
+            string sql = "SELECT * FROM publicidades WHERE fecha > '" + fechaInicio + "' AND fecha < '" + fechaFinal + "'";
+            return _BD.Consulta(sql);
+        }
+
         public DataTable BusquedaAvanzada(string sql)
         {
             return _BD.Consulta(sql);

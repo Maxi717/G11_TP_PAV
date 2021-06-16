@@ -27,9 +27,22 @@ namespace G11_TP_PAV.Negocio
 
 
         }
+
+        internal DataTable RecuperarEdificiosComunes()
+        {
+            string sql = "SELECT * FROM edificios";
+            return _BD.Ejecutar_Select(sql);
+        }
+
         public DataTable RecuperarBarrio(string fk_barrio)
         {
             string sql = "SELECT TOP (1000) [ID],[DOMICILIO],[ASCENSOR],[CANT_ASCENSORES] ,b.nombre as BARRIO FROM [BD3K6G11_2021].[dbo].[edificios] e join dbo.barrios b on b.id_barrio = e.ID_BARRIO WHERE e.id_barrio = " + fk_barrio;
+            return _BD.Ejecutar_Select(sql);
+        }
+
+        public DataTable RecuperarEdificiosDesdeHasta(string limI, string limS)
+        {
+            string sql = "SELECT * FROM edificios WHERE cant_departamentos > " + limI + " AND cant_departamentos < " + limS;
             return _BD.Ejecutar_Select(sql);
         }
 

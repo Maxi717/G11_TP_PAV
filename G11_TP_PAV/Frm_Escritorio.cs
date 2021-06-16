@@ -15,8 +15,8 @@ using G11_TP_PAV.Formularios.TransRecibos;
 using G11_TP_PAV.Formularios.EmaContratoAlquiler;
 using G11_TP_PAV.Formularios.CompraVenta;
 using G11_TP_PAV.Formularios.Gastos;
+using G11_TP_PAV.Informes;
 using G11_TP_PAV.Formularios.ContratoAlquiler;
-
 
 namespace G11_TP_PAV
 {
@@ -164,6 +164,22 @@ namespace G11_TP_PAV
             this.Hide();
             Frm_ListadoContratos lcon = new Frm_ListadoContratos();
             lcon.ShowDialog();
+            this.Show();
+        }
+
+        private void publicidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_ListadoPublicidades lisPub = new Frm_ListadoPublicidades();
+            lisPub.ShowDialog();
+            this.Show();
+        }
+
+        private void edificiosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_ListadoEdificios lisEdif = new Frm_ListadoEdificios();
+            lisEdif.ShowDialog();
             this.Show();
         }
     }
