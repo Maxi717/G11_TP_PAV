@@ -32,6 +32,20 @@ namespace G11_TP_PAV.Negocio
 
         }
 
+        public DataTable ReporteVencimientos()
+        {
+            string sql = "SELECT TOP (1000) [id_contratoALQ],[fecha_inicio],[duracion_contrato],[monto],[id_tipo_moneda],[designacion_catatral],cliente.nombre FROM [BD3K6G11_2021].[dbo].[contratoAlquiler] contrato join dbo.clientes cliente on contrato.documento = cliente.numero_documento where convert(date,duracion_contrato,105)>= convert(date,'" + Pp_fechaInicio + "',105) and convert(date,duracion_contrato,105)<= convert(date,'" + Pp_duracionContrato + "',105)";
+            return _BD.Ejecutar_Select(sql);
+
+        }
+
+        public DataTable ListadoFacturasComisiones()
+        {
+            string sql = "SELECT facturas.numero_factura, facturas.fecha_pago, facturas.monto_con_comision, { fn CONCAT(propiedades.calle,CONVERT(CHAR,propiedades.numero)) } AS propiedad, ventas.id_compraVenta FROM compraVentas AS ventas  INNER JOIN facturas_comisiones3 AS facturas ON ventas.numero_factura = facturas.numero_factura INNER JOIN propiedades AS propiedades ON ventas.designacion_catastral = propiedades.designacion_catastral where convert(date,facturas.fecha_pago,105)>= convert(date,'" + Pp_fechaInicio + "',105) and convert(date,facturas.fecha_pago,105)<= convert(date,'" + Pp_duracionContrato + "',105)";
+            return _BD.Ejecutar_Select(sql);
+
+        }
+
         public DataTable RecuperarTodos()
         {
             string sql = "SELECT * FROM contratoAlquiler";

@@ -17,6 +17,7 @@ using G11_TP_PAV.Formularios.CompraVenta;
 using G11_TP_PAV.Formularios.Gastos;
 using G11_TP_PAV.Informes;
 using G11_TP_PAV.Formularios.ContratoAlquiler;
+using G11_TP_PAV.ReporteEma;
 
 namespace G11_TP_PAV
 {
@@ -180,6 +181,22 @@ namespace G11_TP_PAV
             this.Hide();
             Frm_ListadoEdificios lisEdif = new Frm_ListadoEdificios();
             lisEdif.ShowDialog();
+            this.Show();
+        }
+
+        private void comisionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ComisionesFacturas comisiones = new ComisionesFacturas();
+            comisiones.ShowDialog();
+            this.Show();
+        }
+
+        private void vencimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ReporteVencimientoContrato venc = new ReporteVencimientoContrato();
+            venc.ShowDialog();
             this.Show();
         }
     }

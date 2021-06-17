@@ -370,6 +370,18 @@
     <Compile Include="Formularios\Publicidades\Frm_ListadoPublicidades.Designer.cs">
       <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ReporteComisiones\ComsionesFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteComisiones\ComsionesFacturas.Designer.cs">
+      <DependentUpon>ComsionesFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReporteVencimientos\ReporteListadoVencimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteVencimientos\ReporteListadoVencimientos.Designer.cs">
+      <DependentUpon>ReporteListadoVencimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tipos de Moneda\Frm_ABM_TipoMoneda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -565,6 +577,14 @@
       <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Publicidades\informeReportePublicidades.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteComisiones\ComsionesFacturas.resx">
+      <DependentUpon>ComsionesFacturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteComisiones\ReportComisiones.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteVencimientos\ReporteVencimientos.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteVencimientos\ReporteListadoVencimientos.resx">
+      <DependentUpon>ReporteListadoVencimientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tipos de Moneda\Frm_ABM_TipoMoneda.resx">
       <DependentUpon>Frm_ABM_TipoMoneda.cs</DependentUpon>
     </EmbeddedResource>
