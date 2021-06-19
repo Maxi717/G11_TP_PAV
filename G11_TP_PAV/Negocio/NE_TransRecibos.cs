@@ -84,6 +84,19 @@ namespace G11_TP_PAV.Negocio
             int nroRecibo = (recibos.Rows.Count) + 1;
             return nroRecibo;
         }
+
+        public DataTable recuperarListado()
+        {
+            string sql = @"SELECT r.numero_recibo AS numero , r.mes AS mes, r.anio AS año, r.numero_expensa AS numeroExpensa, e.importe AS importe, e.id_departamento AS idDepto, d.id_dueño AS idDueño 
+                            FROM recibos r JOIN expensas e ON r.numero_expensa = e.numero_expensa 
+                            JOIN departamento d ON e.id_departamento = d.id_departamento";
+
+            return _BD.Consulta(sql);
+        }
+
+
+
+
     }
 }
 

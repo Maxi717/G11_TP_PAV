@@ -316,6 +316,12 @@
     <Compile Include="Formularios\Gastos\Frm_Modificar_Gastos.designer.cs">
       <DependentUpon>Frm_Modificar_Gastos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.Designer.cs">
+      <DependentUpon>Frm_ListadoRecibosExpensas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Publicidades\Frm_ABMC_Publicidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +447,7 @@
     <Compile Include="Negocio\NE_Gastos.cs" />
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
+    <Compile Include="Negocio\NE_Recibos.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
     <Compile Include="Negocio\NE_Transaccion_Recibos.cs" />
     <Compile Include="Negocio\NE_TransRecibos.cs" />
@@ -556,6 +563,10 @@
       <DependentUpon>Frm_Modificar_Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Gastos\Listado_Gastos.rdlc" />
+    <EmbeddedResource Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.resx">
+      <DependentUpon>Frm_ListadoRecibosExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ListadoRecibosExpensas\ListadoRecibosExpensas.rdlc" />
     <EmbeddedResource Include="Formularios\Publicidades\Frm_ABMC_Publicidad.resx">
       <DependentUpon>Frm_ABMC_Publicidad.cs</DependentUpon>
     </EmbeddedResource>
