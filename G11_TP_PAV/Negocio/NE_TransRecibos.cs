@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using G11_TP_PAV.Clases;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace G11_TP_PAV.Negocio
 {
@@ -94,8 +95,21 @@ namespace G11_TP_PAV.Negocio
             return _BD.Consulta(sql);
         }
 
+        public DataTable recuperarListado( string fechaMes)
+        {
+            string[] dato = fechaMes.Split('/');
 
+            int indice = int.Parse(dato[0]);
 
+            string[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+
+            string sql = @"SELECT r.numero_recibo AS numero , r.mes AS mes, r.anio AS año, r.numero_expensa AS numeroExpensa, e.importe AS importe, e.id_departamento AS idDepto, d.id_dueño AS idDueño 
+                            FROM recibos r JOIN expensas e ON r.numero_expensa = e.numero_expensa 
+                            JOIN departamento d ON e.id_departamento = d.id_departamento
+                            WHERE r.mes = '"+ meses[indice - 1] +"' AND r.anio = "+ dato[1] +"";
+
+            return _BD.Consulta(sql);
+        }
 
     }
 }
