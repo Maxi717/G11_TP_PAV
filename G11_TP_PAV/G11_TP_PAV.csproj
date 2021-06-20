@@ -472,6 +472,7 @@
     <EmbeddedResource Include="Formularios\CompraVenta\Frm_ReporteVentas.resx">
       <DependentUpon>Frm_ReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Report1.rdlc" />
     <EmbeddedResource Include="Formularios\CompraVenta\Reporte_Ventas.rdlc" />
     <EmbeddedResource Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.resx">
       <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>

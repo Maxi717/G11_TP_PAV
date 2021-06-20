@@ -71,7 +71,9 @@ namespace G11_TP_PAV.Formularios.CompraVenta
 
         private void btn_GenerarReporte_Click(object sender, EventArgs e)
         {
+
             NE_CompraVenta venta = new NE_CompraVenta();
+
             if (rd_mesAño.Checked == true)
             {
                 ReportDataSource dato = new ReportDataSource("DataSetVenta", venta.RecuperarInformeVenta(txt_mesFiltro.Text));

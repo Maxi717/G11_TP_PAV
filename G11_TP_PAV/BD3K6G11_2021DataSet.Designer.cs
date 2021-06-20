@@ -1312,7 +1312,6 @@ namespace G11_TP_PAV {
                 base.Columns.Add(this.columnnombre_escribano);
                 this.columnnumero_factura = new global::System.Data.DataColumn("numero_factura", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumero_factura);
-                this.columnfecha.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
