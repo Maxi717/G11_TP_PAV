@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace SqlServerTypes
 {
+    /// comentario para commit
     /// <summary>
     /// Utility methods related to CLR Types for SQL Server 
     /// </summary>
