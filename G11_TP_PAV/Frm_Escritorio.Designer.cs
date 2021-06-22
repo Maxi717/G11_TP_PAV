@@ -52,12 +52,12 @@
             this.publicidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.edificiosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vencimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.vencimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -262,6 +262,13 @@
             this.comisionesToolStripMenuItem.Text = "Comisiones";
             this.comisionesToolStripMenuItem.Click += new System.EventHandler(this.comisionesToolStripMenuItem_Click);
             // 
+            // vencimientosToolStripMenuItem
+            // 
+            this.vencimientosToolStripMenuItem.Name = "vencimientosToolStripMenuItem";
+            this.vencimientosToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.vencimientosToolStripMenuItem.Text = "Vencimientos";
+            this.vencimientosToolStripMenuItem.Click += new System.EventHandler(this.vencimientosToolStripMenuItem_Click);
+            // 
             // estadísticasToolStripMenuItem
             // 
             this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
@@ -297,13 +304,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(437, 568);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // vencimientosToolStripMenuItem
-            // 
-            this.vencimientosToolStripMenuItem.Name = "vencimientosToolStripMenuItem";
-            this.vencimientosToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.vencimientosToolStripMenuItem.Text = "Vencimientos";
-            this.vencimientosToolStripMenuItem.Click += new System.EventHandler(this.vencimientosToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 

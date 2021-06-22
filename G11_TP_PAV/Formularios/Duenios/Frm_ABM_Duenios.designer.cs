@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_refrescar = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.grid_duenios = new System.Windows.Forms.DataGridView();
@@ -39,25 +39,25 @@
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmb_tipo_documento = new G11_TP_PAV.Clases.ComboBoxHeredada();
-            this.txt_numero_documento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_agregar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_borrar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
+            this.txt_numero_documento = new System.Windows.Forms.MaskedTextBox();
+            this.cmb_tipo_documento = new G11_TP_PAV.Clases.ComboBoxHeredada();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_duenios)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_actualizar);
+            this.groupBox1.Controls.Add(this.txt_numero_documento);
+            this.groupBox1.Controls.Add(this.btn_refrescar);
             this.groupBox1.Controls.Add(this.btn_buscar);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.grid_duenios);
             this.groupBox1.Controls.Add(this.cmb_tipo_documento);
-            this.groupBox1.Controls.Add(this.txt_numero_documento);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -66,21 +66,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dueños";
             // 
-            // btn_actualizar
+            // btn_refrescar
             // 
-            this.btn_actualizar.Location = new System.Drawing.Point(410, 49);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(101, 21);
-            this.btn_actualizar.TabIndex = 6;
-            this.btn_actualizar.Text = "Refrescar";
-            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_refrescar.Location = new System.Drawing.Point(410, 49);
+            this.btn_refrescar.Name = "btn_refrescar";
+            this.btn_refrescar.Size = new System.Drawing.Size(101, 21);
+            this.btn_refrescar.TabIndex = 3;
+            this.btn_refrescar.Text = "Refrescar";
+            this.btn_refrescar.UseVisualStyleBackColor = true;
+            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
             // 
             // btn_buscar
             // 
             this.btn_buscar.Location = new System.Drawing.Point(303, 49);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(101, 21);
-            this.btn_buscar.TabIndex = 5;
+            this.btn_buscar.TabIndex = 2;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
@@ -110,7 +111,7 @@
             this.grid_duenios.Name = "grid_duenios";
             this.grid_duenios.ReadOnly = true;
             this.grid_duenios.Size = new System.Drawing.Size(546, 292);
-            this.grid_duenios.TabIndex = 3;
+            this.grid_duenios.TabIndex = 4;
             this.grid_duenios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_duenios_CellClick);
             // 
             // numero_documento
@@ -149,25 +150,6 @@
             this.domicilio.HeaderText = "Domicilio";
             this.domicilio.Name = "domicilio";
             this.domicilio.ReadOnly = true;
-            // 
-            // cmb_tipo_documento
-            // 
-            this.cmb_tipo_documento.FormattingEnabled = true;
-            this.cmb_tipo_documento.Location = new System.Drawing.Point(190, 49);
-            this.cmb_tipo_documento.Name = "cmb_tipo_documento";
-            this.cmb_tipo_documento.Pp_descripcion = "nombre_tipo_documento";
-            this.cmb_tipo_documento.Pp_Pk = "id_tipo_documento";
-            this.cmb_tipo_documento.Pp_tabla_origen = "tipo_documento";
-            this.cmb_tipo_documento.Size = new System.Drawing.Size(97, 21);
-            this.cmb_tipo_documento.TabIndex = 2;
-            // 
-            // txt_numero_documento
-            // 
-            this.txt_numero_documento.Location = new System.Drawing.Point(15, 49);
-            this.txt_numero_documento.MaxLength = 12;
-            this.txt_numero_documento.Name = "txt_numero_documento";
-            this.txt_numero_documento.Size = new System.Drawing.Size(169, 20);
-            this.txt_numero_documento.TabIndex = 1;
             // 
             // label1
             // 
@@ -218,6 +200,27 @@
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
+            // txt_numero_documento
+            // 
+            this.txt_numero_documento.Location = new System.Drawing.Point(15, 50);
+            this.txt_numero_documento.Mask = "99999999";
+            this.txt_numero_documento.Name = "txt_numero_documento";
+            this.txt_numero_documento.Size = new System.Drawing.Size(169, 20);
+            this.txt_numero_documento.TabIndex = 0;
+            // 
+            // cmb_tipo_documento
+            // 
+            this.cmb_tipo_documento.FormattingEnabled = true;
+            this.cmb_tipo_documento.Location = new System.Drawing.Point(190, 49);
+            this.cmb_tipo_documento.Name = "cmb_tipo_documento";
+            this.cmb_tipo_documento.Pp_combinada01 = null;
+            this.cmb_tipo_documento.Pp_combinada02 = null;
+            this.cmb_tipo_documento.Pp_descripcion = "nombre_tipo_documento";
+            this.cmb_tipo_documento.Pp_Pk = "id_tipo_documento";
+            this.cmb_tipo_documento.Pp_tabla_origen = "tipo_documento";
+            this.cmb_tipo_documento.Size = new System.Drawing.Size(97, 21);
+            this.cmb_tipo_documento.TabIndex = 1;
+            // 
             // Frm_ABM_Duenios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,8 +231,10 @@
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Frm_ABM_Duenios";
-            this.Text = "ABM_Dueños";
+            this.ShowIcon = false;
+            this.Text = "Dueños";
             this.Load += new System.EventHandler(this.ABM_Dueños_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -241,7 +246,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_numero_documento;
         private System.Windows.Forms.Label label1;
         private Clases.ComboBoxHeredada cmb_tipo_documento;
         private System.Windows.Forms.Label label2;
@@ -257,6 +261,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
-        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_refrescar;
+        private System.Windows.Forms.MaskedTextBox txt_numero_documento;
     }
 }

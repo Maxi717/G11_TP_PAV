@@ -18,6 +18,8 @@ using G11_TP_PAV.Formularios.Gastos;
 using G11_TP_PAV.Informes;
 using G11_TP_PAV.Formularios.ContratoAlquiler;
 using G11_TP_PAV.ReporteEma;
+using G11_TP_PAV.Formularios.Publicidades;
+using G11_TP_PAV.Formularios.ReporteGanancias;
 
 namespace G11_TP_PAV
 {

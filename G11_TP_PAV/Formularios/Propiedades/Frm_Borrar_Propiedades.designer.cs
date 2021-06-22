@@ -62,7 +62,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(411, 411);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(188, 45);
-            this.btn_cancelar.TabIndex = 37;
+            this.btn_cancelar.TabIndex = 1;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -72,7 +72,7 @@
             this.btn_aceptar.Location = new System.Drawing.Point(53, 411);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(181, 45);
-            this.btn_aceptar.TabIndex = 36;
+            this.btn_aceptar.TabIndex = 0;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
@@ -144,7 +144,7 @@
             this.txt_departamento.Location = new System.Drawing.Point(590, 120);
             this.txt_departamento.Name = "txt_departamento";
             this.txt_departamento.Size = new System.Drawing.Size(31, 26);
-            this.txt_departamento.TabIndex = 26;
+            this.txt_departamento.TabIndex = 4;
             // 
             // txt_piso
             // 
@@ -153,7 +153,7 @@
             this.txt_piso.Location = new System.Drawing.Point(489, 120);
             this.txt_piso.Name = "txt_piso";
             this.txt_piso.Size = new System.Drawing.Size(31, 26);
-            this.txt_piso.TabIndex = 25;
+            this.txt_piso.TabIndex = 3;
             // 
             // txt_numero
             // 
@@ -162,7 +162,7 @@
             this.txt_numero.Location = new System.Drawing.Point(341, 120);
             this.txt_numero.Name = "txt_numero";
             this.txt_numero.Size = new System.Drawing.Size(92, 26);
-            this.txt_numero.TabIndex = 24;
+            this.txt_numero.TabIndex = 2;
             // 
             // txt_calle
             // 
@@ -171,7 +171,7 @@
             this.txt_calle.Location = new System.Drawing.Point(76, 120);
             this.txt_calle.Name = "txt_calle";
             this.txt_calle.Size = new System.Drawing.Size(188, 26);
-            this.txt_calle.TabIndex = 23;
+            this.txt_calle.TabIndex = 9;
             // 
             // txt_designacion
             // 
@@ -180,7 +180,7 @@
             this.txt_designacion.Location = new System.Drawing.Point(195, 88);
             this.txt_designacion.Name = "txt_designacion";
             this.txt_designacion.Size = new System.Drawing.Size(150, 26);
-            this.txt_designacion.TabIndex = 22;
+            this.txt_designacion.TabIndex = 8;
             // 
             // label1
             // 
@@ -199,7 +199,7 @@
             this.txt_barrio.Location = new System.Drawing.Point(81, 153);
             this.txt_barrio.Name = "txt_barrio";
             this.txt_barrio.Size = new System.Drawing.Size(100, 26);
-            this.txt_barrio.TabIndex = 38;
+            this.txt_barrio.TabIndex = 5;
             // 
             // txt_tipo
             // 
@@ -208,7 +208,7 @@
             this.txt_tipo.Location = new System.Drawing.Point(327, 153);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(100, 26);
-            this.txt_tipo.TabIndex = 39;
+            this.txt_tipo.TabIndex = 6;
             // 
             // label9
             // 
@@ -309,8 +309,12 @@
             this.Controls.Add(this.txt_calle);
             this.Controls.Add(this.txt_designacion);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Borrar_Propiedades";
-            this.Text = "Frm_Borrar_Propiedades";
+            this.ShowIcon = false;
+            this.Text = "Borrar Propiedad";
             this.Load += new System.EventHandler(this.Frm_Borrar_Propiedades_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_duenios)).EndInit();
