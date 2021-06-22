@@ -47,7 +47,7 @@
             this.btn_iniciar_baja.Location = new System.Drawing.Point(379, 210);
             this.btn_iniciar_baja.Name = "btn_iniciar_baja";
             this.btn_iniciar_baja.Size = new System.Drawing.Size(235, 59);
-            this.btn_iniciar_baja.TabIndex = 8;
+            this.btn_iniciar_baja.TabIndex = 4;
             this.btn_iniciar_baja.Text = "Borrar Seleccionada";
             this.btn_iniciar_baja.UseVisualStyleBackColor = true;
             // 
@@ -57,7 +57,7 @@
             this.btn_iniciar_update.Location = new System.Drawing.Point(195, 210);
             this.btn_iniciar_update.Name = "btn_iniciar_update";
             this.btn_iniciar_update.Size = new System.Drawing.Size(178, 59);
-            this.btn_iniciar_update.TabIndex = 7;
+            this.btn_iniciar_update.TabIndex = 3;
             this.btn_iniciar_update.Text = "Modificar Seleccionada";
             this.btn_iniciar_update.UseVisualStyleBackColor = true;
             // 
@@ -66,7 +66,7 @@
             this.btn_iniciar_alta.Location = new System.Drawing.Point(12, 210);
             this.btn_iniciar_alta.Name = "btn_iniciar_alta";
             this.btn_iniciar_alta.Size = new System.Drawing.Size(177, 59);
-            this.btn_iniciar_alta.TabIndex = 6;
+            this.btn_iniciar_alta.TabIndex = 2;
             this.btn_iniciar_alta.Text = "Agregar Nueva Publicidad";
             this.btn_iniciar_alta.UseVisualStyleBackColor = true;
             this.btn_iniciar_alta.Click += new System.EventHandler(this.btn_iniciar_alta_Click);
@@ -89,7 +89,7 @@
             this.grid_publicidades.RowTemplate.ReadOnly = true;
             this.grid_publicidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid_publicidades.Size = new System.Drawing.Size(606, 191);
-            this.grid_publicidades.TabIndex = 5;
+            this.grid_publicidades.TabIndex = 1;
             this.grid_publicidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_publicidades_CellContentClick);
             // 
             // id_publicidad
@@ -141,6 +141,7 @@
             this.Controls.Add(this.btn_iniciar_update);
             this.Controls.Add(this.btn_iniciar_alta);
             this.Controls.Add(this.grid_publicidades);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Frm_ABMC_Publicidad";
             this.Text = "Frm_ABMC_Publicidad";
             this.Load += new System.EventHandler(this.Frm_ABMC_Publicidad_Load);

@@ -18,6 +18,9 @@ using G11_TP_PAV.Formularios.Gastos;
 using G11_TP_PAV.Informes;
 using G11_TP_PAV.Formularios.ContratoAlquiler;
 using G11_TP_PAV.ReporteEma;
+using G11_TP_PAV.Formularios.EstadisticaComisionTipoMoneda;
+using G11_TP_PAV.Formularios.EstadisticaAlqTipoMoneda;
+
 
 namespace G11_TP_PAV
 {
@@ -197,6 +200,22 @@ namespace G11_TP_PAV
             this.Hide();
             ReporteVencimientoContrato venc = new ReporteVencimientoContrato();
             venc.ShowDialog();
+            this.Show();
+        }
+
+        private void comisionesPorTipoDeMonedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Estadistica_ComisionTipoMoneda estCTM = new Frm_Estadistica_ComisionTipoMoneda();
+            estCTM.ShowDialog();
+            this.Show();
+        }
+
+        private void contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_EstAlqTipoMoneda estATM = new Frm_EstAlqTipoMoneda();
+            estATM.ShowDialog();
             this.Show();
         }
     }

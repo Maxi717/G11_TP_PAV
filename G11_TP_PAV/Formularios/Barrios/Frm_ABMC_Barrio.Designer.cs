@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            //this.bD3K6G11_2021DataSet = new G11_TP_PAV.BD3K6G11_2021DataSet();
             this.barriosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.barriosTableAdapter = new G11_TP_PAV.BD3K6G11_2021DataSetTableAdapters.barriosTableAdapter();
             this.grid_barrios = new System.Windows.Forms.DataGridView();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Localidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,33 +48,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.bD3K6G112021DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.bD3K6G11_2021Provincias = new G11_TP_PAV.BD3K6G11_2021Provincias();
             this.provinciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.provinciasTableAdapter = new G11_TP_PAV.BD3K6G11_2021ProvinciasTableAdapters.provinciasTableAdapter();
-            //this.bD3K6G11_2021Provincias1 = new G11_TP_PAV.BD3K6G11_2021Provincias();
-            //((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barriosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_barrios)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G112021DataSetBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bD3K6G11_2021DataSet
-            // 
-            //this.bD3K6G11_2021DataSet.DataSetName = "BD3K6G11_2021DataSet";
-            //this.bD3K6G11_2021DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // barriosBindingSource
             // 
             this.barriosBindingSource.DataMember = "barrios";
-            //this.barriosBindingSource.DataSource = this.bD3K6G11_2021DataSet;
-            // 
-            // barriosTableAdapter
-            // 
-            //this.barriosTableAdapter.ClearBeforeFill = true;
             // 
             // grid_barrios
             // 
@@ -178,7 +160,7 @@
             this.btn_borrar.Location = new System.Drawing.Point(198, 72);
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.Size = new System.Drawing.Size(29, 25);
-            this.btn_borrar.TabIndex = 9;
+            this.btn_borrar.TabIndex = 3;
             this.btn_borrar.UseVisualStyleBackColor = true;
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
@@ -205,22 +187,26 @@
             this.cmb_localidades.FormattingEnabled = true;
             this.cmb_localidades.Location = new System.Drawing.Point(124, 40);
             this.cmb_localidades.Name = "cmb_localidades";
+            this.cmb_localidades.Pp_combinada01 = null;
+            this.cmb_localidades.Pp_combinada02 = null;
             this.cmb_localidades.Pp_descripcion = "nombre";
             this.cmb_localidades.Pp_Pk = "id_localidad";
             this.cmb_localidades.Pp_tabla_origen = "localidades";
             this.cmb_localidades.Size = new System.Drawing.Size(103, 21);
-            this.cmb_localidades.TabIndex = 6;
+            this.cmb_localidades.TabIndex = 1;
             // 
             // cmb_provincias
             // 
             this.cmb_provincias.FormattingEnabled = true;
             this.cmb_provincias.Location = new System.Drawing.Point(12, 40);
             this.cmb_provincias.Name = "cmb_provincias";
+            this.cmb_provincias.Pp_combinada01 = null;
+            this.cmb_provincias.Pp_combinada02 = null;
             this.cmb_provincias.Pp_descripcion = "nombre";
             this.cmb_provincias.Pp_Pk = "id_provincia";
             this.cmb_provincias.Pp_tabla_origen = "provincias";
             this.cmb_provincias.Size = new System.Drawing.Size(103, 21);
-            this.cmb_provincias.TabIndex = 5;
+            this.cmb_provincias.TabIndex = 0;
             this.cmb_provincias.SelectedIndexChanged += new System.EventHandler(this.cmb_provincias_SelectedIndexChanged);
             // 
             // btn_buscar
@@ -250,29 +236,9 @@
             this.txt_nombre.TabIndex = 2;
             this.txt_nombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // bD3K6G112021DataSetBindingSource
-            // 
-            //this.bD3K6G112021DataSetBindingSource.DataSource = this.bD3K6G11_2021DataSet;
-            this.bD3K6G112021DataSetBindingSource.Position = 0;
-            // 
-            // bD3K6G11_2021Provincias
-            // 
-            //this.bD3K6G11_2021Provincias.DataSetName = "BD3K6G11_2021Provincias";
-            //this.bD3K6G11_2021Provincias.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // provinciasBindingSource
             // 
             this.provinciasBindingSource.DataMember = "provincias";
-            //this.provinciasBindingSource.DataSource = this.bD3K6G11_2021Provincias;
-            // 
-            // provinciasTableAdapter
-            // 
-            //this.provinciasTableAdapter.ClearBeforeFill = true;
-            // 
-            // bD3K6G11_2021Provincias1
-            // 
-            //this.bD3K6G11_2021Provincias1.DataSetName = "BD3K6G11_2021Provincias";
-            //this.bD3K6G11_2021Provincias1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ABMC_Barrio
             // 
@@ -292,15 +258,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Administrar Barrios";
             this.Load += new System.EventHandler(this.ABMC_Barrio_Load);
-            //((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barriosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_barrios)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bD3K6G112021DataSetBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciasBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.bD3K6G11_2021Provincias1)).EndInit();
             this.ResumeLayout(false);
 
         }
