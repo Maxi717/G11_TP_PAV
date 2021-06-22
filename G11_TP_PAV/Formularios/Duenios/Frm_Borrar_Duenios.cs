@@ -42,8 +42,10 @@ namespace G11_TP_PAV.Formularios.Duenios
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Esta seguro de Borrar?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("¿Esta seguro de borrar el dueño y todas sus asociaciones a propiedades?", "Importante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
+                NE_Propiedades propiedades = new NE_Propiedades();
+                duenio.borrar_asociacion(Pp_numero_documento, Pp_tipo_documento);
                 duenio.borrar(Pp_numero_documento, Pp_tipo_documento);
                 MessageBox.Show("Se borró correctamente el dueño.");
                 this.Close();

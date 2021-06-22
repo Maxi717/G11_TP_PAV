@@ -32,6 +32,7 @@ namespace G11_TP_PAV.Formularios.Dueños
             if (txt_numero_documento.Text == "")
             {
                 MessageBox.Show("Falta ingresar un documento.");
+                txt_numero_documento.Focus();
                 return;
             }
 
@@ -41,24 +42,28 @@ namespace G11_TP_PAV.Formularios.Dueños
                 if (tabla.Rows.Count != 0)
                 {
                     MessageBox.Show("Ya existe un dueño registrado con ese documento.");
+                    txt_numero_documento.Focus();
                     return;
                 }
             
             if (txt_nombre.Text == "")
                 {
                     MessageBox.Show("Falta ingresar un el nombre del dueño.");
+                    txt_nombre.Focus();
                     return;
                 }
 
             if (txt_telefono.Text == "")
                 {
                     MessageBox.Show("Falta ingresar un telefono.");
+                    txt_telefono.Focus();
                     return;
                 }
 
             if (txt_domicilio.Text == "")
                 {
                     MessageBox.Show("Falta ingresar un el domicilio del dueño.");
+                    txt_domicilio.Focus();
                     return;
                 }
 

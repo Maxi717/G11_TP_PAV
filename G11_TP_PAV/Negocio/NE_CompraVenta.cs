@@ -158,5 +158,24 @@ namespace G11_TP_PAV.Negocio
 
         }
 
+
+        public DataTable gananciasPorTipoPropiedad()
+        {
+            string sql = @"SELECT unido.tipo_propiedad, SUM(unido.ganancias) AS ganancias FROM(
+                           SELECT  tipo_propiedad.nombre as tipo_propiedad, SUM(facturas_comisiones3.comision) AS ganancias FROM facturas_comisiones3 
+                           JOIN compraVentas ON facturas_comisiones3.numero_factura = compraVentas.numero_factura 
+                           JOIN propiedades ON compraVentas.designacion_catastral = propiedades.designacion_catastral 
+                           JOIN tipo_propiedad ON propiedades.id_tipo_propiedad = tipo_propiedad.id_tipo_propiedad 
+                           GROUP BY (tipo_propiedad.nombre)
+                           UNION
+                           SELECT  tipo_propiedad.nombre as tipo_propiedad, SUM(facturas_comisiones3.comision) AS ganancias FROM facturas_comisiones3
+                           JOIN contratoAlquiler ON facturas_comisiones3.numero_factura = contratoAlquiler.numero_facturas 
+                           JOIN propiedades ON contratoAlquiler.designacion_catatral = propiedades.designacion_catastral 
+                           JOIN tipo_propiedad ON propiedades.id_tipo_propiedad = tipo_propiedad.id_tipo_propiedad 
+                           GROUP BY (tipo_propiedad.nombre)) AS unido
+                           GROUP BY (unido.tipo_propiedad)";
+            return (_BD.Consulta(sql));
+        }
+  
     }
 }
