@@ -54,12 +54,10 @@
             this.comisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vencimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gastosPorTipoDePropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gananciasPorTipoDePropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -273,20 +271,10 @@
             // 
             // estadísticasToolStripMenuItem
             // 
-            this.estadísticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gastosPorTipoDePropiedadToolStripMenuItem,
-            this.gananciasPorTipoDePropiedadToolStripMenuItem});
             this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
             this.estadísticasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
             this.estadísticasToolStripMenuItem.Text = "Estadísticas";
-            // 
-            // gastosPorTipoDePropiedadToolStripMenuItem
-            // 
-            this.gastosPorTipoDePropiedadToolStripMenuItem.Name = "gastosPorTipoDePropiedadToolStripMenuItem";
-            this.gastosPorTipoDePropiedadToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
-            this.gastosPorTipoDePropiedadToolStripMenuItem.Text = "Gastos por tipo de Propiedad";
-            this.gastosPorTipoDePropiedadToolStripMenuItem.Click += new System.EventHandler(this.gastosPorTipoDePropiedadToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -316,13 +304,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(437, 568);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // gananciasPorTipoDePropiedadToolStripMenuItem
-            // 
-            this.gananciasPorTipoDePropiedadToolStripMenuItem.Name = "gananciasPorTipoDePropiedadToolStripMenuItem";
-            this.gananciasPorTipoDePropiedadToolStripMenuItem.Size = new System.Drawing.Size(306, 26);
-            this.gananciasPorTipoDePropiedadToolStripMenuItem.Text = "Ganancias por tipo de propiedad";
-            this.gananciasPorTipoDePropiedadToolStripMenuItem.Click += new System.EventHandler(this.gananciasPorTipoDePropiedadToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -381,8 +362,6 @@
         private System.Windows.Forms.ToolStripMenuItem edificiosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem comisionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vencimientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gastosPorTipoDePropiedadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gananciasPorTipoDePropiedadToolStripMenuItem;
     }
 }
 
