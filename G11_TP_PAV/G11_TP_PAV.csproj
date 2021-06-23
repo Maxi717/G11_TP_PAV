@@ -725,8 +725,7 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Formularios\Est_Compra_Moneda\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+
     <None Include="BD3K6G11_2021publicidades.xsc">
       <DependentUpon>BD3K6G11_2021publicidades.xsd</DependentUpon>
     </None>
