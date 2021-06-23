@@ -130,7 +130,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetEsteban.xsd</DependentUpon>
-
+    </Compile>
     <Compile Include="Formularios\Est_Comi_Contrato\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -358,7 +358,7 @@
     </Compile>
     <Compile Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.Designer.cs">
       <DependentUpon>Frm_Estadistica_cantFacturasXEscribano.cs</DependentUpon>
-
+    </Compile>
 
     <Compile Include="Formularios\EstadisticasGonza\DataGonza.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -425,6 +425,7 @@
     </Compile>
     <Compile Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.Designer.cs">
       <DependentUpon>Frm_ListadoRecibosExpensas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Propiedades\Ds_Reporte_Propiedades.cs">
       <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
     </Compile>
@@ -579,9 +580,6 @@
     <Compile Include="Negocio\NE_Publicidades.cs" />
     <Compile Include="Negocio\NE_Recibos.cs" />
     <Compile Include="Negocio\NE_EstadisticasGonza.cs" />
-    <Compile Include="Negocio\NE_Gastos.cs" />
-    <Compile Include="Negocio\NE_propiedades.cs" />
-    <Compile Include="Negocio\NE_Publicidades.cs" />
     <Compile Include="Negocio\NE_ReporteDepartamento.cs" />
     <Compile Include="Negocio\NE_ReportePropiedad.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
@@ -702,6 +700,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.resx">
       <DependentUpon>Frm_Estadistica_cantFacturasXEscribano.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EstadisticasGonza\EstadisticasProvincias.resx">
       <DependentUpon>EstadisticasProvincias.cs</DependentUpon>
     </EmbeddedResource>
@@ -838,6 +837,7 @@
     </None>
     <None Include="DataSetEsteban.xss">
       <DependentUpon>DataSetEsteban.xsd</DependentUpon>
+    </None>
     <None Include="Formularios\DepartamentosRepor\DataSetDeptos.xsc">
       <DependentUpon>DataSetDeptos.xsd</DependentUpon>
     </None>
