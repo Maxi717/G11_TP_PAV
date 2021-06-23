@@ -33,8 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.txt_limSuperior = new System.Windows.Forms.TextBox();
-            this.txt_limInferior = new System.Windows.Forms.TextBox();
+            this.txt_limInferior = new System.Windows.Forms.MaskedTextBox();
+            this.txt_limSuperior = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // RV_edificios
@@ -85,27 +85,31 @@
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // txt_limSuperior
-            // 
-            this.txt_limSuperior.Location = new System.Drawing.Point(369, 79);
-            this.txt_limSuperior.Name = "txt_limSuperior";
-            this.txt_limSuperior.Size = new System.Drawing.Size(100, 20);
-            this.txt_limSuperior.TabIndex = 7;
-            // 
             // txt_limInferior
             // 
             this.txt_limInferior.Location = new System.Drawing.Point(134, 79);
+            this.txt_limInferior.Mask = "99999";
             this.txt_limInferior.Name = "txt_limInferior";
             this.txt_limInferior.Size = new System.Drawing.Size(100, 20);
-            this.txt_limInferior.TabIndex = 8;
+            this.txt_limInferior.TabIndex = 9;
+            this.txt_limInferior.ValidatingType = typeof(int);
+            // 
+            // txt_limSuperior
+            // 
+            this.txt_limSuperior.Location = new System.Drawing.Point(369, 79);
+            this.txt_limSuperior.Mask = "99999";
+            this.txt_limSuperior.Name = "txt_limSuperior";
+            this.txt_limSuperior.Size = new System.Drawing.Size(100, 20);
+            this.txt_limSuperior.TabIndex = 10;
+            this.txt_limSuperior.ValidatingType = typeof(int);
             // 
             // Frm_ListadoEdificios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 612);
-            this.Controls.Add(this.txt_limInferior);
             this.Controls.Add(this.txt_limSuperior);
+            this.Controls.Add(this.txt_limInferior);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -126,7 +130,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.TextBox txt_limSuperior;
-        private System.Windows.Forms.TextBox txt_limInferior;
+        private System.Windows.Forms.MaskedTextBox txt_limInferior;
+        private System.Windows.Forms.MaskedTextBox txt_limSuperior;
     }
 }
