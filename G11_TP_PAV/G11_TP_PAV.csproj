@@ -353,7 +353,7 @@
     </Compile>
     <Compile Include="Formularios\EstadisticasGonza\EstadisticasSuperficieBarrio.Designer.cs">
       <DependentUpon>EstadisticasSuperficieBarrio.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="Formularios\EstadisticaAlqTipoMoneda\Frm_EstAlqTipoMoneda.cs">
       <SubType>Form</SubType>
     </Compile>
