@@ -201,5 +201,21 @@ namespace G11_TP_PAV
             venc.ShowDialog();
             this.Show();
         }
+
+        private void gananciasPorTipoDePropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_estadisticaGananciasPorTipoPropiedad est = new Frm_estadisticaGananciasPorTipoPropiedad();
+            est.ShowDialog();
+            this.Show();
+        }
+
+        private void gastosPublicitariosPorTipoDePropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Estadistica_Publicidades est = new Frm_Estadistica_Publicidades();
+            est.ShowDialog();
+            this.Show();
+        }
     }
 }
