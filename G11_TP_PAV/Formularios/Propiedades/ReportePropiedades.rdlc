@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSetListaProp">
       <Query>
         <DataSourceName>Ds_Reporte_Propiedades</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -48,7 +48,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Ds_Reporte_Propiedades</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Usuario\source\repos\Maxi717\G11_TP_PAV\G11_TP_PAV\Formularios\Propiedades\Ds_Reporte_Propiedades.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Maxi\Source\Repos\Maxi717\G11_TP_PAV\G11_TP_PAV\Formularios\Propiedades\Ds_Reporte_Propiedades.xsd</rd:SchemaPath>
         <rd:TableName>RepPropiedad</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
@@ -539,7 +539,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
+            <DataSetName>DataSetListaProp</DataSetName>
             <Top>0.17639cm</Top>
             <Left>0.47625cm</Left>
             <Height>1.2cm</Height>

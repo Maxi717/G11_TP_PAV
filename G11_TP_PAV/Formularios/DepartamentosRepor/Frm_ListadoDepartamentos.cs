@@ -55,5 +55,10 @@ namespace G11_TP_PAV.Formularios.DepartamentosRepor
         {
             ArmarReporte();
         }
+
+        private void rv_deptos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

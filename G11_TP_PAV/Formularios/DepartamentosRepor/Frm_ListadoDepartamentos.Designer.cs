@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -35,8 +37,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rv_deptos = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataSetDeptos = new G11_TP_PAV.Formularios.DepartamentosRepor.DataSetDeptos();
+            this.DataTableDeptoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.num_max = new G11_TP_PAV.Clases.NumericHeredada();
             this.num_min = new G11_TP_PAV.Clases.NumericHeredada();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetDeptos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTableDeptoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_min)).BeginInit();
             this.SuspendLayout();
@@ -57,9 +63,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 25);
+            this.label3.Size = new System.Drawing.Size(242, 25);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Reporte de propiedades";
+            this.label3.Text = "Reporte de departamentos";
             // 
             // button2
             // 
@@ -101,11 +107,26 @@
             // 
             // rv_deptos
             // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DataTableDeptoBindingSource;
+            this.rv_deptos.LocalReport.DataSources.Add(reportDataSource1);
+            this.rv_deptos.LocalReport.ReportEmbeddedResource = "G11_TP_PAV.Formularios.DepartamentosRepor.ReporteListadoDepartamentos.rdlc";
             this.rv_deptos.Location = new System.Drawing.Point(12, 103);
             this.rv_deptos.Name = "rv_deptos";
             this.rv_deptos.ServerReport.BearerToken = null;
             this.rv_deptos.Size = new System.Drawing.Size(875, 382);
             this.rv_deptos.TabIndex = 16;
+            this.rv_deptos.Load += new System.EventHandler(this.rv_deptos_Load);
+            // 
+            // DataSetDeptos
+            // 
+            this.DataSetDeptos.DataSetName = "DataSetDeptos";
+            this.DataSetDeptos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DataTableDeptoBindingSource
+            // 
+            this.DataTableDeptoBindingSource.DataMember = "DataTableDepto";
+            this.DataTableDeptoBindingSource.DataSource = this.DataSetDeptos;
             // 
             // num_max
             // 
@@ -158,6 +179,8 @@
             this.MinimizeBox = false;
             this.Name = "Frm_ListadoDepartamentos";
             this.Load += new System.EventHandler(this.Frm_ListadoDepartamentos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetDeptos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTableDeptoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_min)).EndInit();
             this.ResumeLayout(false);
@@ -176,5 +199,7 @@
         private Clases.NumericHeredada num_min;
         private Clases.NumericHeredada num_max;
         private Microsoft.Reporting.WinForms.ReportViewer rv_deptos;
+        private System.Windows.Forms.BindingSource DataTableDeptoBindingSource;
+        private DataSetDeptos DataSetDeptos;
     }
 }

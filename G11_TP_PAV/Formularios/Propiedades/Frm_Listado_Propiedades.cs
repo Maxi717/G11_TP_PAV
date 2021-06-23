@@ -24,6 +24,7 @@ namespace G11_TP_PAV.Formularios.Propiedades
         private void Frm_Listado_Propiedades_Load(object sender, EventArgs e)
         {
             this.rv_prop.RefreshReport();
+            ArmarReporte();
         }
 
         private DataTable CalcularDatosUsuarios()
@@ -36,7 +37,7 @@ namespace G11_TP_PAV.Formularios.Propiedades
         private void ArmarReporte()
         {
             DataTable tabla = CalcularDatosUsuarios();
-            ReportDataSource datos = new ReportDataSource("DataSet1", tabla);
+            ReportDataSource datos = new ReportDataSource("DataSetListaProp", tabla);
             rv_prop.LocalReport.ReportEmbeddedResource = "G11_TP_PAV.Formularios.Propiedades.ReportePropiedades.rdlc";
             ReportParameter[] parametros = new ReportParameter[1];
             parametros[0] = new ReportParameter("RP_Prop", "Desde: "+num_min.Value.ToString()+"    Hasta:"+num_max.Value.ToString());
@@ -53,6 +54,11 @@ namespace G11_TP_PAV.Formularios.Propiedades
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rv_prop_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

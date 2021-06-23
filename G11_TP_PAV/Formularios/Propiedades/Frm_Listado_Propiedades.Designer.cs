@@ -43,11 +43,13 @@
             // 
             // rv_prop
             // 
+            this.rv_prop.LocalReport.ReportEmbeddedResource = "G11_TP_PAV.Formularios.Propiedades.ReportePropiedades.rdlc";
             this.rv_prop.Location = new System.Drawing.Point(12, 128);
             this.rv_prop.Name = "rv_prop";
             this.rv_prop.ServerReport.BearerToken = null;
             this.rv_prop.Size = new System.Drawing.Size(862, 374);
             this.rv_prop.TabIndex = 0;
+            this.rv_prop.Load += new System.EventHandler(this.rv_prop_Load);
             // 
             // label1
             // 
