@@ -46,7 +46,11 @@ namespace G11_TP_PAV.Formularios.Estadisticas_Esteban
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 548);
             this.Controls.Add(this.Rv_GanXBarrio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Frm_EstadisticaGasto_x_Edificio";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gastos por Edificio";
             this.Load += new System.EventHandler(this.Frm_EstadisticaGasto_x_Edificio_Load);
             this.ResumeLayout(false);

@@ -47,7 +47,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.rv_ReciboExpensas.Name = "rv_ReciboExpensas";
             this.rv_ReciboExpensas.ServerReport.BearerToken = null;
             this.rv_ReciboExpensas.Size = new System.Drawing.Size(714, 301);
-            this.rv_ReciboExpensas.TabIndex = 0;
+            this.rv_ReciboExpensas.TabIndex = 3;
             // 
             // btn_Generar
             // 
@@ -55,7 +55,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.btn_Generar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Generar.Name = "btn_Generar";
             this.btn_Generar.Size = new System.Drawing.Size(112, 32);
-            this.btn_Generar.TabIndex = 1;
+            this.btn_Generar.TabIndex = 0;
             this.btn_Generar.Text = "Generar Listado";
             this.btn_Generar.UseVisualStyleBackColor = true;
             this.btn_Generar.Click += new System.EventHandler(this.btn_Generar_Click);
@@ -79,7 +79,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.chk_Filtro.Location = new System.Drawing.Point(349, 121);
             this.chk_Filtro.Name = "chk_Filtro";
             this.chk_Filtro.Size = new System.Drawing.Size(68, 22);
-            this.chk_Filtro.TabIndex = 7;
+            this.chk_Filtro.TabIndex = 1;
             this.chk_Filtro.Text = "Filtrar ";
             this.chk_Filtro.UseVisualStyleBackColor = true;
             this.chk_Filtro.CheckedChanged += new System.EventHandler(this.chk_Filtro_CheckedChanged);
@@ -95,7 +95,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(329, 81);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
@@ -105,7 +105,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.btn_mesActual.Location = new System.Drawing.Point(240, 16);
             this.btn_mesActual.Name = "btn_mesActual";
             this.btn_mesActual.Size = new System.Drawing.Size(59, 54);
-            this.btn_mesActual.TabIndex = 7;
+            this.btn_mesActual.TabIndex = 1;
             this.btn_mesActual.Text = "Mes actual";
             this.btn_mesActual.UseVisualStyleBackColor = true;
             this.btn_mesActual.Click += new System.EventHandler(this.btn_mesActual_Click);
@@ -117,7 +117,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.txt_mesFiltro.Mask = "00/0000";
             this.txt_mesFiltro.Name = "txt_mesFiltro";
             this.txt_mesFiltro.Size = new System.Drawing.Size(62, 24);
-            this.txt_mesFiltro.TabIndex = 2;
+            this.txt_mesFiltro.TabIndex = 0;
             this.txt_mesFiltro.ValidatingType = typeof(System.DateTime);
             // 
             // rd_mesAño
@@ -143,6 +143,7 @@ namespace G11_TP_PAV.Formularios.ListadoRecibosExpensas
             this.Controls.Add(this.btn_Generar);
             this.Controls.Add(this.rv_ReciboExpensas);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_ListadoRecibosExpensas";

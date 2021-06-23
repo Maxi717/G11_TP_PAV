@@ -52,7 +52,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.rv1.Name = "rv1";
             this.rv1.ServerReport.BearerToken = null;
             this.rv1.Size = new System.Drawing.Size(1006, 300);
-            this.rv1.TabIndex = 0;
+            this.rv1.TabIndex = 3;
             // 
             // label1
             // 
@@ -82,7 +82,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(494, 125);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
@@ -92,7 +92,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.btn_mesActual.Location = new System.Drawing.Point(240, 16);
             this.btn_mesActual.Name = "btn_mesActual";
             this.btn_mesActual.Size = new System.Drawing.Size(59, 54);
-            this.btn_mesActual.TabIndex = 7;
+            this.btn_mesActual.TabIndex = 2;
             this.btn_mesActual.Text = "Mes actual";
             this.btn_mesActual.UseVisualStyleBackColor = true;
             this.btn_mesActual.Click += new System.EventHandler(this.btn_mesActual_Click);
@@ -124,7 +124,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.txt_hasta.Mask = "00/00/0000";
             this.txt_hasta.Name = "txt_hasta";
             this.txt_hasta.Size = new System.Drawing.Size(80, 24);
-            this.txt_hasta.TabIndex = 4;
+            this.txt_hasta.TabIndex = 5;
             this.txt_hasta.ValidatingType = typeof(System.DateTime);
             // 
             // txt_desde
@@ -134,7 +134,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.txt_desde.Mask = "00/00/0000";
             this.txt_desde.Name = "txt_desde";
             this.txt_desde.Size = new System.Drawing.Size(83, 24);
-            this.txt_desde.TabIndex = 3;
+            this.txt_desde.TabIndex = 4;
             this.txt_desde.ValidatingType = typeof(System.DateTime);
             // 
             // txt_mesFiltro
@@ -144,7 +144,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.txt_mesFiltro.Mask = "00/0000";
             this.txt_mesFiltro.Name = "txt_mesFiltro";
             this.txt_mesFiltro.Size = new System.Drawing.Size(62, 24);
-            this.txt_mesFiltro.TabIndex = 2;
+            this.txt_mesFiltro.TabIndex = 1;
             this.txt_mesFiltro.ValidatingType = typeof(System.DateTime);
             // 
             // rd_periodo
@@ -153,7 +153,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.rd_periodo.Location = new System.Drawing.Point(31, 77);
             this.rd_periodo.Name = "rd_periodo";
             this.rd_periodo.Size = new System.Drawing.Size(76, 22);
-            this.rd_periodo.TabIndex = 1;
+            this.rd_periodo.TabIndex = 3;
             this.rd_periodo.TabStop = true;
             this.rd_periodo.Text = "periodo";
             this.rd_periodo.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.btn_GenerarReporte.Location = new System.Drawing.Point(941, 141);
             this.btn_GenerarReporte.Name = "btn_GenerarReporte";
             this.btn_GenerarReporte.Size = new System.Drawing.Size(78, 55);
-            this.btn_GenerarReporte.TabIndex = 4;
+            this.btn_GenerarReporte.TabIndex = 0;
             this.btn_GenerarReporte.Text = "Generar Reporte";
             this.btn_GenerarReporte.UseVisualStyleBackColor = true;
             this.btn_GenerarReporte.Click += new System.EventHandler(this.btn_GenerarReporte_Click);
@@ -187,7 +187,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.chk_Filtro.Location = new System.Drawing.Point(514, 164);
             this.chk_Filtro.Name = "chk_Filtro";
             this.chk_Filtro.Size = new System.Drawing.Size(68, 22);
-            this.chk_Filtro.TabIndex = 5;
+            this.chk_Filtro.TabIndex = 1;
             this.chk_Filtro.Text = "Filtrar ";
             this.chk_Filtro.UseVisualStyleBackColor = true;
             this.chk_Filtro.CheckedChanged += new System.EventHandler(this.chk_Filtro_CheckedChanged);
@@ -208,6 +208,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_ReporteVentas";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Ventas";
             this.Load += new System.EventHandler(this.Frm_ReporteVentas_Load);
