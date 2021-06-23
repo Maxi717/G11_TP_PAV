@@ -11,9 +11,9 @@ using G11_TP_PAV.Negocio;
 using G11_TP_PAV;
 
 namespace G11_TP_PAV.Formularios.EmaContratoAlquiler
-{
+{ 
     public partial class Frm_ContratoAlquiler : Form
-    {
+    { 
         public Frm_ContratoAlquiler()
         {
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace G11_TP_PAV.Formularios.EmaContratoAlquiler
                 for (int i = 0; i < tabla.Rows.Count; i++)
                 {
                     DataGrid.Rows.Add();
-                    DataGrid.Rows[i].Cells[0].Value = tabla.Rows[i]["nro_factura"].ToString();
+                    DataGrid.Rows[i].Cells[0].Value = tabla.Rows[i]["numero_factura"].ToString();
                     DataGrid.Rows[i].Cells[1].Value = tabla.Rows[i]["propiedad"].ToString();
                     DataGrid.Rows[i].Cells[2].Value = tabla.Rows[i]["documento"].ToString();
                     DataGrid.Rows[i].Cells[3].Value = tabla.Rows[i]["id_tipo_moneda"].ToString();

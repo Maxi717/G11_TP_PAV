@@ -22,6 +22,7 @@ namespace G11_TP_PAV.Formularios
             InitializeComponent();
         }
 
+        NE_departamentos departamento = new NE_departamentos();
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace G11_TP_PAV.Formularios
         private void button2_Click(object sender, EventArgs e)
         {
             ModificarDepartamentos ModifDepto = new ModificarDepartamentos();
+            id = dataGridView1.CurrentRow.Cells["id_departamento"].Value.ToString();
             ModifDepto.id = id;
             ModifDepto.ShowDialog();
             ModifDepto.Dispose();
@@ -42,6 +44,7 @@ namespace G11_TP_PAV.Formularios
         private void button3_Click(object sender, EventArgs e)
         {
             BajaDepartamentos BajaDepto = new BajaDepartamentos();
+            id = dataGridView1.CurrentRow.Cells["id_departamento"].Value.ToString();
             BajaDepto.id = id;
             BajaDepto.ShowDialog();
             BajaDepto.Dispose();
@@ -51,11 +54,14 @@ namespace G11_TP_PAV.Formularios
         {
             cmb_Barrio.CargarCombo();
             cmb_Edificio.CargarCombo();
+            dataGridView1.Rows.Clear();
+            DataTable tabla = new DataTable();
+            tabla = departamento.RecuperarDepartamentos();
+            CargarGrilla(tabla);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            NE_departamentos departamento = new NE_departamentos();
             if (chk_edificio.Checked == true)
             {
 
@@ -110,6 +116,12 @@ namespace G11_TP_PAV.Formularios
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             id = dataGridView1.CurrentRow.Cells["id_departamento"].Value.ToString();
+        }
+
+        private void chk_edificio_CheckedChanged(object sender, EventArgs e)
+        {
+            cmb_Barrio.SelectedIndex = -1;
+            cmb_Edificio.SelectedIndex = -1;
         }
     }
 

@@ -73,6 +73,5 @@ namespace G11_TP_PAV.ReporteEma
             contrato.Pp_fechaInicio = fechaDesde;
 
         }
-
     }
 }
