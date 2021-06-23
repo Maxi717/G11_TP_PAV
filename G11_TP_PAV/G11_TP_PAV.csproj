@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -172,6 +181,20 @@
     <Compile Include="Formularios\ContratoAlquiler\Frm_ListadoContratos.Designer.cs">
       <DependentUpon>Frm_ListadoContratos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\DepartamentosRepor\DataSetDeptos.cs">
+      <DependentUpon>DataSetDeptos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DepartamentosRepor\DataSetDeptos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDeptos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\DepartamentosRepor\Frm_ListadoDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\DepartamentosRepor\Frm_ListadoDepartamentos.Designer.cs">
+      <DependentUpon>Frm_ListadoDepartamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Duenios\Frm_ABM_Duenios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +333,20 @@
     <Compile Include="Formularios\Gastos\Frm_Modificar_Gastos.designer.cs">
       <DependentUpon>Frm_Modificar_Gastos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Propiedades\Ds_Reporte_Propiedades.cs">
+      <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Propiedades\Ds_Reporte_Propiedades.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Propiedades\Frm_Listado_Propiedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Propiedades\Frm_Listado_Propiedades.Designer.cs">
+      <DependentUpon>Frm_Listado_Propiedades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Publicidades\Frm_ABMC_Publicidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -435,6 +472,8 @@
     <Compile Include="Negocio\NE_Gastos.cs" />
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
+    <Compile Include="Negocio\NE_ReporteDepartamento.cs" />
+    <Compile Include="Negocio\NE_ReportePropiedad.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
     <Compile Include="Negocio\NE_Transaccion_Recibos.cs" />
     <Compile Include="Negocio\NE_TransRecibos.cs" />
@@ -475,6 +514,10 @@
       <DependentUpon>Frm_ListadoContratos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ContratoAlquiler\Reporte_Alquileres.rdlc" />
+    <EmbeddedResource Include="Formularios\DepartamentosRepor\Frm_ListadoDepartamentos.resx">
+      <DependentUpon>Frm_ListadoDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\DepartamentosRepor\ReporteListadoDepartamentos.rdlc" />
     <EmbeddedResource Include="Formularios\Duenios\Frm_ABM_Duenios.resx">
       <DependentUpon>Frm_ABM_Duenios.cs</DependentUpon>
     </EmbeddedResource>
@@ -546,6 +589,10 @@
       <DependentUpon>Frm_Modificar_Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Gastos\Listado_Gastos.rdlc" />
+    <EmbeddedResource Include="Formularios\Propiedades\Frm_Listado_Propiedades.resx">
+      <DependentUpon>Frm_Listado_Propiedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Propiedades\ReportePropiedades.rdlc" />
     <EmbeddedResource Include="Formularios\Publicidades\Frm_ABMC_Publicidad.resx">
       <DependentUpon>Frm_ABMC_Publicidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -627,6 +674,28 @@
     <None Include="BD3K6G11_2021DataSet.xss">
       <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
     </None>
+    <None Include="Formularios\DepartamentosRepor\DataSetDeptos.xsc">
+      <DependentUpon>DataSetDeptos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\DepartamentosRepor\DataSetDeptos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDeptos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\DepartamentosRepor\DataSetDeptos.xss">
+      <DependentUpon>DataSetDeptos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Propiedades\Ds_Reporte_Propiedades.xsc">
+      <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Propiedades\Ds_Reporte_Propiedades.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Ds_Reporte_Propiedades.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Propiedades\Ds_Reporte_Propiedades.xss">
+      <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -683,5 +752,25 @@
     <Content Include="Resources\update.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup />
+  <ItemGroup Condition="$(VisualStudioVersion) == '15.0'">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=13.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
 </Project>

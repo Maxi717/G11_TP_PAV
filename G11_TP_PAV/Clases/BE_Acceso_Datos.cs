@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace G11_TP_PAV.Clases
 {
@@ -77,7 +78,14 @@ namespace G11_TP_PAV.Clases
         {
             Conectar();
             Cmd.CommandText = sql;
-            Cmd.ExecuteNonQuery();
+            try
+            {
+                Cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error", ex.Message);
+            }
             Desconectar();
         }
 
