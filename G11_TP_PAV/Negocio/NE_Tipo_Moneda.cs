@@ -48,6 +48,12 @@ namespace G11_TP_PAV.Negocio
             return _BD.Consulta(sql);
         }
 
+        public DataTable RecuperarParaEstadistica()
+        {
+            string sql = "SELECT nombre as Moneda, porcentaje_comision as 'PorcentajedeComision' FROM tipo_moneda";
+            return _BD.Consulta(sql);
+        }
+
         public void Modificar(string id_moneda)
         {
             string sqlModificar = @"UPDATE tipo_moneda SET "

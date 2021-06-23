@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Denominacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Superficie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Porcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dueño = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,14 +48,6 @@
             this.chk_edificio = new System.Windows.Forms.CheckBox();
             this.cmb_Edificio = new G11_TP_PAV.Clases.ComboBox1();
             this.cmb_Barrio = new G11_TP_PAV.Clases.ComboBox1();
-            this.id_departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Piso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Denominacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Superficie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Porcentaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dueño = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,51 @@
             this.dataGridView1.Size = new System.Drawing.Size(689, 185);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // id_departamento
+            // 
+            this.id_departamento.HeaderText = "id_departamento";
+            this.id_departamento.Name = "id_departamento";
+            this.id_departamento.Visible = false;
+            // 
+            // Piso
+            // 
+            this.Piso.HeaderText = "Piso";
+            this.Piso.Name = "Piso";
+            this.Piso.Width = 40;
+            // 
+            // Denominacion
+            // 
+            this.Denominacion.HeaderText = "Denominacion";
+            this.Denominacion.Name = "Denominacion";
+            // 
+            // Superficie
+            // 
+            this.Superficie.HeaderText = "Superficie";
+            this.Superficie.Name = "Superficie";
+            this.Superficie.Width = 80;
+            // 
+            // Porcentaje
+            // 
+            this.Porcentaje.HeaderText = "Porcentaje";
+            this.Porcentaje.Name = "Porcentaje";
+            this.Porcentaje.Width = 80;
+            // 
+            // Dueño
+            // 
+            this.Dueño.HeaderText = "Dueño";
+            this.Dueño.Name = "Dueño";
+            this.Dueño.Width = 120;
+            // 
+            // Domicilio
+            // 
+            this.Domicilio.HeaderText = "Domicilio";
+            this.Domicilio.Name = "Domicilio";
+            // 
+            // Barrio
+            // 
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
             // 
             // button1
             // 
@@ -171,6 +216,7 @@
             this.chk_edificio.TabIndex = 13;
             this.chk_edificio.Text = "Seleccionar todos";
             this.chk_edificio.UseVisualStyleBackColor = true;
+            this.chk_edificio.CheckedChanged += new System.EventHandler(this.chk_edificio_CheckedChanged);
             // 
             // cmb_Edificio
             // 
@@ -179,6 +225,7 @@
             this.cmb_Edificio.Name = "cmb_Edificio";
             this.cmb_Edificio.Pp_Conseleccion = false;
             this.cmb_Edificio.Pp_descripcion = "DOMICILIO";
+            this.cmb_Edificio.Pp_descripcion2 = null;
             this.cmb_Edificio.Pp_Pk = "ID";
             this.cmb_Edificio.Pp_tabla = "edificios";
             this.cmb_Edificio.Size = new System.Drawing.Size(281, 24);
@@ -191,55 +238,11 @@
             this.cmb_Barrio.Name = "cmb_Barrio";
             this.cmb_Barrio.Pp_Conseleccion = false;
             this.cmb_Barrio.Pp_descripcion = "nombre";
+            this.cmb_Barrio.Pp_descripcion2 = null;
             this.cmb_Barrio.Pp_Pk = "id_barrio";
             this.cmb_Barrio.Pp_tabla = "barrios";
             this.cmb_Barrio.Size = new System.Drawing.Size(281, 24);
             this.cmb_Barrio.TabIndex = 10;
-            // 
-            // id_departamento
-            // 
-            this.id_departamento.HeaderText = "id_departamento";
-            this.id_departamento.Name = "id_departamento";
-            this.id_departamento.Visible = false;
-            // 
-            // Piso
-            // 
-            this.Piso.HeaderText = "Piso";
-            this.Piso.Name = "Piso";
-            this.Piso.Width = 40;
-            // 
-            // Denominacion
-            // 
-            this.Denominacion.HeaderText = "Denominacion";
-            this.Denominacion.Name = "Denominacion";
-            // 
-            // Superficie
-            // 
-            this.Superficie.HeaderText = "Superficie";
-            this.Superficie.Name = "Superficie";
-            this.Superficie.Width = 80;
-            // 
-            // Porcentaje
-            // 
-            this.Porcentaje.HeaderText = "Porcentaje";
-            this.Porcentaje.Name = "Porcentaje";
-            this.Porcentaje.Width = 80;
-            // 
-            // Dueño
-            // 
-            this.Dueño.HeaderText = "Dueño";
-            this.Dueño.Name = "Dueño";
-            this.Dueño.Width = 120;
-            // 
-            // Domicilio
-            // 
-            this.Domicilio.HeaderText = "Domicilio";
-            this.Domicilio.Name = "Domicilio";
-            // 
-            // Barrio
-            // 
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
             // 
             // Departamentos
             // 

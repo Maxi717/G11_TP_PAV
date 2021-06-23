@@ -23,22 +23,27 @@ namespace G11_TP_PAV.Formularios
         {
             InitializeComponent();
         }
-
+        NE_edificios edificio = new NE_edificios();
         private void Form1_Load(object sender, EventArgs e)
         {
             BE_Edificios _BD = new BE_Edificios();
             DataTable tabla = new DataTable();
+
             string sql;
             sql = "SELECT id_barrio, nombre FROM barrios";
             tabla = _BD.Ejecutar_Select(sql);
             cmb_barrio.DisplayMember = "nombre";
             cmb_barrio.ValueMember = "id_barrio";
             cmb_barrio.DataSource = tabla;
+
+            dataGridView1.Rows.Clear();
+            tabla = edificio.RecuperarEdificios();
+            CargarGrilla(tabla);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            NE_edificios edificio = new NE_edificios();
+
             if (ck_todo.Checked == true)
             {
                 dataGridView1.Rows.Clear();
@@ -68,7 +73,7 @@ namespace G11_TP_PAV.Formularios
                         dataGridView1.Rows[i].Cells[0].Value = tabla.Rows[i]["ID"].ToString();
                         dataGridView1.Rows[i].Cells[1].Value = tabla.Rows[i]["DOMICILIO"].ToString();
                         dataGridView1.Rows[i].Cells[2].Value = tabla.Rows[i]["ASCENSOR"].ToString();
-                        dataGridView1.Rows[i].Cells[3].Value = tabla.Rows[i]["CANT_ASCENSORES"].ToString();
+                        dataGridView1.Rows[i].Cells[3].Value = tabla.Rows[i]["cant_departamentos"].ToString();
                         dataGridView1.Rows[i].Cells[4].Value = tabla.Rows[i]["BARRIO"].ToString();
 
 
@@ -91,7 +96,7 @@ namespace G11_TP_PAV.Formularios
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //if (dataGridView1.CurrentRow.Cells)
-            id = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+             id = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
 
         }
 
@@ -99,6 +104,8 @@ namespace G11_TP_PAV.Formularios
         {
             //MessageBox.Show(cmb_barrio.SelectedValue.ToString());
             ModificarEdificios modificar = new ModificarEdificios();
+            id = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+
             modificar.id = id;
             modificar.ShowDialog();
             modificar.Dispose();
@@ -107,6 +114,8 @@ namespace G11_TP_PAV.Formularios
         private void button2_Click(object sender, EventArgs e)
         {
             BajaEdificios baja = new BajaEdificios();
+            id = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+
             baja.id = id;
             baja.ShowDialog();
             baja.Dispose();
@@ -117,6 +126,11 @@ namespace G11_TP_PAV.Formularios
             Departamentos departamentos = new Departamentos();
             departamentos.ShowDialog();
             departamentos.Dispose();
+        }
+
+        private void ck_todo_CheckedChanged(object sender, EventArgs e)
+        {
+            cmb_barrio.SelectedIndex = -1;
         }
     }
 }

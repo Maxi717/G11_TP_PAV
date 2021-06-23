@@ -12,6 +12,7 @@ namespace G11_TP_PAV.Negocio
     class NE_duenios
     {
         BE_Acceso_Datos _BD = new BE_Acceso_Datos();
+        BE_Transaccional _BD_T = new BE_Transaccional();
 
         public DataTable RecuperarTodos()
         {
@@ -53,6 +54,11 @@ namespace G11_TP_PAV.Negocio
         public void borrar(string numero_documento, string id_tipo_documento)
         {
             _BD.Consulta("DELETE FROM duenios WHERE numero_documento = " + numero_documento + " AND id_tipo_documento = " + id_tipo_documento);
+        }
+
+        public void borrar_asociacion(string documento, string tipo_documento)
+        {
+            _BD_T.Consulta("DELETE FROM asociaciones WHERE documento = " + documento + " AND tipo_documento = " + tipo_documento);
         }
 
     }

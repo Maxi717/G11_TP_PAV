@@ -37,8 +37,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_domi = new G11_TP_PAV.Clases.TextBox01();
-            this.txt_ascensor = new G11_TP_PAV.Clases.TextBox01();
             this.txt_cant = new G11_TP_PAV.Clases.TextBox01();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +84,7 @@
             // cmb_barrio
             // 
             this.cmb_barrio.FormattingEnabled = true;
-            this.cmb_barrio.Location = new System.Drawing.Point(255, 159);
+            this.cmb_barrio.Location = new System.Drawing.Point(275, 155);
             this.cmb_barrio.Name = "cmb_barrio";
             this.cmb_barrio.Size = new System.Drawing.Size(121, 21);
             this.cmb_barrio.TabIndex = 4;
@@ -130,17 +130,6 @@
             this.txt_domi.Size = new System.Drawing.Size(100, 20);
             this.txt_domi.TabIndex = 1;
             // 
-            // txt_ascensor
-            // 
-            this.txt_ascensor.Location = new System.Drawing.Point(275, 91);
-            this.txt_ascensor.Name = "txt_ascensor";
-            this.txt_ascensor.Pp_campo = null;
-            this.txt_ascensor.Pp_MensajeError = "Debe ingresar un valor para ascensor";
-            this.txt_ascensor.Pp_tabla = null;
-            this.txt_ascensor.Pp_validable = true;
-            this.txt_ascensor.Size = new System.Drawing.Size(100, 20);
-            this.txt_ascensor.TabIndex = 2;
-            // 
             // txt_cant
             // 
             this.txt_cant.Location = new System.Drawing.Point(275, 123);
@@ -152,13 +141,22 @@
             this.txt_cant.Size = new System.Drawing.Size(100, 20);
             this.txt_cant.TabIndex = 3;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(275, 91);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // AltaEdificios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 276);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txt_domi);
-            this.Controls.Add(this.txt_ascensor);
             this.Controls.Add(this.txt_cant);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
@@ -186,7 +184,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private G11_TP_PAV.Clases.TextBox01 txt_cant;
-        private G11_TP_PAV.Clases.TextBox01 txt_ascensor;
         private G11_TP_PAV.Clases.TextBox01 txt_domi;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

@@ -33,7 +33,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_domicilio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_telefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmb_tipo_documento = new G11_TP_PAV.Clases.ComboBoxHeredada();
+            this.txt_telefono = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btn_cancelar
@@ -48,7 +48,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(214, 249);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(181, 50);
-            this.btn_cancelar.TabIndex = 31;
+            this.btn_cancelar.TabIndex = 5;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -58,7 +58,7 @@
             this.btn_aceptar.Location = new System.Drawing.Point(27, 249);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(181, 50);
-            this.btn_aceptar.TabIndex = 30;
+            this.btn_aceptar.TabIndex = 4;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
@@ -79,7 +79,7 @@
             this.txt_domicilio.Location = new System.Drawing.Point(214, 205);
             this.txt_domicilio.Name = "txt_domicilio";
             this.txt_domicilio.Size = new System.Drawing.Size(155, 26);
-            this.txt_domicilio.TabIndex = 27;
+            this.txt_domicilio.TabIndex = 3;
             // 
             // label5
             // 
@@ -90,14 +90,6 @@
             this.label5.Size = new System.Drawing.Size(72, 20);
             this.label5.TabIndex = 26;
             this.label5.Text = "Domicilio";
-            // 
-            // txt_telefono
-            // 
-            this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono.Location = new System.Drawing.Point(214, 173);
-            this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(106, 26);
-            this.txt_telefono.TabIndex = 25;
             // 
             // label4
             // 
@@ -115,7 +107,7 @@
             this.txt_nombre.Location = new System.Drawing.Point(214, 141);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(155, 26);
-            this.txt_nombre.TabIndex = 23;
+            this.txt_nombre.TabIndex = 1;
             // 
             // label3
             // 
@@ -163,32 +155,47 @@
             this.cmb_tipo_documento.FormattingEnabled = true;
             this.cmb_tipo_documento.Location = new System.Drawing.Point(214, 107);
             this.cmb_tipo_documento.Name = "cmb_tipo_documento";
+            this.cmb_tipo_documento.Pp_combinada01 = null;
+            this.cmb_tipo_documento.Pp_combinada02 = null;
             this.cmb_tipo_documento.Pp_descripcion = "nombre_tipo_documento";
             this.cmb_tipo_documento.Pp_Pk = "id_tipo_documento";
             this.cmb_tipo_documento.Pp_tabla_origen = "tipo_documento";
             this.cmb_tipo_documento.Size = new System.Drawing.Size(129, 28);
-            this.cmb_tipo_documento.TabIndex = 29;
+            this.cmb_tipo_documento.TabIndex = 0;
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_telefono.Location = new System.Drawing.Point(214, 173);
+            this.txt_telefono.Mask = "9999999999";
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(115, 26);
+            this.txt_telefono.TabIndex = 2;
             // 
             // Frm_Modificar_Duenios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(422, 326);
+            this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_aceptar);
             this.Controls.Add(this.cmb_tipo_documento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_domicilio);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_numero_documento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Modificar_Duenios";
-            this.Text = "Frm_Modificar_Duenios";
+            this.ShowIcon = false;
+            this.Text = "Modificar Dueño ";
             this.Load += new System.EventHandler(this.Frm_Modificar_Duenios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,12 +210,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_domicilio;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_numero_documento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txt_telefono;
     }
 }

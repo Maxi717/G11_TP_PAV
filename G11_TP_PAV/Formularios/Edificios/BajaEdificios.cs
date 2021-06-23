@@ -46,8 +46,8 @@ namespace G11_TP_PAV.Formularios
         {
 
             txt_domi.Text = tabla.Rows[0]["Domicilio"].ToString();
-            txt_cant.Text = tabla.Rows[0]["Cant_Ascensores"].ToString();
-            txt_ascensor.Text = tabla.Rows[0]["Ascensor"].ToString();
+            txt_cant.Text = tabla.Rows[0]["cant_departamentos"].ToString();
+            //checkBox1.Checked = tabla.Rows[0]["Ascensor"].ToString();
             cmb_barrio.SelectedValue = tabla.Rows[0]["Barrio"].ToString();
 
 
@@ -60,7 +60,7 @@ namespace G11_TP_PAV.Formularios
             edificios.Pp_id = id;
             edificios.Pp_domicilio = txt_domi.Text;
             edificios.Pp_cant_ascensor = txt_cant.Text;
-            edificios.Pp_ascensor = txt_ascensor.Text;
+            edificios.Pp_ascensor = checkBox1.Checked.ToString();
             edificios.Pp_id_barrio = cmb_barrio.SelectedValue.ToString();
 
             edificios.Borrar();

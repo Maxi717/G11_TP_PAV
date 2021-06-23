@@ -17,6 +17,7 @@ namespace G11_TP_PAV
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Frm_ReporteVentas());
