@@ -27,8 +27,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BD3K6G11_2021DataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\diaze\Source\Repos\G11_TP_PAV\G11_TP_PAV\BD3K6G11_2021DataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSetEsteban</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\diaze\Source\Repos\G11_TP_PAV\G11_TP_PAV\DataSetEsteban.xsd</rd:SchemaPath>
         <rd:TableName>estadistica_esteban</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

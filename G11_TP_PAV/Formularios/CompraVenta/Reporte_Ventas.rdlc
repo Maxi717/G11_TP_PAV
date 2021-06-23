@@ -441,7 +441,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1029,7 +1028,7 @@
         <Top>0.07056cm</Top>
         <Left>0.57073cm</Left>
         <Height>1.8cm</Height>
-        <Width>25.18521cm</Width>
+        <Width>25.18524cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1198,8 +1197,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>BD3K6G11_2021DataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\diaze\Source\Repos\G11_TP_PAV\G11_TP_PAV\BD3K6G11_2021DataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSetEsteban</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\diaze\Source\Repos\G11_TP_PAV\G11_TP_PAV\DataSetEsteban.xsd</rd:SchemaPath>
         <rd:TableName>reportVenta</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
