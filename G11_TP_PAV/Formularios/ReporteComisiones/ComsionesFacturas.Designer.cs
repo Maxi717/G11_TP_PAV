@@ -137,7 +137,7 @@
             this.MinimizeBox = false;
             this.Name = "ComisionesFacturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "ComisionesFacturas";
             this.Load += new System.EventHandler(this.ReporteVencimientoContrato_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -31,9 +31,6 @@ namespace G11_TP_PAV.Formularios
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            NE_Publicidades publi = new NE_Publicidades();
-            string fecha = publi.ConvertirFecha(date_public.Value);
-            MessageBox.Show(fecha);
 
         }
 
@@ -82,6 +79,8 @@ namespace G11_TP_PAV.Formularios
                     publi.AltaPublicidades(fecha, precio, costo, descripcion, id_seccion, id_designacion_catastral);
 
                     MessageBox.Show("Publicidad agregada exitosamente");
+
+                    this.Close();
                     
                 }
 

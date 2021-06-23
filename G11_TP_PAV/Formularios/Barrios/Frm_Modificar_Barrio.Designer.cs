@@ -81,7 +81,7 @@
             this.btn_aplicar_mod.Location = new System.Drawing.Point(202, 143);
             this.btn_aplicar_mod.Name = "btn_aplicar_mod";
             this.btn_aplicar_mod.Size = new System.Drawing.Size(180, 67);
-            this.btn_aplicar_mod.TabIndex = 13;
+            this.btn_aplicar_mod.TabIndex = 4;
             this.btn_aplicar_mod.Text = "Aplicar Cambios";
             this.btn_aplicar_mod.UseVisualStyleBackColor = true;
             this.btn_aplicar_mod.Click += new System.EventHandler(this.btn_aplicar_mod_Click);
@@ -91,11 +91,13 @@
             this.cmb_provincia_mod.FormattingEnabled = true;
             this.cmb_provincia_mod.Location = new System.Drawing.Point(202, 13);
             this.cmb_provincia_mod.Name = "cmb_provincia_mod";
+            this.cmb_provincia_mod.Pp_combinada01 = null;
+            this.cmb_provincia_mod.Pp_combinada02 = null;
             this.cmb_provincia_mod.Pp_descripcion = "nombre";
             this.cmb_provincia_mod.Pp_Pk = "id_provincia";
             this.cmb_provincia_mod.Pp_tabla_origen = "provincias";
             this.cmb_provincia_mod.Size = new System.Drawing.Size(180, 21);
-            this.cmb_provincia_mod.TabIndex = 1;
+            this.cmb_provincia_mod.TabIndex = 0;
             this.cmb_provincia_mod.SelectedIndexChanged += new System.EventHandler(this.cmb_provincia_mod_SelectedIndexChanged);
             // 
             // cmb_localidad_mod
@@ -103,11 +105,13 @@
             this.cmb_localidad_mod.FormattingEnabled = true;
             this.cmb_localidad_mod.Location = new System.Drawing.Point(202, 58);
             this.cmb_localidad_mod.Name = "cmb_localidad_mod";
+            this.cmb_localidad_mod.Pp_combinada01 = null;
+            this.cmb_localidad_mod.Pp_combinada02 = null;
             this.cmb_localidad_mod.Pp_descripcion = "nombre";
             this.cmb_localidad_mod.Pp_Pk = "id_localidad";
             this.cmb_localidad_mod.Pp_tabla_origen = "localidades";
             this.cmb_localidad_mod.Size = new System.Drawing.Size(180, 21);
-            this.cmb_localidad_mod.TabIndex = 0;
+            this.cmb_localidad_mod.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -127,7 +131,7 @@
             this.btn_restablecer.Location = new System.Drawing.Point(352, 102);
             this.btn_restablecer.Name = "btn_restablecer";
             this.btn_restablecer.Size = new System.Drawing.Size(30, 26);
-            this.btn_restablecer.TabIndex = 12;
+            this.btn_restablecer.TabIndex = 3;
             this.btn_restablecer.UseVisualStyleBackColor = true;
             this.btn_restablecer.Click += new System.EventHandler(this.btn_restablecer_Click);
             // 

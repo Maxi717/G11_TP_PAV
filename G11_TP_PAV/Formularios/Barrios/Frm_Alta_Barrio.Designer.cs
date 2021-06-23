@@ -47,6 +47,8 @@
             this.cmb_provincias_alta.FormattingEnabled = true;
             this.cmb_provincias_alta.Location = new System.Drawing.Point(202, 13);
             this.cmb_provincias_alta.Name = "cmb_provincias_alta";
+            this.cmb_provincias_alta.Pp_combinada01 = null;
+            this.cmb_provincias_alta.Pp_combinada02 = null;
             this.cmb_provincias_alta.Pp_descripcion = "nombre";
             this.cmb_provincias_alta.Pp_Pk = "id_provincia";
             this.cmb_provincias_alta.Pp_tabla_origen = "provincias";
@@ -59,6 +61,8 @@
             this.cmb_localidades_alta.FormattingEnabled = true;
             this.cmb_localidades_alta.Location = new System.Drawing.Point(202, 58);
             this.cmb_localidades_alta.Name = "cmb_localidades_alta";
+            this.cmb_localidades_alta.Pp_combinada01 = null;
+            this.cmb_localidades_alta.Pp_combinada02 = null;
             this.cmb_localidades_alta.Pp_descripcion = "nombre";
             this.cmb_localidades_alta.Pp_Pk = "id_localidad";
             this.cmb_localidades_alta.Pp_tabla_origen = "localidades";
@@ -79,7 +83,7 @@
             this.btn_Alta_Barrio.Location = new System.Drawing.Point(202, 143);
             this.btn_Alta_Barrio.Name = "btn_Alta_Barrio";
             this.btn_Alta_Barrio.Size = new System.Drawing.Size(180, 67);
-            this.btn_Alta_Barrio.TabIndex = 3;
+            this.btn_Alta_Barrio.TabIndex = 4;
             this.btn_Alta_Barrio.Text = "Agregar Nuevo Barrio";
             this.btn_Alta_Barrio.UseVisualStyleBackColor = true;
             this.btn_Alta_Barrio.Click += new System.EventHandler(this.btn_Alta_Barrio_Click);
@@ -130,7 +134,7 @@
             this.btn_borrar_todo.Location = new System.Drawing.Point(352, 101);
             this.btn_borrar_todo.Name = "btn_borrar_todo";
             this.btn_borrar_todo.Size = new System.Drawing.Size(30, 26);
-            this.btn_borrar_todo.TabIndex = 8;
+            this.btn_borrar_todo.TabIndex = 3;
             this.btn_borrar_todo.UseVisualStyleBackColor = true;
             this.btn_borrar_todo.Click += new System.EventHandler(this.btn_borrar_todo_Click);
             // 
