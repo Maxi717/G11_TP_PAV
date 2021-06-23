@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace G11_TP_PAV.Negocio
 {
-    class  NE_ContratoAlquiler
+    class NE_ContratoAlquiler
     {
-        public string Pp_id_contrato { get; set; }
+        public string Pp_nroFactura { get; set; }
         public string Pp_fechaInicio { get; set; }
         public string Pp_duracionContrato { get; set; }
         public string Pp_monto { get; set; }
@@ -27,7 +27,7 @@ namespace G11_TP_PAV.Negocio
 
         public DataTable RecuperarDatos()
         {
-            string sql = "SELECT fact.nro_factura, cont.fecha_inicio,cont.monto * (0.01 *fact.comision) as monto,concat (moneda.nombre,'-',moneda.porcentaje_comision,'%') as id_tipo_moneda,CONCAT(prop.calle, prop.numero) as propiedad,cont.documento FROM facturas_comisiones fact join contratoAlquiler cont on cont.id_contratoALQ = fact.contrato_alquiler join propiedades prop on cont.designacion_catatral = prop.designacion_catastral join tipo_moneda moneda on cont.id_tipo_moneda = moneda.id_moneda";
+            string sql = "SELECT fact.numero_factura, cont.fecha_inicio,cont.monto * (0.01 * fact.comision) as monto,concat(moneda.nombre, '-', moneda.porcentaje_comision, '%') as id_tipo_moneda,CONCAT(prop.calle, prop.numero) as propiedad,cont.documento FROM facturas_comisiones3 fact join contratoAlquiler cont on cont.numero_facturas = fact.numero_factura join propiedades prop on cont.designacion_catatral = prop.designacion_catastral join tipo_moneda moneda on cont.id_tipo_moneda = moneda.id_moneda";
             return _BD.Ejecutar_Select(sql);
 
         }
@@ -67,19 +67,39 @@ namespace G11_TP_PAV.Negocio
 
         }
 
+
         public void InsertarFactura() {
-            
-                string sqlInsertarCont = "INSERT INTO contratoAlquiler (fecha_inicio,duracion_contrato,monto,id_tipo_moneda,designacion_catatral,documento) VALUES('" + Pp_fechaInicio + "' , '" + Pp_duracionContrato + "' , '" + Pp_monto + "' , '" + Pp_porcentaje + "', '" + Pp_propiedad + "', '" + Pp_cliente + "' )";
+            string ConsultarPorcentaje = "SELECT porcentaje_comision FROM tipo_moneda WHERE id_moneda = '" + Pp_porcentaje + "'";
+            tabla = _BD.Ejecutar_Select(ConsultarPorcentaje);
+            string Comision = tabla.Rows[0]["porcentaje_comision"].ToString();
 
-                _BD.Insertar(sqlInsertarCont);
+            string Porcentaje = (int.Parse(Pp_monto) * 0.01 * double.Parse(Comision)).ToString();
+            string sqlInsertar = "INSERT INTO facturas_comisiones3 (comision,monto_con_comision,fecha_pago,matricula_escribano) VALUES('" + Pp_porcentaje + "' , '" + Porcentaje + "' , '" + Pp_fechaInicio + "' , '" + Pp_escribano + "')";
+            _BD.Insertar(sqlInsertar);
+            string sqlSelect = "select * from facturas_comisiones3 where numero_factura in(select MAX(numero_factura) as ID from facturas_comisiones3 )";
+            tabla = _BD.Ejecutar_Select(sqlSelect);
+            Pp_nroFactura = tabla.Rows[0]["numero_factura"].ToString();
 
-                string sqlSelect = "select * from contratoAlquiler where id_contratoALQ in(select MAX(id_contratoALQ) as ID from contratoAlquiler )";
-                tabla = _BD.Ejecutar_Select(sqlSelect);
-                Pp_id_contrato = tabla.Rows[0]["id_contratoALQ"].ToString();
-                string sqlInsertar = "INSERT INTO facturas_comisiones (comision,monto,fecha_pago,matricula_escribano,contrato_alquiler) VALUES('" + Pp_porcentaje + "' , '" + Pp_monto + "' , '" + Pp_fechaInicio + "' , '" + Pp_escribano + "', '" + Pp_id_contrato + "' )";
-                _BD.Insertar(sqlInsertar);
+            string sqlInsertarCont = "INSERT INTO contratoAlquiler (fecha_inicio,duracion_contrato,monto,id_tipo_moneda,designacion_catatral,documento,numero_facturas) VALUES('" + Pp_fechaInicio + "' , '" + Pp_duracionContrato + "' , '" + Pp_monto + "' , '" + Pp_porcentaje + "', '" + Pp_propiedad + "', '" + Pp_cliente + "', '" + Pp_nroFactura + "')";
+            _BD.Insertar(sqlInsertarCont);
+
+
 
             _BD.Validar();
+        }
+
+        public DataTable Info_Etd_ComiXTipo()
+        {
+            string ComiXTipo = "SELECT 'Contrato Alquiler' AS TIPO ,SUM(A.monto) AS MONTO FROM [BD3K6G11_2021].[dbo].[facturas_comisiones3] F FULL join dbo.contratoAlquiler A on A.numero_facturas = F.numero_factura UNION SELECT 'Contrato Venta' AS TIPO ,SUM(V.monto) AS MONTO FROM [BD3K6G11_2021].[dbo].[facturas_comisiones3] F FULL join dbo.compraVentas V on V.numero_factura = F.numero_factura";
+            return _BD.Ejecutar_Select(ComiXTipo);
+
+        }
+
+        public DataTable EST_Compra_Moneda()
+        {
+            string Compra_Venta = "SELECT m.nombre AS Moneda,count(v.id_moneda) AS Cantidades FROM[BD3K6G11_2021].[dbo].[compraVentas] V inner join tipo_moneda M on m.id_moneda = v.id_moneda group BY(m.nombre)";
+            return _BD.Ejecutar_Select(Compra_Venta);
+
         }
     }
 }

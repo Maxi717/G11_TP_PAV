@@ -35,16 +35,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ck_todo = new System.Windows.Forms.CheckBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ascensor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cant_Ascensores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ck_todo = new System.Windows.Forms.CheckBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,58 +124,6 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(371, 50);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(223, 44);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Mostrar Edificios";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Todos";
-            // 
-            // ck_todo
-            // 
-            this.ck_todo.AutoSize = true;
-            this.ck_todo.Location = new System.Drawing.Point(72, 80);
-            this.ck_todo.Name = "ck_todo";
-            this.ck_todo.Size = new System.Drawing.Size(15, 14);
-            this.ck_todo.TabIndex = 3;
-            this.ck_todo.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(288, 51);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Resetear";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(456, 376);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(148, 38);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Formulario Departamentos";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // ID
             // 
             this.ID.HeaderText = "ID";
@@ -207,7 +155,60 @@
             this.Barrio.Name = "Barrio";
             this.Barrio.Width = 150;
             // 
-            // Form1
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(371, 50);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(223, 44);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Mostrar Edificios";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Todos";
+            // 
+            // ck_todo
+            // 
+            this.ck_todo.AutoSize = true;
+            this.ck_todo.Location = new System.Drawing.Point(72, 80);
+            this.ck_todo.Name = "ck_todo";
+            this.ck_todo.Size = new System.Drawing.Size(15, 14);
+            this.ck_todo.TabIndex = 3;
+            this.ck_todo.UseVisualStyleBackColor = true;
+            this.ck_todo.CheckedChanged += new System.EventHandler(this.ck_todo_CheckedChanged);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(288, 51);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(77, 23);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Resetear";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(456, 376);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(148, 38);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Formulario Departamentos";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // Frm_ABM_Edificios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +227,7 @@
             this.Controls.Add(this.label3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Frm_ABM_Edificios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario ABM Edificios";
             this.Load += new System.EventHandler(this.Form1_Load);

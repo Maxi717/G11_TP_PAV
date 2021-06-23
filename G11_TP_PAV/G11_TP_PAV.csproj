@@ -106,6 +106,28 @@
     <Compile Include="Clases\TratamientosEspeciales.cs" />
     <Compile Include="Clases\TratEsp.cs" />
     <Compile Include="Clases\TratEspeciales.cs" />
+    <Compile Include="Formularios\Est_Comi_Contrato\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Est_Comi_Contrato\Frm_Est_Comi_Contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Est_Comi_Contrato\Frm_Est_Comi_Contrato.Designer.cs">
+      <DependentUpon>Frm_Est_Comi_Contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Est_Compra_Moneda\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Est_Compra_Moneda\Frm_Compra_Moneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Est_Compra_Moneda\Frm_Compra_Moneda.Designer.cs">
+      <DependentUpon>Frm_Compra_Moneda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Barrios\Frm_ABMC_Barrio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +463,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\Est_Comi_Contrato\Frm_Est_Comi_Contrato.resx">
+      <DependentUpon>Frm_Est_Comi_Contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Est_Comi_Contrato\Report1.rdlc" />
+    <EmbeddedResource Include="Formularios\Est_Compra_Moneda\Frm_Compra_Moneda.resx">
+      <DependentUpon>Frm_Compra_Moneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Est_Compra_Moneda\CompraVenta.rdlc" />
     <EmbeddedResource Include="Formularios\Barrios\Frm_ABMC_Barrio.resx">
       <DependentUpon>Frm_ABMC_Barrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -626,6 +656,28 @@
     </None>
     <None Include="BD3K6G11_2021DataSet.xss">
       <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Est_Comi_Contrato\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Est_Comi_Contrato\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Est_Comi_Contrato\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Est_Compra_Moneda\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\Est_Compra_Moneda\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\Est_Compra_Moneda\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
