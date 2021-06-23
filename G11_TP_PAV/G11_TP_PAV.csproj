@@ -72,6 +72,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BD3K6G11_2021publicidades.cs">
+      <DependentUpon>BD3K6G11_2021publicidades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BD3K6G11_2021publicidades.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K6G11_2021publicidades.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Clases\BE_Acceso_Datos.cs" />
     <Compile Include="Clases\BE_Acceso_Datos_T.cs" />
     <Compile Include="Clases\BE_Edificios.cs" />
@@ -379,6 +387,12 @@
     <Compile Include="Formularios\Publicidades\Frm_Alta_Publicidad.designer.cs">
       <DependentUpon>Frm_Alta_Publicidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Publicidades\Frm_Estadistica_Publicidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Publicidades\Frm_Estadistica_Publicidades.Designer.cs">
+      <DependentUpon>Frm_Estadistica_Publicidades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Publicidades\Frm_ListadoPublicidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -390,6 +404,12 @@
     </Compile>
     <Compile Include="Formularios\ReporteComisiones\ComsionesFacturas.Designer.cs">
       <DependentUpon>ComsionesFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ReporteGanancias\Frm_estadisticaGananciasPorTipoPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ReporteGanancias\Frm_estadisticaGananciasPorTipoPropiedad.Designer.cs">
+      <DependentUpon>Frm_estadisticaGananciasPorTipoPropiedad.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\ReporteVencimientos\ReporteListadoVencimientos.cs">
       <SubType>Form</SubType>
@@ -593,14 +613,22 @@
     <EmbeddedResource Include="Formularios\Publicidades\Frm_Alta_Publicidad.resx">
       <DependentUpon>Frm_Alta_Publicidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicidades\Frm_Estadistica_Publicidades.resx">
+      <DependentUpon>Frm_Estadistica_Publicidades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Publicidades\Frm_ListadoPublicidades.resx">
       <DependentUpon>Frm_ListadoPublicidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Publicidades\informeEstadisticasPublicidades.rdlc" />
     <EmbeddedResource Include="Formularios\Publicidades\informeReportePublicidades.rdlc" />
     <EmbeddedResource Include="Formularios\ReporteComisiones\ComsionesFacturas.resx">
       <DependentUpon>ComsionesFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ReporteComisiones\ReportComisiones.rdlc" />
+    <EmbeddedResource Include="Formularios\ReporteGanancias\Frm_estadisticaGananciasPorTipoPropiedad.resx">
+      <DependentUpon>Frm_estadisticaGananciasPorTipoPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ReporteGanancias\informeGananciasPorTipoPropiedad.rdlc" />
     <EmbeddedResource Include="Formularios\ReporteVencimientos\ReporteVencimientos.rdlc" />
     <EmbeddedResource Include="Formularios\ReporteVencimientos\ReporteListadoVencimientos.resx">
       <DependentUpon>ReporteListadoVencimientos.cs</DependentUpon>
@@ -646,6 +674,17 @@
     </None>
     <None Include="BD3K6G11_2021DataSet.xss">
       <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021publicidades.xsc">
+      <DependentUpon>BD3K6G11_2021publicidades.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K6G11_2021publicidades.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K6G11_2021publicidades.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K6G11_2021publicidades.xss">
+      <DependentUpon>BD3K6G11_2021publicidades.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

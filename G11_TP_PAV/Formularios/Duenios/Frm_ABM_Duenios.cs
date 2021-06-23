@@ -44,8 +44,7 @@ namespace G11_TP_PAV.Formularios.Dueños
 
         private void ABM_Dueños_Load(object sender, EventArgs e)
         {
-            tabla = duenio.RecuperarTodos();
-            CargarGrilla(tabla);
+            CargarGrilla(duenio.RecuperarTodos());
 
             cmb_tipo_documento.CargarCombo("SELECT " + cmb_tipo_documento.Pp_Pk + ", " + cmb_tipo_documento.Pp_descripcion + " FROM " + cmb_tipo_documento.Pp_tabla_origen);
 
@@ -59,6 +58,7 @@ namespace G11_TP_PAV.Formularios.Dueños
             if (txt_numero_documento.Text == "")
             {
                 MessageBox.Show("Ingrese un Numero de documento para la busqueda.");
+                txt_numero_documento.Focus();
                 return;
             }
             else
@@ -120,6 +120,11 @@ namespace G11_TP_PAV.Formularios.Dueños
 
             tabla = duenio.RecuperarTodos();
             CargarGrilla(tabla);
+        }
+
+        private void btn_refrescar_Click(object sender, EventArgs e)
+        {
+            CargarGrilla(duenio.RecuperarTodos());
         }
     }
 }

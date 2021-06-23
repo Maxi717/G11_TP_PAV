@@ -39,16 +39,31 @@ namespace G11_TP_PAV.Informes
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            DataTable tabla = new DataTable();
-            NE_edificios edificio = new NE_edificios();
-            tabla = edificio.RecuperarEdificiosDesdeHasta(txt_limInferior.Text, txt_limSuperior.Text);
+            if (txt_limInferior.Text == "" || txt_limSuperior.Text == "")
+            {
+                if (int.Parse(txt_limInferior.Text) <= int.Parse(txt_limSuperior.Text))
+                {
+                    DataTable tabla = new DataTable();
+                    NE_edificios edificio = new NE_edificios();
+                    tabla = edificio.RecuperarEdificiosDesdeHasta(txt_limInferior.Text, txt_limSuperior.Text);
 
-            ReportDataSource ds = new ReportDataSource("DataEdificios", tabla);
+                    ReportDataSource ds = new ReportDataSource("DataEdificios", tabla);
 
-            RV_edificios.LocalReport.DataSources.Clear();
-            RV_edificios.LocalReport.DataSources.Add(ds);
-            RV_edificios.RefreshReport();
+                    RV_edificios.LocalReport.DataSources.Clear();
+                    RV_edificios.LocalReport.DataSources.Add(ds);
+                    RV_edificios.RefreshReport();
+                }
 
+                else
+                {
+                    MessageBox.Show("Los limites ingresados no son acptados");
+                    txt_limInferior.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese los limites para poder realizar la busqueda.");
+            }
         }
     }
 }

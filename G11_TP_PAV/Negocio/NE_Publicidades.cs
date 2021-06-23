@@ -71,7 +71,15 @@ namespace G11_TP_PAV.Negocio
                 fecha = fecha.Remove(fecha.Length - 1);
             }
             return fecha;
+        }
 
+        public DataTable GastosPorTipoPropiedad()
+        {
+            string sql = @"SELECT SUM(costo) AS gastos, tipo_propiedad.nombre AS tipo_propiedad FROM publicidades 
+                           JOIN propiedades ON publicidades.designacion_catastral = propiedades.designacion_catastral 
+                           JOIN tipo_propiedad ON propiedades.id_tipo_propiedad = tipo_propiedad.id_tipo_propiedad
+                           GROUP BY (tipo_propiedad.nombre)";
+            return (_BD.Consulta(sql));
         }
     }
 }

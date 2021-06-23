@@ -59,7 +59,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
+            this.gananciasPorTipoDePropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -274,8 +276,9 @@
             // estadísticasToolStripMenuItem
             // 
             this.estadísticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comisionesPorTipoDeMonedaToolStripMenuItem,
-            this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem});
+
+            this.gananciasPorTipoDePropiedadToolStripMenuItem,
+            this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem});
             this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
             this.estadísticasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
@@ -317,12 +320,21 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem
+
+            // gananciasPorTipoDePropiedadToolStripMenuItem
             // 
-            this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem.Name = "contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem";
-            this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem.Size = new System.Drawing.Size(371, 26);
-            this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem.Text = "Contratos de Alquiler por Tipo de Moneda";
-            this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem.Click += new System.EventHandler(this.contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem_Click);
+            this.gananciasPorTipoDePropiedadToolStripMenuItem.Name = "gananciasPorTipoDePropiedadToolStripMenuItem";
+            this.gananciasPorTipoDePropiedadToolStripMenuItem.Size = new System.Drawing.Size(371, 26);
+            this.gananciasPorTipoDePropiedadToolStripMenuItem.Text = "Ganancias por tipo de propiedad";
+            this.gananciasPorTipoDePropiedadToolStripMenuItem.Click += new System.EventHandler(this.gananciasPorTipoDePropiedadToolStripMenuItem_Click);
+            // 
+            // gastosPublicitariosPorTipoDePropiedadToolStripMenuItem
+            // 
+            this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem.Name = "gastosPublicitariosPorTipoDePropiedadToolStripMenuItem";
+            this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem.Size = new System.Drawing.Size(371, 26);
+            this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem.Text = "Gastos publicitarios por tipo de propiedad";
+            this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem.Click += new System.EventHandler(this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem_Click);
+
             // 
             // Frm_Escritorio
             // 
@@ -381,8 +393,9 @@
         private System.Windows.Forms.ToolStripMenuItem edificiosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem comisionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vencimientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comisionesPorTipoDeMonedaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contratosDeAlquilerPorTipoDeMonedaToolStripMenuItem;
+
+        private System.Windows.Forms.ToolStripMenuItem gananciasPorTipoDePropiedadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gastosPublicitariosPorTipoDePropiedadToolStripMenuItem;
     }
 }
 
