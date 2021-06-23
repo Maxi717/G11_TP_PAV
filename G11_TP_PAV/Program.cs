@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using G11_TP_PAV.Formularios.CompraVenta;
+using G11_TP_PAV.Formularios.Estadisticas_Esteban;
 using G11_TP_PAV.Formularios.ListadoRecibosExpensas;
+
 
 namespace G11_TP_PAV
 {
@@ -18,7 +19,7 @@ namespace G11_TP_PAV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_ReporteVentas());
+            Application.Run(new Frm_Estadistica_cantFacturasXEscribano());
         }
     }
 }

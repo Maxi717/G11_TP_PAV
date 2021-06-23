@@ -243,6 +243,14 @@ SELECT numero_comprobante, fecha, concepto, proveedor, importe, id_edificio FROM
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="estadistica_esteban" msprop:Generator_TableClassName="estadistica_estebanDataTable" msprop:Generator_TableVarName="tableestadistica_esteban" msprop:Generator_RowChangedName="estadistica_estebanRowChanged" msprop:Generator_TablePropName="estadistica_esteban" msprop:Generator_RowDeletingName="estadistica_estebanRowDeleting" msprop:Generator_RowChangingName="estadistica_estebanRowChanging" msprop:Generator_RowEvHandlerName="estadistica_estebanRowChangeEventHandler" msprop:Generator_RowDeletedName="estadistica_estebanRowDeleted" msprop:Generator_RowClassName="estadistica_estebanRow" msprop:Generator_UserTableName="estadistica_esteban" msprop:Generator_RowEvArgName="estadistica_estebanRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="denominacion" msprop:Generator_ColumnVarNameInTable="columndenominacion" msprop:Generator_ColumnPropNameInRow="denominacion" msprop:Generator_ColumnPropNameInTable="denominacionColumn" msprop:Generator_UserColumnName="denominacion" type="xs:string" minOccurs="0" />
+              <xs:element name="valor" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" msprop:Generator_UserColumnName="valor" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">

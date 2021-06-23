@@ -286,6 +286,18 @@
     <Compile Include="Formularios\Escribanos\Frm_Modificar_Escribano.designer.cs">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_EstadisticaGasto_x_Edificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_EstadisticaGasto_x_Edificio.Designer.cs">
+      <DependentUpon>Frm_EstadisticaGasto_x_Edificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.Designer.cs">
+      <DependentUpon>Frm_Estadistica_cantFacturasXEscribano.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Gastos\Frm_Altas_Gastos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -444,6 +456,7 @@
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
     <Compile Include="Negocio\NE_Escribanos.cs" />
+    <Compile Include="Negocio\NE_Estadistica.cs" />
     <Compile Include="Negocio\NE_Gastos.cs" />
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
@@ -472,7 +485,6 @@
     <EmbeddedResource Include="Formularios\CompraVenta\Frm_ReporteVentas.resx">
       <DependentUpon>Frm_ReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\CompraVenta\Report1.rdlc" />
     <EmbeddedResource Include="Formularios\CompraVenta\Reporte_Ventas.rdlc" />
     <EmbeddedResource Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.resx">
       <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
@@ -547,6 +559,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Escribanos\Frm_Modificar_Escribano.resx">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Est_Factura_x_Escribano.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Est_Gastos_X_Edificio.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Frm_EstadisticaGasto_x_Edificio.resx">
+      <DependentUpon>Frm_EstadisticaGasto_x_Edificio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.resx">
+      <DependentUpon>Frm_Estadistica_cantFacturasXEscribano.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Gastos\Frm_Altas_Gastos.resx">
       <DependentUpon>Frm_Altas_Gastos.cs</DependentUpon>

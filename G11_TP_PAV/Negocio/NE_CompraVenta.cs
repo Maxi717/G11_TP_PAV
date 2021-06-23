@@ -12,7 +12,7 @@ namespace G11_TP_PAV.Negocio
     class NE_CompraVenta
     {
 
-
+        
         public string fechaActual { get; set; }
 
         public int nroDoc { get; set; }
