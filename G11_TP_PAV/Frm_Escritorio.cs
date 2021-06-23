@@ -27,6 +27,8 @@ using G11_TP_PAV.Est_Compra_Moneda;
 using G11_TP_PAV.Formularios.Propiedades;
 using G11_TP_PAV.Formularios.DepartamentosRepor;
 using G11_TP_PAV.Formularios.EstadisticasGonza;
+using G11_TP_PAV.Formularios.ListadoRecibosExpensas;
+using G11_TP_PAV.Formularios.Estadisticas_Esteban;
 
 
 namespace G11_TP_PAV
@@ -288,6 +290,38 @@ namespace G11_TP_PAV
             this.Hide();
             EstadisticasSuperficieBarrio esb = new EstadisticasSuperficieBarrio();
             esb.ShowDialog();
+            this.Show();
+        }
+
+        private void compraVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_ReporteVentas rvta = new Frm_ReporteVentas();
+            rvta.ShowDialog();
+            this.Show();
+        }
+
+        private void recibosYExpensasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_ListadoRecibosExpensas lre = new Frm_ListadoRecibosExpensas();
+            lre.ShowDialog();
+            this.Show();
+        }
+
+        private void cantidadDeFacturasPorEscribanoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Estadistica_cantFacturasXEscribano ecfe = new Frm_Estadistica_cantFacturasXEscribano();
+            ecfe.ShowDialog();
+            this.Show();
+        }
+
+        private void gastosPorEdificioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_EstadisticaGasto_x_Edificio ecfe = new Frm_EstadisticaGasto_x_Edificio();
+            ecfe.ShowDialog();
             this.Show();
         }
     }

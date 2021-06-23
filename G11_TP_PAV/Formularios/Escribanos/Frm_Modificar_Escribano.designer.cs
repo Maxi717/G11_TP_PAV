@@ -203,6 +203,7 @@ namespace G11_TP_PAV.Formularios.Escribanos
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_Modificar_Escribano";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Escribano";
             this.Load += new System.EventHandler(this.Frm_Modificar_Escribano_Load);

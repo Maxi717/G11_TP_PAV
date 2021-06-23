@@ -94,6 +94,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_BuscarCliente";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda de Cliente";
             this.Load += new System.EventHandler(this.Frm_BuscarCliente_Load);

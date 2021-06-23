@@ -102,6 +102,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_BuscarPropiedad";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccion de Propiedad";
             this.Load += new System.EventHandler(this.Frm_BuscarPropiedad_Load);

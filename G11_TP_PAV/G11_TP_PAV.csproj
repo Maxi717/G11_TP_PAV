@@ -58,7 +58,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -126,6 +126,11 @@
     <Compile Include="Clases\TratamientosEspeciales.cs" />
     <Compile Include="Clases\TratEsp.cs" />
     <Compile Include="Clases\TratEspeciales.cs" />
+    <Compile Include="DataSetEsteban.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEsteban.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Est_Comi_Contrato\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -177,6 +182,12 @@
     </Compile>
     <Compile Include="Formularios\Clientes\Frm_Modificar_Clientes.designer.cs">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_ReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CompraVenta\Frm_ReporteVentas.Designer.cs">
+      <DependentUpon>Frm_ReporteVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.cs">
       <SubType>Form</SubType>
@@ -336,6 +347,18 @@
     <Compile Include="Formularios\Escribanos\Frm_Modificar_Escribano.designer.cs">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_EstadisticaGasto_x_Edificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_EstadisticaGasto_x_Edificio.Designer.cs">
+      <DependentUpon>Frm_EstadisticaGasto_x_Edificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.Designer.cs">
+      <DependentUpon>Frm_Estadistica_cantFacturasXEscribano.cs</DependentUpon>
+    </Compile>
 
     <Compile Include="Formularios\EstadisticasGonza\DataGonza.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -396,6 +419,12 @@
     </Compile>
     <Compile Include="Formularios\Gastos\Frm_Modificar_Gastos.designer.cs">
       <DependentUpon>Frm_Modificar_Gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.Designer.cs">
+      <DependentUpon>Frm_ListadoRecibosExpensas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Propiedades\Ds_Reporte_Propiedades.cs">
       <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
@@ -545,10 +574,12 @@
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
     <Compile Include="Negocio\NE_Escribanos.cs" />
-    <Compile Include="Negocio\NE_EstadisticasGonza.cs" />
+    <Compile Include="Negocio\NE_Estadistica.cs" />
     <Compile Include="Negocio\NE_Gastos.cs" />
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
+    <Compile Include="Negocio\NE_Recibos.cs" />
+    <Compile Include="Negocio\NE_EstadisticasGonza.cs" />
     <Compile Include="Negocio\NE_ReporteDepartamento.cs" />
     <Compile Include="Negocio\NE_ReportePropiedad.cs" />
     <Compile Include="Negocio\NE_Tipo_Moneda.cs" />
@@ -580,6 +611,10 @@
     <EmbeddedResource Include="Formularios\Clientes\Frm_Modificar_Clientes.resx">
       <DependentUpon>Frm_Modificar_Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Frm_ReporteVentas.resx">
+      <DependentUpon>Frm_ReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CompraVenta\Reporte_Ventas.rdlc" />
     <EmbeddedResource Include="Formularios\ContratoAlquiler\Frm_ContratoAlquiler.resx">
       <DependentUpon>Frm_ContratoAlquiler.cs</DependentUpon>
     </EmbeddedResource>
@@ -658,6 +693,14 @@
     <EmbeddedResource Include="Formularios\Escribanos\Frm_Modificar_Escribano.resx">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Est_Factura_x_Escribano.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Est_Gastos_X_Edificio.rdlc" />
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Frm_EstadisticaGasto_x_Edificio.resx">
+      <DependentUpon>Frm_EstadisticaGasto_x_Edificio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estadisticas_Esteban\Frm_Estadistica_cantFacturasXEscribano.resx">
+      <DependentUpon>Frm_Estadistica_cantFacturasXEscribano.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EstadisticasGonza\EstadisticasProvincias.resx">
       <DependentUpon>EstadisticasProvincias.cs</DependentUpon>
     </EmbeddedResource>
@@ -687,6 +730,10 @@
       <DependentUpon>Frm_Modificar_Gastos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Gastos\Listado_Gastos.rdlc" />
+    <EmbeddedResource Include="Formularios\ListadoRecibosExpensas\Frm_ListadoRecibosExpensas.resx">
+      <DependentUpon>Frm_ListadoRecibosExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ListadoRecibosExpensas\ListadoRecibosExpensas.rdlc" />
     <EmbeddedResource Include="Formularios\Propiedades\Frm_Listado_Propiedades.resx">
       <DependentUpon>Frm_Listado_Propiedades.cs</DependentUpon>
     </EmbeddedResource>
@@ -779,6 +826,17 @@
     </None>
     <None Include="BD3K6G11_2021DataSet.xss">
       <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEsteban.xsc">
+      <DependentUpon>DataSetEsteban.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEsteban.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEsteban.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetEsteban.xss">
+      <DependentUpon>DataSetEsteban.xsd</DependentUpon>
     </None>
     <None Include="Formularios\DepartamentosRepor\DataSetDeptos.xsc">
       <DependentUpon>DataSetDeptos.xsd</DependentUpon>

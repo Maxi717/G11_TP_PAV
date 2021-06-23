@@ -12,7 +12,7 @@ namespace G11_TP_PAV.Negocio
     class NE_CompraVenta
     {
 
-
+        
         public string fechaActual { get; set; }
 
         public int nroDoc { get; set; }
@@ -157,6 +157,62 @@ namespace G11_TP_PAV.Negocio
             return (id + 1).ToString();
 
         }
+
+
+        public DataTable RecuperarInformeVenta()
+        {
+            string SqlSelect = @"SELECT cv.id_compraVenta as id, cv.fecha as fecha, cv.monto as monto, tm.nombre as nombre_moneda, cv.designacion_catastral as design_catas, c.nombre as nombre_cliente, e.matricula as mp, e.apellido as apellido_escribano, e.nombre as nombre_escribano, cv.numero_factura as numero_factura
+                                 FROM compraVentas cv JOIN clientes c 
+                                                  ON cv.id_tipo_documento = c.id_tipo_documento AND cv.documento_comprador = c.numero_documento
+                                                  JOIN tipo_moneda tm 
+                                                  ON cv.id_moneda = tm.id_moneda
+                                                  JOIN facturas_comisiones3 fc
+                                                  ON cv.numero_factura = fc.numero_factura
+                                                  JOIN escribanos e 
+                                                  ON fc.matricula_escribano = e.matricula";
+
+
+            return _BD.Consulta(SqlSelect);
+        }
+
+        public DataTable RecuperarInformeVenta(string FechaMes)
+        {
+            string[] dato = FechaMes.Split('/');
+
+            string SqlSelect = @"SELECT cv.id_compraVenta as id, cv.fecha as fecha, cv.monto as monto, tm.nombre as nombre_moneda, cv.designacion_catastral as design_catas, c.nombre as nombre_cliente, e.matricula as mp, e.apellido as apellido_escribano, e.nombre as nombre_escribano, cv.numero_factura as numero_factura
+                                 FROM compraVentas cv JOIN clientes c 
+                                                  ON cv.id_tipo_documento = c.id_tipo_documento AND cv.documento_comprador = c.numero_documento
+                                                  JOIN tipo_moneda tm 
+                                                  ON cv.id_moneda = tm.id_moneda
+                                                  JOIN facturas_comisiones3 fc
+                                                  ON cv.numero_factura = fc.numero_factura
+                                                  JOIN escribanos e 
+                                                  ON fc.matricula_escribano = e.matricula
+                                WHERE month(cv.fecha) = "+ dato[0] +" AND YEAR(cv.fecha) = "+ dato[1] +"";
+
+            return _BD.Consulta(SqlSelect);
+
+
+        }
+
+        public DataTable RecuperarInformeVenta(string fechaDesde , string fechaHasta)
+        {
+
+            string SqlSelect = @"SELECT cv.id_compraVenta as id, cv.fecha as fecha, cv.monto as monto, tm.nombre as nombre_moneda, cv.designacion_catastral as design_catas, c.nombre as nombre_cliente, e.matricula as mp, e.apellido as apellido_escribano, e.nombre as nombre_escribano, cv.numero_factura as numero_factura
+                                 FROM compraVentas cv JOIN clientes c 
+                                                  ON cv.id_tipo_documento = c.id_tipo_documento AND cv.documento_comprador = c.numero_documento
+                                                  JOIN tipo_moneda tm 
+                                                  ON cv.id_moneda = tm.id_moneda
+                                                  JOIN facturas_comisiones3 fc
+                                                  ON cv.numero_factura = fc.numero_factura
+                                                  JOIN escribanos e 
+                                                  ON fc.matricula_escribano = e.matricula
+                                WHERE (cv.fecha >= '" + fechaDesde + "') AND (cv.fecha <= '"+ fechaHasta +"')";
+
+            return _BD.Consulta(SqlSelect);
+        }
+
+
 
 
         public DataTable gananciasPorTipoPropiedad()

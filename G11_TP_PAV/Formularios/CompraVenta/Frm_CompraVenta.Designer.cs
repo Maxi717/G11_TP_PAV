@@ -388,6 +388,7 @@ namespace G11_TP_PAV.Formularios.CompraVenta
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_CompraVenta";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de CompraVenta";
             this.Load += new System.EventHandler(this.Frm_CompraVenta_Load);

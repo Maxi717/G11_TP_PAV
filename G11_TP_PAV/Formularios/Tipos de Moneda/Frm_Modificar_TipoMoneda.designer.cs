@@ -141,6 +141,7 @@ namespace G11_TP_PAV.Formularios.Tipo_Moneda
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_Modificar_TipoMoneda";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Modificar_TipoMoneda";
             this.Load += new System.EventHandler(this.Frm_Modificar_TipoMoneda_Load);

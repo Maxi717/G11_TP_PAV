@@ -120,6 +120,7 @@ namespace G11_TP_PAV.Formularios.Tipo_Moneda
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Frm_ABM_TipoMoneda";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Tipo de Moneda";
             this.Load += new System.EventHandler(this.Frm_ABM_TipoMoneda_Load);

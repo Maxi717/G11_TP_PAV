@@ -53,6 +53,8 @@
             this.edificiosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comisionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vencimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.propiedadesDisponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gananciasPorTipoDePropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gastosPublicitariosPorTipoDePropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,14 +62,16 @@
             this.comisionesPorTipoDeMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compraVentasPorTipoDeMonedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comisionesPorTipoDeContratoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.departamentosPorLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.propiedadesDisponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentosPorLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recibosYExpensasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cantidadDeFacturasPorEscribanoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gastosPorEdificioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -233,7 +237,9 @@
             this.comisionesToolStripMenuItem,
             this.vencimientosToolStripMenuItem,
             this.propiedadesDisponiblesToolStripMenuItem,
-            this.departamentosToolStripMenuItem1});
+            this.departamentosToolStripMenuItem1,
+            this.compraVentasToolStripMenuItem,
+            this.recibosYExpensasToolStripMenuItem});
             this.listadosToolStripMenuItem.Name = "listadosToolStripMenuItem";
             this.listadosToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.listadosToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
@@ -281,6 +287,20 @@
             this.vencimientosToolStripMenuItem.Text = "Vencimientos";
             this.vencimientosToolStripMenuItem.Click += new System.EventHandler(this.vencimientosToolStripMenuItem_Click);
             // 
+            // propiedadesDisponiblesToolStripMenuItem
+            // 
+            this.propiedadesDisponiblesToolStripMenuItem.Name = "propiedadesDisponiblesToolStripMenuItem";
+            this.propiedadesDisponiblesToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.propiedadesDisponiblesToolStripMenuItem.Text = "Propiedades disponibles";
+            this.propiedadesDisponiblesToolStripMenuItem.Click += new System.EventHandler(this.propiedadesDisponiblesToolStripMenuItem_Click);
+            // 
+            // departamentosToolStripMenuItem1
+            // 
+            this.departamentosToolStripMenuItem1.Name = "departamentosToolStripMenuItem1";
+            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(249, 26);
+            this.departamentosToolStripMenuItem1.Text = "Departamentos";
+            this.departamentosToolStripMenuItem1.Click += new System.EventHandler(this.departamentosToolStripMenuItem1_Click);
+            // 
             // estadísticasToolStripMenuItem
             // 
             this.estadísticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -291,7 +311,9 @@
             this.compraVentasPorTipoDeMonedaToolStripMenuItem,
             this.comisionesPorTipoDeContratoToolStripMenuItem,
             this.departamentosPorLocalidadToolStripMenuItem,
-            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem});
+            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem,
+            this.cantidadDeFacturasPorEscribanoToolStripMenuItem,
+            this.gastosPorEdificioToolStripMenuItem});
             this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
             this.estadísticasToolStripMenuItem.Padding = new System.Windows.Forms.Padding(24);
             this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(99, 73);
@@ -339,6 +361,20 @@
             this.comisionesPorTipoDeContratoToolStripMenuItem.Text = "Comisiones por tipo de contrato";
             this.comisionesPorTipoDeContratoToolStripMenuItem.Click += new System.EventHandler(this.comisionesPorTipoDeContratoToolStripMenuItem_Click);
             // 
+            // departamentosPorLocalidadToolStripMenuItem
+            // 
+            this.departamentosPorLocalidadToolStripMenuItem.Name = "departamentosPorLocalidadToolStripMenuItem";
+            this.departamentosPorLocalidadToolStripMenuItem.Size = new System.Drawing.Size(373, 26);
+            this.departamentosPorLocalidadToolStripMenuItem.Text = "Departamentos por provincia";
+            this.departamentosPorLocalidadToolStripMenuItem.Click += new System.EventHandler(this.departamentosPorLocalidadToolStripMenuItem_Click);
+            // 
+            // superficieDeDepartamentosPorLocalidadToolStripMenuItem
+            // 
+            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Name = "superficieDeDepartamentosPorLocalidadToolStripMenuItem";
+            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Size = new System.Drawing.Size(373, 26);
+            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Text = "Superficie de departamentos por localidad";
+            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Click += new System.EventHandler(this.superficieDeDepartamentosPorLocalidadToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -368,33 +404,33 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // propiedadesDisponiblesToolStripMenuItem
+            // compraVentasToolStripMenuItem
             // 
-            this.propiedadesDisponiblesToolStripMenuItem.Name = "propiedadesDisponiblesToolStripMenuItem";
-            this.propiedadesDisponiblesToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
-            this.propiedadesDisponiblesToolStripMenuItem.Text = "Propiedades disponibles";
-            this.propiedadesDisponiblesToolStripMenuItem.Click += new System.EventHandler(this.propiedadesDisponiblesToolStripMenuItem_Click);
+            this.compraVentasToolStripMenuItem.Name = "compraVentasToolStripMenuItem";
+            this.compraVentasToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.compraVentasToolStripMenuItem.Text = "CompraVentas";
+            this.compraVentasToolStripMenuItem.Click += new System.EventHandler(this.compraVentasToolStripMenuItem_Click);
             // 
-            // departamentosToolStripMenuItem1
+            // recibosYExpensasToolStripMenuItem
             // 
-            this.departamentosToolStripMenuItem1.Name = "departamentosToolStripMenuItem1";
-            this.departamentosToolStripMenuItem1.Size = new System.Drawing.Size(249, 26);
-            this.departamentosToolStripMenuItem1.Text = "Departamentos";
-            this.departamentosToolStripMenuItem1.Click += new System.EventHandler(this.departamentosToolStripMenuItem1_Click);
+            this.recibosYExpensasToolStripMenuItem.Name = "recibosYExpensasToolStripMenuItem";
+            this.recibosYExpensasToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.recibosYExpensasToolStripMenuItem.Text = "Recibos y expensas";
+            this.recibosYExpensasToolStripMenuItem.Click += new System.EventHandler(this.recibosYExpensasToolStripMenuItem_Click);
             // 
-            // departamentosPorLocalidadToolStripMenuItem
+            // cantidadDeFacturasPorEscribanoToolStripMenuItem
             // 
-            this.departamentosPorLocalidadToolStripMenuItem.Name = "departamentosPorLocalidadToolStripMenuItem";
-            this.departamentosPorLocalidadToolStripMenuItem.Size = new System.Drawing.Size(373, 26);
-            this.departamentosPorLocalidadToolStripMenuItem.Text = "Departamentos por provincia";
-            this.departamentosPorLocalidadToolStripMenuItem.Click += new System.EventHandler(this.departamentosPorLocalidadToolStripMenuItem_Click);
+            this.cantidadDeFacturasPorEscribanoToolStripMenuItem.Name = "cantidadDeFacturasPorEscribanoToolStripMenuItem";
+            this.cantidadDeFacturasPorEscribanoToolStripMenuItem.Size = new System.Drawing.Size(373, 26);
+            this.cantidadDeFacturasPorEscribanoToolStripMenuItem.Text = "Cantidad de facturas por escribano";
+            this.cantidadDeFacturasPorEscribanoToolStripMenuItem.Click += new System.EventHandler(this.cantidadDeFacturasPorEscribanoToolStripMenuItem_Click);
             // 
-            // superficieDeDepartamentosPorLocalidadToolStripMenuItem
+            // gastosPorEdificioToolStripMenuItem
             // 
-            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Name = "superficieDeDepartamentosPorLocalidadToolStripMenuItem";
-            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Size = new System.Drawing.Size(373, 26);
-            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Text = "Superficie de departamentos por localidad";
-            this.superficieDeDepartamentosPorLocalidadToolStripMenuItem.Click += new System.EventHandler(this.superficieDeDepartamentosPorLocalidadToolStripMenuItem_Click);
+            this.gastosPorEdificioToolStripMenuItem.Name = "gastosPorEdificioToolStripMenuItem";
+            this.gastosPorEdificioToolStripMenuItem.Size = new System.Drawing.Size(373, 26);
+            this.gastosPorEdificioToolStripMenuItem.Text = "Gastos por edificio";
+            this.gastosPorEdificioToolStripMenuItem.Click += new System.EventHandler(this.gastosPorEdificioToolStripMenuItem_Click);
             // 
             // Frm_Escritorio
             // 
@@ -464,6 +500,10 @@
         private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem departamentosPorLocalidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem superficieDeDepartamentosPorLocalidadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem compraVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recibosYExpensasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cantidadDeFacturasPorEscribanoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gastosPorEdificioToolStripMenuItem;
     }
 }
 
