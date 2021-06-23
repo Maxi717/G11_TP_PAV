@@ -52,6 +52,12 @@ namespace G11_TP_PAV.Negocio
             return _BD.Ejecutar_Select(sql);
         }
 
+        public DataTable RecuperarParaEstadistica()
+        {
+            string sql = "SELECT  tipo_moneda.nombre as Moneda, COUNT(*) as Cantidad FROM contratoAlquiler INNER JOIN tipo_moneda ON contratoAlquiler.id_tipo_moneda = tipo_moneda.id_moneda GROUP   BY contratoAlquiler.id_tipo_moneda, tipo_moneda.nombre";
+            return _BD.Ejecutar_Select(sql);
+        }
+
         public DataTable RecuperarPorFecha(DateTime desde, DateTime hasta)
         {
             string fechaDesde = desde.ToString();

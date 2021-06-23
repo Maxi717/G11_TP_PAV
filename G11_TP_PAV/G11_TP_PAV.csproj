@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD3K6G11_2021DataSet.cs">
+      <DependentUpon>BD3K6G11_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BD3K6G11_2021DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +290,18 @@
     </Compile>
     <Compile Include="Formularios\Escribanos\Frm_Modificar_Escribano.designer.cs">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EstadisticaAlqTipoMoneda\Frm_EstAlqTipoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EstadisticaAlqTipoMoneda\Frm_EstAlqTipoMoneda.Designer.cs">
+      <DependentUpon>Frm_EstAlqTipoMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EstadisticaComisionTipoMoneda\Frm_Estadistica_ComisionTipoMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EstadisticaComisionTipoMoneda\Frm_Estadistica_ComisionTipoMoneda.Designer.cs">
+      <DependentUpon>Frm_Estadistica_ComisionTipoMoneda.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Gastos\Frm_Altas_Gastos.cs">
       <SubType>Form</SubType>
@@ -549,6 +564,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Escribanos\Frm_Modificar_Escribano.resx">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EstadisticaAlqTipoMoneda\EstadisticaAlqTipoMoneda.rdlc" />
+    <EmbeddedResource Include="Formularios\EstadisticaComisionTipoMoneda\Estadistica_ComisionTipoMoneda.rdlc" />
+    <EmbeddedResource Include="Formularios\EstadisticaComisionTipoMoneda\Frm_Estadistica_ComisionTipoMoneda.resx">
+      <DependentUpon>Frm_Estadistica_ComisionTipoMoneda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Gastos\Frm_Altas_Gastos.resx">
       <DependentUpon>Frm_Altas_Gastos.cs</DependentUpon>

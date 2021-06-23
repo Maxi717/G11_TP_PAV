@@ -18,6 +18,8 @@ using G11_TP_PAV.Formularios.Gastos;
 using G11_TP_PAV.Informes;
 using G11_TP_PAV.Formularios.ContratoAlquiler;
 using G11_TP_PAV.ReporteEma;
+using G11_TP_PAV.Formularios.EstadisticaComisionTipoMoneda;
+using G11_TP_PAV.Formularios.EstadisticaAlqTipoMoneda;
 using G11_TP_PAV.Formularios.Publicidades;
 using G11_TP_PAV.Formularios.ReporteGanancias;
 
@@ -202,6 +204,7 @@ namespace G11_TP_PAV
             this.Show();
         }
 
+
         private void gananciasPorTipoDePropiedadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -218,4 +221,3 @@ namespace G11_TP_PAV
             this.Show();
         }
     }
-}
