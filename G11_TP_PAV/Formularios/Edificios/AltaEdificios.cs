@@ -30,6 +30,8 @@ namespace G11_TP_PAV.Formularios
             cmb_barrio.DisplayMember = "nombre";
             cmb_barrio.ValueMember = "id_barrio";
             cmb_barrio.DataSource = tabla;
+
+            cmb_barrio.SelectedIndex = -1;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace G11_TP_PAV.Formularios
 
                 edificios.Pp_domicilio = txt_domi.Text;
                 edificios.Pp_cant_ascensor = txt_cant.Text;
-                edificios.Pp_ascensor= txt_ascensor.Text;
+                edificios.Pp_ascensor= checkBox1.Checked.ToString();
                 edificios.Pp_id_barrio = cmb_barrio.SelectedValue.ToString();
 
 

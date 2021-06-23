@@ -45,6 +45,8 @@ namespace G11_TP_PAV.Formularios
         {
             Frm_Alta_Publicidad alta = new Frm_Alta_Publicidad();
             alta.ShowDialog();
+            DataTable tablafull = GenerarGrilla();
+            CargarGrilla(tablafull);
         }
 
         private void grid_publicidades_CellContentClick(object sender, DataGridViewCellEventArgs e)

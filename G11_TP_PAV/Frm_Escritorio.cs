@@ -18,6 +18,13 @@ using G11_TP_PAV.Formularios.Gastos;
 using G11_TP_PAV.Informes;
 using G11_TP_PAV.Formularios.ContratoAlquiler;
 using G11_TP_PAV.ReporteEma;
+using G11_TP_PAV.Formularios.EstadisticaComisionTipoMoneda;
+using G11_TP_PAV.Formularios.EstadisticaAlqTipoMoneda;
+using G11_TP_PAV.Formularios.Publicidades;
+using G11_TP_PAV.Formularios.ReporteGanancias;
+using G11_TP_PAV.Est_Comi_Contrato;
+using G11_TP_PAV.Est_Compra_Moneda;
+
 
 namespace G11_TP_PAV
 {
@@ -197,6 +204,55 @@ namespace G11_TP_PAV
             this.Hide();
             ReporteVencimientoContrato venc = new ReporteVencimientoContrato();
             venc.ShowDialog();
+            this.Show();
+        }
+
+
+        private void gananciasPorTipoDePropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_estadisticaGananciasPorTipoPropiedad est = new Frm_estadisticaGananciasPorTipoPropiedad();
+            est.ShowDialog();
+            this.Show();
+        }
+
+        private void gastosPublicitariosPorTipoDePropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Estadistica_Publicidades est = new Frm_Estadistica_Publicidades();
+            est.ShowDialog();
+            this.Show();
+        }
+
+        private void alquileresPorTipoDeMonedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_EstAlqTipoMoneda estATM = new Frm_EstAlqTipoMoneda();
+            estATM.ShowDialog();
+            this.Show();
+        }
+
+        private void comisionesPorTipoDeMonedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Estadistica_ComisionTipoMoneda estCTM = new Frm_Estadistica_ComisionTipoMoneda();
+            estCTM.ShowDialog();
+            this.Show();
+        }
+
+        private void compraVentasPorTipoDeMonedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Compra_Moneda estCVTM = new Frm_Compra_Moneda();
+            estCVTM.ShowDialog();
+            this.Show();
+        }
+
+        private void comisionesPorTipoDeContratoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Est_Comi_Contrato estCC = new Frm_Est_Comi_Contrato();
+            estCC.ShowDialog();
             this.Show();
         }
     }

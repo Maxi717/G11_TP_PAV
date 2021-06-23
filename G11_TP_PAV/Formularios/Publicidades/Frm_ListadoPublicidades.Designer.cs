@@ -111,7 +111,9 @@
             this.Controls.Add(this.date_inicio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RV_publicidades);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Frm_ListadoPublicidades";
+            this.ShowIcon = false;
             this.Text = "Listado Publicidades";
             this.Load += new System.EventHandler(this.Frm_ListadoPublicidades_Load);
             this.ResumeLayout(false);

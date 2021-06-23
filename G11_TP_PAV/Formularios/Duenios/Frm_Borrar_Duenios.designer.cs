@@ -48,7 +48,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(211, 253);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(181, 50);
-            this.btn_cancelar.TabIndex = 31;
+            this.btn_cancelar.TabIndex = 1;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -58,7 +58,7 @@
             this.btn_aceptar.Location = new System.Drawing.Point(24, 253);
             this.btn_aceptar.Name = "btn_aceptar";
             this.btn_aceptar.Size = new System.Drawing.Size(181, 50);
-            this.btn_aceptar.TabIndex = 30;
+            this.btn_aceptar.TabIndex = 0;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
             this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
@@ -161,10 +161,13 @@
             // 
             // cmb_tipo_documento
             // 
+            this.cmb_tipo_documento.Enabled = false;
             this.cmb_tipo_documento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_tipo_documento.FormattingEnabled = true;
             this.cmb_tipo_documento.Location = new System.Drawing.Point(211, 111);
             this.cmb_tipo_documento.Name = "cmb_tipo_documento";
+            this.cmb_tipo_documento.Pp_combinada01 = null;
+            this.cmb_tipo_documento.Pp_combinada02 = null;
             this.cmb_tipo_documento.Pp_descripcion = "nombre_tipo_documento";
             this.cmb_tipo_documento.Pp_Pk = "id_tipo_documento";
             this.cmb_tipo_documento.Pp_tabla_origen = "tipo_documento";
@@ -189,8 +192,12 @@
             this.Controls.Add(this.txt_numero_documento);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Borrar_Duenios";
-            this.Text = "Frm_Borrar_Duenios";
+            this.ShowIcon = false;
+            this.Text = "Borrar Dueño";
             this.Load += new System.EventHandler(this.Frm_Borrar_Duenios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

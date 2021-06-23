@@ -78,7 +78,7 @@
             this.btn_Alta_Public.Location = new System.Drawing.Point(203, 223);
             this.btn_Alta_Public.Name = "btn_Alta_Public";
             this.btn_Alta_Public.Size = new System.Drawing.Size(180, 67);
-            this.btn_Alta_Public.TabIndex = 13;
+            this.btn_Alta_Public.TabIndex = 7;
             this.btn_Alta_Public.Text = "Agregar Publicidad";
             this.btn_Alta_Public.UseVisualStyleBackColor = true;
             this.btn_Alta_Public.Click += new System.EventHandler(this.btn_Alta_Public_Click);
@@ -88,14 +88,14 @@
             this.txt_costo.Location = new System.Drawing.Point(203, 42);
             this.txt_costo.Name = "txt_costo";
             this.txt_costo.Size = new System.Drawing.Size(180, 20);
-            this.txt_costo.TabIndex = 12;
+            this.txt_costo.TabIndex = 1;
             // 
             // txt_precio
             // 
             this.txt_precio.Location = new System.Drawing.Point(203, 82);
             this.txt_precio.Name = "txt_precio";
             this.txt_precio.Size = new System.Drawing.Size(180, 20);
-            this.txt_precio.TabIndex = 12;
+            this.txt_precio.TabIndex = 2;
             // 
             // date_public
             // 
@@ -103,7 +103,7 @@
             this.date_public.Location = new System.Drawing.Point(203, 11);
             this.date_public.Name = "date_public";
             this.date_public.Size = new System.Drawing.Size(180, 20);
-            this.date_public.TabIndex = 20;
+            this.date_public.TabIndex = 0;
             this.date_public.Value = new System.DateTime(2021, 5, 12, 0, 0, 0, 0);
             this.date_public.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -125,7 +125,7 @@
             this.btn_borrar_todo.Location = new System.Drawing.Point(359, 191);
             this.btn_borrar_todo.Name = "btn_borrar_todo";
             this.btn_borrar_todo.Size = new System.Drawing.Size(30, 26);
-            this.btn_borrar_todo.TabIndex = 18;
+            this.btn_borrar_todo.TabIndex = 6;
             this.btn_borrar_todo.UseVisualStyleBackColor = true;
             this.btn_borrar_todo.Click += new System.EventHandler(this.btn_borrar_todo_Click);
             // 
@@ -145,7 +145,7 @@
             this.txt_descripcion.Location = new System.Drawing.Point(203, 122);
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(180, 20);
-            this.txt_descripcion.TabIndex = 12;
+            this.txt_descripcion.TabIndex = 3;
             this.txt_descripcion.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
@@ -162,22 +162,26 @@
             this.cmb_secciones.FormattingEnabled = true;
             this.cmb_secciones.Location = new System.Drawing.Point(203, 158);
             this.cmb_secciones.Name = "cmb_secciones";
+            this.cmb_secciones.Pp_combinada01 = null;
+            this.cmb_secciones.Pp_combinada02 = null;
             this.cmb_secciones.Pp_descripcion = "nombre";
             this.cmb_secciones.Pp_Pk = "id_seccion";
             this.cmb_secciones.Pp_tabla_origen = "secciones";
             this.cmb_secciones.Size = new System.Drawing.Size(180, 21);
-            this.cmb_secciones.TabIndex = 22;
+            this.cmb_secciones.TabIndex = 4;
             // 
             // cmb_propiedades
             // 
             this.cmb_propiedades.FormattingEnabled = true;
             this.cmb_propiedades.Location = new System.Drawing.Point(203, 195);
             this.cmb_propiedades.Name = "cmb_propiedades";
+            this.cmb_propiedades.Pp_combinada01 = null;
+            this.cmb_propiedades.Pp_combinada02 = null;
             this.cmb_propiedades.Pp_descripcion = "designacion_catastral";
             this.cmb_propiedades.Pp_Pk = "designacion_catastral";
             this.cmb_propiedades.Pp_tabla_origen = "propiedades";
             this.cmb_propiedades.Size = new System.Drawing.Size(150, 21);
-            this.cmb_propiedades.TabIndex = 22;
+            this.cmb_propiedades.TabIndex = 5;
             // 
             // Frm_Alta_Publicidad
             // 

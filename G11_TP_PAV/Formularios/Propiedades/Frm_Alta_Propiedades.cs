@@ -48,7 +48,10 @@ namespace G11_TP_PAV.Formularios
 
         private void FRM_Alta_Propiedades_Load(object sender, EventArgs e)
         {
-            cmb_barrio.CargarCombo("SELECT " + cmb_barrio.Pp_Pk + ", " + cmb_barrio.Pp_descripcion + " FROM " + cmb_barrio.Pp_tabla_origen);
+            cmb_provincia.CargarCombo("SELECT " + cmb_provincia.Pp_Pk + "," + cmb_provincia.Pp_descripcion + " FROM " + cmb_provincia.Pp_tabla_origen);
+            cmb_provincia.SelectedIndex = -1;
+            cmb_localidad.Enabled = false;
+            cmb_barrio.Enabled = false;
             cmb_tipo_propiedad.CargarCombo("SELECT " + cmb_tipo_propiedad.Pp_Pk + ", " + cmb_tipo_propiedad.Pp_descripcion + " FROM " + cmb_tipo_propiedad.Pp_tabla_origen);
             cmb_tipo_documento.CargarCombo("SELECT " + cmb_tipo_documento.Pp_Pk + ", " + cmb_tipo_documento.Pp_descripcion + " FROM " + cmb_tipo_documento.Pp_tabla_origen);
         }
@@ -159,9 +162,10 @@ namespace G11_TP_PAV.Formularios
                 txt_numero_documento.ReadOnly = false;
                 txt_calle.ReadOnly = false;
                 txt_nombre.ReadOnly = false;
-                cmb_barrio.Enabled = true;
+                cmb_provincia.Enabled = true;
                 cmb_tipo_documento.Enabled = true;
                 cmb_tipo_propiedad.Enabled = true;
+                cmb_tipo_documento.Enabled = true;
                 btn_aceptar.Enabled = true;
                 btn_agregar.Enabled = true;
                 btn_buscar.Enabled = true;
@@ -172,6 +176,27 @@ namespace G11_TP_PAV.Formularios
         private void btn_sacar_Click(object sender, EventArgs e)
         {
             grid_duenios.Rows.RemoveAt(grid_duenios.CurrentCell.RowIndex);
+        }
+
+        private void cmb_provincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_provincia.SelectedIndex != -1)
+            {
+                cmb_localidad.Enabled = true;
+                cmb_localidad.CargarCombo("SELECT " + cmb_localidad.Pp_Pk + ", " + cmb_localidad.Pp_descripcion + " FROM " + cmb_localidad.Pp_tabla_origen + " WHERE id_provincia = " + cmb_provincia.SelectedValue.ToString());
+                cmb_localidad.SelectedIndex = -1;
+                cmb_barrio.Enabled = false;
+            }
+        }
+
+        private void cmb_localidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_localidad.SelectedIndex != -1)
+            {
+                cmb_barrio.Enabled = true;
+                cmb_barrio.CargarCombo("SELECT " + cmb_barrio.Pp_Pk + ", " + cmb_barrio.Pp_descripcion + " FROM " + cmb_barrio.Pp_tabla_origen + " WHERE id_localidad = " + cmb_localidad.SelectedValue.ToString());
+                cmb_barrio.SelectedIndex = -1;
+            }
         }
     }
 }
