@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetDeptos" targetNamespace="http://tempuri.org/DataSetDeptos.xsd" xmlns:mstns="http://tempuri.org/DataSetDeptos.xsd" xmlns="http://tempuri.org/DataSetDeptos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetDeptos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetDeptos" msprop:Generator_UserDSName="DataSetDeptos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableDepto" msprop:Generator_TableClassName="DataTableDeptoDataTable" msprop:Generator_TableVarName="tableDataTableDepto" msprop:Generator_RowChangedName="DataTableDeptoRowChanged" msprop:Generator_TablePropName="DataTableDepto" msprop:Generator_RowDeletingName="DataTableDeptoRowDeleting" msprop:Generator_RowChangingName="DataTableDeptoRowChanging" msprop:Generator_RowEvHandlerName="DataTableDeptoRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableDeptoRowDeleted" msprop:Generator_RowClassName="DataTableDeptoRow" msprop:Generator_UserTableName="DataTableDepto" msprop:Generator_RowEvArgName="DataTableDeptoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_departamento" msprop:Generator_ColumnVarNameInTable="columnid_departamento" msprop:Generator_ColumnPropNameInRow="id_departamento" msprop:Generator_ColumnPropNameInTable="id_departamentoColumn" msprop:Generator_UserColumnName="id_departamento" type="xs:int" minOccurs="0" />
+              <xs:element name="piso" msprop:Generator_ColumnVarNameInTable="columnpiso" msprop:Generator_ColumnPropNameInRow="piso" msprop:Generator_ColumnPropNameInTable="pisoColumn" msprop:Generator_UserColumnName="piso" type="xs:int" minOccurs="0" />
+              <xs:element name="denominacion" msprop:Generator_ColumnVarNameInTable="columndenominacion" msprop:Generator_ColumnPropNameInRow="denominacion" msprop:Generator_ColumnPropNameInTable="denominacionColumn" msprop:Generator_UserColumnName="denominacion" type="xs:string" minOccurs="0" />
+              <xs:element name="superficie" msprop:Generator_ColumnVarNameInTable="columnsuperficie" msprop:Generator_ColumnPropNameInRow="superficie" msprop:Generator_ColumnPropNameInTable="superficieColumn" msprop:Generator_UserColumnName="superficie" type="xs:int" minOccurs="0" />
+              <xs:element name="porcentaje" msprop:Generator_ColumnVarNameInTable="columnporcentaje" msprop:Generator_ColumnPropNameInRow="porcentaje" msprop:Generator_ColumnPropNameInTable="porcentajeColumn" msprop:Generator_UserColumnName="porcentaje" type="xs:int" minOccurs="0" />
+              <xs:element name="duenio" msprop:Generator_ColumnVarNameInTable="columnduenio" msprop:Generator_ColumnPropNameInRow="duenio" msprop:Generator_ColumnPropNameInTable="duenioColumn" msprop:Generator_UserColumnName="duenio" type="xs:string" minOccurs="0" />
+              <xs:element name="domicilio" msprop:Generator_ColumnVarNameInTable="columndomicilio" msprop:Generator_ColumnPropNameInRow="domicilio" msprop:Generator_ColumnPropNameInTable="domicilioColumn" msprop:Generator_UserColumnName="domicilio" type="xs:string" minOccurs="0" />
+              <xs:element name="barrio" msprop:Generator_ColumnVarNameInTable="columnbarrio" msprop:Generator_ColumnPropNameInRow="barrio" msprop:Generator_ColumnPropNameInTable="barrioColumn" msprop:Generator_UserColumnName="barrio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

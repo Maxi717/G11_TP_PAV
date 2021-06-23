@@ -100,11 +100,18 @@ namespace G11_TP_PAV.Clases
                         return ((TextBoxHeredada)item).Text;
                     }
                 }
-                if (item.GetType().Name == "ComboBoxHeredada")
+                if (item.GetType().Name == "ComboBoxHeredadaG")
                 {
                     if (((ComboBoxHeredadaG)item).Pp_campo == campo)
                     {
-                        return ((ComboBoxHeredadaG)item).SelectedValue.ToString();
+                        try
+                        {
+                            return ((ComboBoxHeredadaG)item).SelectedValue.ToString();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error!",ex.Message);
+                        }
                     }
                 }
                 if (item.GetType().Name == "NumericHeredada")
@@ -118,7 +125,7 @@ namespace G11_TP_PAV.Clases
                 {
                     if (((DateTimeHeredada)item).Pp_campo == campo)
                     {
-                        return ((DateTimeHeredada)item).Value.ToShortDateString();
+                        return "'" + ((DateTimeHeredada)item).Value.ToString() + "'";
                     }
                 }
             }
