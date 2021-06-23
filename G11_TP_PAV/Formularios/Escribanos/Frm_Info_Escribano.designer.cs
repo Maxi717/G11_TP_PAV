@@ -197,6 +197,7 @@ namespace G11_TP_PAV.Formularios.Escribanos
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_Info_Escribano";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Informacion del Escribano";
             this.Load += new System.EventHandler(this.Frm_Info_Escribano_Load);

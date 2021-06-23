@@ -203,6 +203,7 @@ namespace G11_TP_PAV.Formularios.Escribanos
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_Alta_Escribano";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Escribano";
             this.Load += new System.EventHandler(this.Frm_Alta_Escribano_Load);

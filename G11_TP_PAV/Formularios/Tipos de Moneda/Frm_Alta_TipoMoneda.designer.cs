@@ -141,6 +141,7 @@ namespace G11_TP_PAV.Formularios.Tipo_Moneda
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Frm_Alta_TipoMoneda";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Moneda";
             this.grp_TipoMoneda.ResumeLayout(false);
