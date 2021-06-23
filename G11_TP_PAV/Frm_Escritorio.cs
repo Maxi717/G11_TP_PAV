@@ -24,6 +24,9 @@ using G11_TP_PAV.Formularios.Publicidades;
 using G11_TP_PAV.Formularios.ReporteGanancias;
 using G11_TP_PAV.Est_Comi_Contrato;
 using G11_TP_PAV.Est_Compra_Moneda;
+using G11_TP_PAV.Formularios.Propiedades;
+using G11_TP_PAV.Formularios.DepartamentosRepor;
+using G11_TP_PAV.Formularios.EstadisticasGonza;
 
 
 namespace G11_TP_PAV
@@ -253,6 +256,38 @@ namespace G11_TP_PAV
             this.Hide();
             Frm_Est_Comi_Contrato estCC = new Frm_Est_Comi_Contrato();
             estCC.ShowDialog();
+            this.Show();
+        }
+
+        private void propiedadesDisponiblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Listado_Propiedades lp = new Frm_Listado_Propiedades();
+            lp.ShowDialog();
+            this.Show();
+        }
+
+        private void departamentosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_ListadoDepartamentos ld = new Frm_ListadoDepartamentos();
+            ld.ShowDialog();
+            this.Show();
+        }
+
+        private void departamentosPorLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EstadisticasProvincias ep = new EstadisticasProvincias();
+            ep.ShowDialog();
+            this.Show();
+        }
+
+        private void superficieDeDepartamentosPorLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EstadisticasSuperficieBarrio esb = new EstadisticasSuperficieBarrio();
+            esb.ShowDialog();
             this.Show();
         }
     }
