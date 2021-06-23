@@ -23,7 +23,6 @@ namespace G11_TP_PAV.Formularios.Propiedades
 
         private void Frm_Listado_Propiedades_Load(object sender, EventArgs e)
         {
-
             this.rv_prop.RefreshReport();
         }
 

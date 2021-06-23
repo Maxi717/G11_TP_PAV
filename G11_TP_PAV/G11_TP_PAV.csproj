@@ -303,6 +303,23 @@
     <Compile Include="Formularios\Escribanos\Frm_Modificar_Escribano.designer.cs">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EstadisticasGonza\DataGonza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataGonza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EstadisticasGonza\EstadisticasProvincias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EstadisticasGonza\EstadisticasProvincias.Designer.cs">
+      <DependentUpon>EstadisticasProvincias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\EstadisticasGonza\EstadisticasSuperficieBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\EstadisticasGonza\EstadisticasSuperficieBarrio.Designer.cs">
+      <DependentUpon>EstadisticasSuperficieBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Gastos\Frm_Altas_Gastos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -469,6 +486,7 @@
     <Compile Include="Negocio\NE_duenios.cs" />
     <Compile Include="Negocio\NE_edificios.cs" />
     <Compile Include="Negocio\NE_Escribanos.cs" />
+    <Compile Include="Negocio\NE_EstadisticasGonza.cs" />
     <Compile Include="Negocio\NE_Gastos.cs" />
     <Compile Include="Negocio\NE_propiedades.cs" />
     <Compile Include="Negocio\NE_Publicidades.cs" />
@@ -573,6 +591,14 @@
     <EmbeddedResource Include="Formularios\Escribanos\Frm_Modificar_Escribano.resx">
       <DependentUpon>Frm_Modificar_Escribano.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EstadisticasGonza\EstadisticasProvincias.resx">
+      <DependentUpon>EstadisticasProvincias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EstadisticasGonza\EstadisticasSuperficieBarrio.resx">
+      <DependentUpon>EstadisticasSuperficieBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\EstadisticasGonza\ReporteEstadisticaProvincias.rdlc" />
+    <EmbeddedResource Include="Formularios\EstadisticasGonza\ReporteSuperficieProvincia.rdlc" />
     <EmbeddedResource Include="Formularios\Gastos\Frm_Altas_Gastos.resx">
       <DependentUpon>Frm_Altas_Gastos.cs</DependentUpon>
     </EmbeddedResource>
@@ -684,6 +710,17 @@
     </None>
     <None Include="Formularios\DepartamentosRepor\DataSetDeptos.xss">
       <DependentUpon>DataSetDeptos.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\EstadisticasGonza\DataGonza.xsc">
+      <DependentUpon>DataGonza.xsd</DependentUpon>
+    </None>
+    <None Include="Formularios\EstadisticasGonza\DataGonza.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataGonza.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Formularios\EstadisticasGonza\DataGonza.xss">
+      <DependentUpon>DataGonza.xsd</DependentUpon>
     </None>
     <None Include="Formularios\Propiedades\Ds_Reporte_Propiedades.xsc">
       <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>

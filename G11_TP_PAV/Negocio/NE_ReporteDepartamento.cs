@@ -18,5 +18,6 @@ namespace G11_TP_PAV.Negocio
                         + " WHERE superficie >= " + min + " AND superficie <= " + max;
             return _BD.Consulta(sql);
         }
+
     }
 }
