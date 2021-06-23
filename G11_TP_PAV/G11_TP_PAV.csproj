@@ -810,10 +810,6 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Ds_Reporte_Propiedades.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Formularios\Propiedades\Ds_Reporte_Propiedades.xss">
-      <DependentUpon>Ds_Reporte_Propiedades.xsd</DependentUpon>
-
-
     <None Include="Formularios\Est_Comi_Contrato\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
